@@ -13,19 +13,25 @@ function readResources(dir: string): Resource[] {
       return readResources(fullPath);
     }
 
-    if (!entry.isFile() || !entry.name.endsWith(".json")) {
+    if (!entry.isFile() || !entry.name.endsWith(".json") || !/^cours.*\.json$/i.test(entry.name)) {
       return [];
     }
 
     const raw = JSON.parse(fs.readFileSync(fullPath, "utf8")) as
       | Resource[]
-      | { resources?: Resource[] };
+      | { nom?: string; name?: string; label?: string; resources?: Resource[] };
 
+    const metadata = Array.isArray(raw) ? {} : raw;
     const items = Array.isArray(raw)
       ? raw
       : Array.isArray(raw.resources)
         ? raw.resources
         : [];
+    const courseLabel =
+      (typeof metadata.nom === "string" && metadata.nom.trim()) ||
+      (typeof metadata.name === "string" && metadata.name.trim()) ||
+      (typeof metadata.label === "string" && metadata.label.trim()) ||
+      undefined;
 
     const parts = fullPath.split(path.sep);
     const dataIndex = parts.indexOf("data");
@@ -38,6 +44,8 @@ function readResources(dir: string): Resource[] {
       niveau: item.niveau || niveauFromPath,
       matiere: item.matiere || matiereFromPath,
       chapitre: item.chapitre || (chapitreFromPath !== "resources" ? chapitreFromPath : ""),
+      sourceFile: path.basename(fullPath),
+      courseLabel: item.courseLabel || courseLabel || path.basename(fullPath),
     }));
   });
 }

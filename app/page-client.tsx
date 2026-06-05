@@ -1,11 +1,12 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Resource } from "../types/resources";
 
 export default function PageClient({ resources }: { resources: Resource[] }) {
   const [niveau, setNiveau] = useState("");
   const [matiere, setMatiere] = useState("");
+  const [courseFile, setCourseFile] = useState("cours.json");
 
   const niveaux = useMemo(() => [...new Set(resources.map((r) => r.niveau))], [resources]);
 
@@ -14,19 +15,55 @@ export default function PageClient({ resources }: { resources: Resource[] }) {
     [niveau, resources]
   );
 
+  const availableCourseFiles = useMemo(() => {
+    const filtered = resources.filter(
+      (r) =>
+        (!niveau || r.niveau === niveau) &&
+        (!matiere || r.matiere === matiere) &&
+        typeof r.sourceFile === "string" &&
+        /^cours.*\.json$/i.test(r.sourceFile)
+    );
+
+    return [...new Set(filtered.map((r) => r.sourceFile as string))]
+      .sort()
+      .map((file) => ({
+        file,
+        label: filtered.find((r) => r.sourceFile === file)?.courseLabel || file,
+      }));
+  }, [niveau, matiere, resources]);
+
+  useEffect(() => {
+    if (!matiere) {
+      setCourseFile("cours.json");
+      return;
+    }
+
+    if (availableCourseFiles.some((entry) => entry.file === "cours.json")) {
+      setCourseFile("cours.json");
+      return;
+    }
+
+    setCourseFile(availableCourseFiles[0]?.file ?? "");
+  }, [matiere, availableCourseFiles]);
+
   const resultats = useMemo(
     () =>
-      resources.filter((r) => (!niveau || r.niveau === niveau) && (!matiere || r.matiere === matiere)),
-    [niveau, matiere, resources]
+      resources.filter(
+        (r) =>
+          (!niveau || r.niveau === niveau) &&
+          (!matiere || r.matiere === matiere) &&
+          (!courseFile || r.sourceFile === courseFile)
+      ),
+    [niveau, matiere, courseFile, resources]
   );
 
   return (
     <main className="page-shell">
       <section className="hero-card">
         <p className="eyebrow">Ressources pédagogiques</p>
-        <h1>Choisissez une classe et une matière pour consulter les contenus.</h1>
+        <h1>Choisissez le niveau, puis la matière, puis le cours si plusieurs versions existent.</h1>
         <p className="lede">
-          Les fiches s’affichent directement, et le chapitre n’est affiché que lorsqu’il existe.
+          L’étiquette du cours vient de la propriété "nom" du fichier JSON. Si plusieurs versions existent pour la matière choisie, vous pouvez basculer vers une autre variante.
         </p>
       </section>
 
@@ -57,7 +94,7 @@ export default function PageClient({ resources }: { resources: Resource[] }) {
             value={matiere}
             onChange={(e) => setMatiere(e.target.value)}
           >
-            <option value="">Toutes les matières</option>
+            <option value="">Choisissez une matière</option>
             {matieres.map((m) => (
               <option key={m} value={m}>
                 {m}
@@ -65,11 +102,31 @@ export default function PageClient({ resources }: { resources: Resource[] }) {
             ))}
           </select>
         </div>
+
+        {matiere && availableCourseFiles.length > 1 ? (
+          <div className="field">
+            <label htmlFor="courseFile">Cours</label>
+            <select
+              id="courseFile"
+              value={courseFile}
+              onChange={(e) => setCourseFile(e.target.value)}
+            >
+              {availableCourseFiles.map((entry) => (
+                <option key={entry.file} value={entry.file}>
+                  {entry.label}
+                </option>
+              ))}
+            </select>
+          </div>
+        ) : null}
       </section>
 
       <section className="results-grid">
         {resultats.map((r) => (
-          <article key={`${r.titre}-${r.url}`} className="resource-card">
+          <article
+            key={`${r.niveau}-${r.matiere}-${r.sourceFile ?? "unknown"}-${r.titre}-${r.url}-${r.chapitre}`}
+            className="resource-card"
+          >
             <div className="resource-head">
               <p className="resource-meta">{r.niveau} • {r.matiere}</p>
               {r.chapitre ? <span className="badge">Chapitre : {r.chapitre}</span> : null}

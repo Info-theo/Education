@@ -6,4 +6,6 @@ export interface Resource {
   type: "link" | "iframe";
   source: string;
   url: string;
+  sourceFile?: string;
+  courseLabel?: string;
 }

@@ -1,17 +1,7 @@
 [
   {
-    "chapitre": "Fractions",
-    "titre": "Découvrir les fractions",
     "type": "link",
     "source": "Site pédagogique D",
     "url": "https://monsite.fr/fractions"
-  },
-  {
-    "chapitre": "Géométrie",
-    "titre": "Découvrir les figures géométriques",
-    "type": "link",
-    "source": "Site pédagogique D",
-    "url": "https://monsite.fr/geometrie"
   }
-
 ]
