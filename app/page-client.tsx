@@ -60,11 +60,18 @@ export default function PageClient({ resources }: { resources: Resource[] }) {
   return (
     <main className="page-shell">
       <section className="hero-card">
-        <p className="eyebrow">Ressources pédagogiques</p>
-        <h1>Choisissez le niveau, puis la matière, puis le cours si plusieurs versions existent.</h1>
-        <p className="lede">
-          L’étiquette du cours vient de la propriété "nom" du fichier JSON. Si plusieurs versions existent pour la matière choisie, vous pouvez basculer vers une autre variante.
-        </p>
+        <div className="hero-copy">
+          <p className="eyebrow">Ressources pédagogiques</p>
+          <h1>Choisissez votre parcours et accédez aux contenus en un clin d’œil.</h1>
+          <p className="lede">
+            Le nom du cours est issu de la propriété "nom" du fichier JSON. Sélectionnez le niveau, la matière, puis basculez vers l’autre version si plusieurs cours existent.
+          </p>
+        </div>
+        <div className="hero-pills">
+          <span>📘 Niveau</span>
+          <span>🧠 Matière</span>
+          <span>📚 Cours</span>
+        </div>
       </section>
 
       <section className="panel">
@@ -121,7 +128,22 @@ export default function PageClient({ resources }: { resources: Resource[] }) {
         ) : null}
       </section>
 
+      <section className="results-header">
+        <div>
+          <p className="eyebrow">Résultats</p>
+          <h2>{resultats.length} ressource{resultats.length > 1 ? "s" : ""} affichée{resultats.length > 1 ? "s" : ""}</h2>
+        </div>
+        <p className="mini-note">Filtres actifs : {niveau || "Tous les niveaux"} • {matiere || "Toutes les matières"}</p>
+      </section>
+
       <section className="results-grid">
+        {resultats.length === 0 ? (
+          <article className="empty-card">
+            <h3>Aucune ressource pour ce choix</h3>
+            <p>Essayez un autre niveau ou une autre matière pour afficher d’autres contenus.</p>
+          </article>
+        ) : null}
+
         {resultats.map((r) => (
           <article
             key={`${r.niveau}-${r.matiere}-${r.sourceFile ?? "unknown"}-${r.titre}-${r.url}-${r.chapitre}`}
@@ -149,7 +171,8 @@ export default function PageClient({ resources }: { resources: Resource[] }) {
         :global(body) {
           margin: 0;
           font-family: Arial, Helvetica, sans-serif;
-          background: linear-gradient(135deg, #f4f7ff 0%, #eef6ff 45%, #f9fbff 100%);
+          background:
+            radial-gradient(circle at top, #ffffff 0%, #edf4ff 35%, #eff7ff 65%, #ecf3fb 100%);
           color: #17324d;
         }
 
@@ -162,25 +185,35 @@ export default function PageClient({ resources }: { resources: Resource[] }) {
 
         .hero-card,
         .panel,
-        .resource-card {
+        .resource-card,
+        .empty-card {
           background: rgba(255, 255, 255, 0.92);
           border: 1px solid #dbe6f7;
           border-radius: 24px;
           box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+          backdrop-filter: blur(8px);
         }
 
         .hero-card {
-          max-width: 1100px;
+          max-width: 1180px;
           margin: 0 auto 18px;
           padding: 24px;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          gap: 18px;
+          background:
+            linear-gradient(145deg, rgba(255,255,255,0.96), rgba(241,247,255,0.96));
         }
+
+        .hero-copy { max-width: 820px; }
 
         .eyebrow {
           text-transform: uppercase;
           letter-spacing: 0.18em;
-          font-size: 0.82rem;
+          font-size: 0.78rem;
           color: #4b6bff;
-          font-weight: 700;
+          font-weight: 800;
         }
 
         h1 {
@@ -192,11 +225,28 @@ export default function PageClient({ resources }: { resources: Resource[] }) {
         .lede {
           color: #4c6383;
           max-width: 780px;
+          font-size: 1.02rem;
+        }
+
+        .hero-pills {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          justify-content: flex-end;
+        }
+
+        .hero-pills span {
+          padding: 8px 10px;
+          border-radius: 999px;
+          background: #edf3ff;
+          color: #3b5bd8;
+          font-weight: 700;
+          font-size: 0.92rem;
         }
 
         .panel {
-          max-width: 1100px;
-          margin: 0 auto 22px;
+          max-width: 1180px;
+          margin: 0 auto 16px;
           padding: 18px;
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -221,18 +271,53 @@ export default function PageClient({ resources }: { resources: Resource[] }) {
           background: #fff;
           color: #17324d;
           font-size: 1rem;
+          transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        select:focus {
+          outline: none;
+          border-color: #5b7cff;
+          box-shadow: 0 0 0 3px rgba(91, 124, 255, 0.18);
+        }
+
+        .results-header {
+          max-width: 1180px;
+          margin: 0 auto 12px;
+          display: flex;
+          justify-content: space-between;
+          align-items: end;
+          gap: 14px;
+          flex-wrap: wrap;
+        }
+
+        .results-header h2 {
+          margin: 4px 0 0;
+          font-size: 1.15rem;
+        }
+
+        .mini-note {
+          color: #56708f;
+          font-size: 0.95rem;
+          margin: 0;
         }
 
         .results-grid {
-          max-width: 1100px;
+          max-width: 1180px;
           margin: 0 auto;
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
           gap: 18px;
         }
 
-        .resource-card {
+        .resource-card,
+        .empty-card {
           padding: 16px;
+          transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .resource-card:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 18px 34px rgba(31, 41, 55, 0.14);
         }
 
         .resource-head {
