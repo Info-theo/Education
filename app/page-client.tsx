@@ -34,8 +34,41 @@ export default function PageClient({
       return [...ordered, ...rest];
     }
 
-    return unique.sort((a, b) => a.localeCompare(b));
+    const preferredOrder = [
+      "CP",
+      "CE1",
+      "CE2",
+      "CM1",
+      "CM2",
+      "6eme",
+      "5eme",
+      "4eme",
+      "3eme",
+      "Seconde",
+      "Première",
+      "Terminale",
+      "L1",
+      "L2",
+      "L3",
+      "M1",
+      "M2",
+    ];
+
+    const ordered = preferredOrder.filter((item) => unique.includes(item));
+    const rest = unique.filter((item) => !preferredOrder.includes(item)).sort((a, b) => a.localeCompare(b));
+
+    return [...ordered, ...rest];
   }, [resources, levelOrder]);
+
+  const levelGroups = useMemo(
+    () => [
+      { label: "Primaire", values: niveaux.filter((item) => ["CP", "CE1", "CE2", "CM1", "CM2"].includes(item)) },
+      { label: "Collège", values: niveaux.filter((item) => ["6eme", "5eme", "4eme", "3eme"].includes(item)) },
+      { label: "Lycée", values: niveaux.filter((item) => ["Seconde", "Première", "Terminale"].includes(item)) },
+      { label: "Supérieur", values: niveaux.filter((item) => ["L1", "L2", "L3", "M1", "M2"].includes(item)) },
+    ],
+    [niveaux]
+  );
 
   const matieres = useMemo(
     () =>
@@ -112,6 +145,8 @@ export default function PageClient({
     } as CSSProperties;
   };
 
+  const canShowCourseFilters = selectedNiveaux.length === 1 && selectedMatieres.length === 1;
+
   const resultats = useMemo(
     () =>
       resources.filter((r) => {
@@ -141,9 +176,9 @@ export default function PageClient({
       </section>
 
       <section className="panel">
-        <div className="field">
+        <div className="field filter-card classes-field">
           <label>Classes</label>
-          <div className="chip-grid">
+          <div className="chip-grid compact-grid">
             <button
               type="button"
               className={selectedNiveaux.length === 0 ? "chip active" : "chip"}
@@ -151,25 +186,32 @@ export default function PageClient({
             >
               Toutes
             </button>
-            {niveaux.map((niveauValue) => (
-              <button
-                key={niveauValue}
-                type="button"
-                className={selectedNiveaux.includes(niveauValue) ? "chip active" : "chip"}
-                style={getChipStyle(niveauValue, "niveau")}
-                onClick={() =>
-                  setSelectedNiveaux((prev) =>
-                    prev.includes(niveauValue) ? prev.filter((item) => item !== niveauValue) : [...prev, niveauValue]
-                  )
-                }
-              >
-                {niveauValue}
-              </button>
-            ))}
           </div>
+          {levelGroups.map((group) => (
+            <div key={group.label} className="level-group">
+              <p className="level-group-title">{group.label}</p>
+              <div className="chip-grid">
+                {group.values.map((niveauValue) => (
+                  <button
+                    key={niveauValue}
+                    type="button"
+                    className={selectedNiveaux.includes(niveauValue) ? "chip active" : "chip"}
+                    style={getChipStyle(niveauValue, "niveau")}
+                    onClick={() =>
+                      setSelectedNiveaux((prev) =>
+                        prev.includes(niveauValue) ? prev.filter((item) => item !== niveauValue) : [...prev, niveauValue]
+                      )
+                    }
+                  >
+                    {niveauValue}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
 
-        <div className="field">
+        <div className="field filter-card">
           <label>Matières</label>
           <div className="chip-grid">
             <button
@@ -199,33 +241,36 @@ export default function PageClient({
           </div>
         </div>
 
-        <div className="field">
-          <label>Cours</label>
-          <div className="chip-grid">
-            <button
-              type="button"
-              className={selectedCourseFiles.length === 0 ? "chip active" : "chip"}
-              onClick={() => setSelectedCourseFiles([])}
-            >
-              Tous
-            </button>
-            {availableCourseFiles.map((entry) => (
+        {canShowCourseFilters ? (
+          <div className="field filter-card">
+            <label>Cours</label>
+            <p className="helper-text">Sélectionnez un cours uniquement quand un niveau et une matière sont déjà choisis.</p>
+            <div className="chip-grid">
               <button
-                key={entry.file}
                 type="button"
-                className={selectedCourseFiles.includes(entry.file) ? "chip active" : "chip"}
-                style={getChipStyle(entry.matiere ?? "Mathématiques", "matiere")}
-                onClick={() =>
-                  setSelectedCourseFiles((prev) =>
-                    prev.includes(entry.file) ? prev.filter((item) => item !== entry.file) : [...prev, entry.file]
-                  )
-                }
+                className={selectedCourseFiles.length === 0 ? "chip active" : "chip"}
+                onClick={() => setSelectedCourseFiles([])}
               >
-                {entry.label}
+                Tous
               </button>
-            ))}
+              {availableCourseFiles.map((entry) => (
+                <button
+                  key={entry.file}
+                  type="button"
+                  className={selectedCourseFiles.includes(entry.file) ? "chip active" : "chip"}
+                  style={getChipStyle(entry.matiere ?? "Mathématiques", "matiere")}
+                  onClick={() =>
+                    setSelectedCourseFiles((prev) =>
+                      prev.includes(entry.file) ? prev.filter((item) => item !== entry.file) : [...prev, entry.file]
+                    )
+                  }
+                >
+                  {entry.label}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+        ) : null}
       </section>
 
       <section className="results-header">
@@ -349,8 +394,8 @@ export default function PageClient({
           max-width: 1180px;
           margin: 0 auto 16px;
           padding: 18px;
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          display: flex;
+          flex-direction: column;
           gap: 14px;
         }
 
@@ -358,6 +403,47 @@ export default function PageClient({
           display: flex;
           flex-direction: column;
           gap: 8px;
+        }
+
+        .filter-card {
+          padding: 14px;
+          border: 1px solid #e5edf8;
+          border-radius: 18px;
+          background: linear-gradient(180deg, rgba(255,255,255,0.97), rgba(248,251,255,0.98));
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+        }
+
+        .classes-field {
+          gap: 10px;
+        }
+
+        .level-group {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          padding: 10px;
+          border: 1px solid #e5edf8;
+          border-radius: 16px;
+          background: rgba(255,255,255,0.92);
+        }
+
+        .level-group-title {
+          margin: 0;
+          color: #4b6bff;
+          font-size: 0.88rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.12em;
+        }
+
+        .compact-grid {
+          margin-bottom: 2px;
+        }
+
+        .helper-text {
+          margin: 0;
+          color: #56708f;
+          font-size: 0.92rem;
         }
 
         label {
