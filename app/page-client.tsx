@@ -1,60 +1,126 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import type { Resource } from "../types/resources";
+import { useEffect, useMemo, useState, type CSSProperties } from "react";
+import type { ColorPalette, Resource, StyleCatalog } from "../types/resources";
 
-export default function PageClient({ resources }: { resources: Resource[] }) {
-  const [niveau, setNiveau] = useState("");
-  const [matiere, setMatiere] = useState("");
-  const [courseFile, setCourseFile] = useState("cours.json");
+const fallbackPalette: Required<ColorPalette> = {
+  base: "#fff5f5",
+  selected: "#dc2626",
+  border: "#fecaca",
+  text: "#991b1b",
+  card: "#fff7f7",
+  accent: "#ef4444",
+};
 
-  const niveaux = useMemo(() => [...new Set(resources.map((r) => r.niveau))], [resources]);
+export default function PageClient({
+  resources,
+  levelOrder = [],
+  styleData = {},
+}: {
+  resources: Resource[];
+  levelOrder?: string[];
+  styleData?: StyleCatalog;
+}) {
+  const [selectedNiveaux, setSelectedNiveaux] = useState<string[]>([]);
+  const [selectedMatieres, setSelectedMatieres] = useState<string[]>([]);
+  const [selectedCourseFiles, setSelectedCourseFiles] = useState<string[]>([]);
+
+  const niveaux = useMemo(() => {
+    const unique = [...new Set(resources.map((r) => r.niveau))];
+
+    if (levelOrder.length > 0) {
+      const ordered = levelOrder.filter((item) => unique.includes(item));
+      const rest = unique.filter((item) => !levelOrder.includes(item)).sort((a, b) => a.localeCompare(b));
+      return [...ordered, ...rest];
+    }
+
+    return unique.sort((a, b) => a.localeCompare(b));
+  }, [resources, levelOrder]);
 
   const matieres = useMemo(
-    () => [...new Set(resources.filter((r) => !niveau || r.niveau === niveau).map((r) => r.matiere))],
-    [niveau, resources]
+    () =>
+      [...new Set(
+        resources
+          .filter((r) => selectedNiveaux.length === 0 || selectedNiveaux.includes(r.niveau))
+          .map((r) => r.matiere)
+      )].sort(),
+    [resources, selectedNiveaux]
   );
 
   const availableCourseFiles = useMemo(() => {
     const filtered = resources.filter(
       (r) =>
-        (!niveau || r.niveau === niveau) &&
-        (!matiere || r.matiere === matiere) &&
+        (selectedNiveaux.length === 0 || selectedNiveaux.includes(r.niveau)) &&
+        (selectedMatieres.length === 0 || selectedMatieres.includes(r.matiere)) &&
         typeof r.sourceFile === "string" &&
         /^cours.*\.json$/i.test(r.sourceFile)
     );
 
-    return [...new Set(filtered.map((r) => r.sourceFile as string))]
-      .sort()
-      .map((file) => ({
-        file,
-        label: filtered.find((r) => r.sourceFile === file)?.courseLabel || file,
-      }));
-  }, [niveau, matiere, resources]);
+    return [...new Map(
+      filtered.map((r) => [
+        r.sourceFile as string,
+        {
+          file: r.sourceFile as string,
+          label: r.courseLabel || r.sourceFile,
+          matiere: r.matiere,
+        },
+      ])
+    ).values()].sort((a, b) => a.label.localeCompare(b.label));
+  }, [resources, selectedNiveaux, selectedMatieres]);
 
   useEffect(() => {
-    if (!matiere) {
-      setCourseFile("cours.json");
-      return;
-    }
+    setSelectedMatieres((prev) => prev.filter((m) => matieres.includes(m)));
+  }, [matieres]);
 
-    if (availableCourseFiles.some((entry) => entry.file === "cours.json")) {
-      setCourseFile("cours.json");
-      return;
-    }
+  useEffect(() => {
+    setSelectedCourseFiles((prev) => prev.filter((file) => availableCourseFiles.some((entry) => entry.file === file)));
+  }, [availableCourseFiles]);
 
-    setCourseFile(availableCourseFiles[0]?.file ?? "");
-  }, [matiere, availableCourseFiles]);
+  const getPalette = (name: string, kind: "niveau" | "matiere") => {
+    const palette = kind === "niveau" ? styleData.niveaux?.[name] : styleData.matieres?.[name];
+
+    return {
+      ...fallbackPalette,
+      ...palette,
+    } as Required<ColorPalette>;
+  };
+
+  const getChipStyle = (name: string, kind: "niveau" | "matiere") => {
+    const palette = getPalette(name, kind);
+
+    return {
+      "--chip-bg": palette.base,
+      "--chip-border": palette.border,
+      "--chip-hover-bg": palette.card,
+      "--chip-active-bg": palette.selected,
+      "--chip-active-border": palette.selected,
+      "--chip-text": palette.text,
+      "--chip-active-text": "#fff",
+    } as CSSProperties;
+  };
+
+  const getResultStyle = (resource: Resource) => {
+    const palette = getPalette(resource.matiere, "matiere");
+
+    return {
+      "--resource-bg": palette.card,
+      "--resource-border": palette.border,
+      "--resource-accent": palette.base,
+      "--resource-link": palette.selected,
+      "--resource-badge-bg": palette.base,
+      "--resource-badge-text": palette.text,
+    } as CSSProperties;
+  };
 
   const resultats = useMemo(
     () =>
-      resources.filter(
-        (r) =>
-          (!niveau || r.niveau === niveau) &&
-          (!matiere || r.matiere === matiere) &&
-          (!courseFile || r.sourceFile === courseFile)
-      ),
-    [niveau, matiere, courseFile, resources]
+      resources.filter((r) => {
+        const matchNiveau = selectedNiveaux.length === 0 || selectedNiveaux.includes(r.niveau);
+        const matchMatiere = selectedMatieres.length === 0 || selectedMatieres.includes(r.matiere);
+        const matchCourse = selectedCourseFiles.length === 0 || selectedCourseFiles.includes(r.sourceFile ?? "");
+        return matchNiveau && matchMatiere && matchCourse;
+      }),
+    [resources, selectedNiveaux, selectedMatieres, selectedCourseFiles]
   );
 
   return (
@@ -62,7 +128,7 @@ export default function PageClient({ resources }: { resources: Resource[] }) {
       <section className="hero-card">
         <div className="hero-copy">
           <p className="eyebrow">Ressources pédagogiques</p>
-          <h1>Choisissez votre parcours et accédez aux contenus en un clin d’œil.</h1>
+          <h1>Choisissez votre niveau et la matière que vous souhaitez explorer pour trouver les resources disponibles.</h1>
           <p className="lede">
             Le nom du cours est issu de la propriété "nom" du fichier JSON. Sélectionnez le niveau, la matière, puis basculez vers l’autre version si plusieurs cours existent.
           </p>
@@ -76,56 +142,90 @@ export default function PageClient({ resources }: { resources: Resource[] }) {
 
       <section className="panel">
         <div className="field">
-          <label htmlFor="niveau">Classe</label>
-          <select
-            id="niveau"
-            value={niveau}
-            onChange={(e) => {
-              setNiveau(e.target.value);
-              setMatiere("");
-            }}
-          >
-            <option value="">Toutes les classes</option>
-            {niveaux.map((n) => (
-              <option key={n} value={n}>
-                {n}
-              </option>
+          <label>Classes</label>
+          <div className="chip-grid">
+            <button
+              type="button"
+              className={selectedNiveaux.length === 0 ? "chip active" : "chip"}
+              onClick={() => setSelectedNiveaux([])}
+            >
+              Toutes
+            </button>
+            {niveaux.map((niveauValue) => (
+              <button
+                key={niveauValue}
+                type="button"
+                className={selectedNiveaux.includes(niveauValue) ? "chip active" : "chip"}
+                style={getChipStyle(niveauValue, "niveau")}
+                onClick={() =>
+                  setSelectedNiveaux((prev) =>
+                    prev.includes(niveauValue) ? prev.filter((item) => item !== niveauValue) : [...prev, niveauValue]
+                  )
+                }
+              >
+                {niveauValue}
+              </button>
             ))}
-          </select>
+          </div>
         </div>
 
         <div className="field">
-          <label htmlFor="matiere">Matière</label>
-          <select
-            id="matiere"
-            value={matiere}
-            onChange={(e) => setMatiere(e.target.value)}
-          >
-            <option value="">Choisissez une matière</option>
-            {matieres.map((m) => (
-              <option key={m} value={m}>
-                {m}
-              </option>
+          <label>Matières</label>
+          <div className="chip-grid">
+            <button
+              type="button"
+              className={selectedMatieres.length === 0 ? "chip active" : "chip"}
+              onClick={() => setSelectedMatieres([])}
+            >
+              Toutes
+            </button>
+            {matieres.map((matiereValue) => (
+              <button
+                key={matiereValue}
+                type="button"
+                className={selectedMatieres.includes(matiereValue) ? "chip active" : "chip"}
+                style={getChipStyle(matiereValue, "matiere")}
+                onClick={() =>
+                  setSelectedMatieres((prev) =>
+                    prev.includes(matiereValue)
+                      ? prev.filter((item) => item !== matiereValue)
+                      : [...prev, matiereValue]
+                  )
+                }
+              >
+                {matiereValue}
+              </button>
             ))}
-          </select>
+          </div>
         </div>
 
-        {matiere && availableCourseFiles.length > 1 ? (
-          <div className="field">
-            <label htmlFor="courseFile">Cours</label>
-            <select
-              id="courseFile"
-              value={courseFile}
-              onChange={(e) => setCourseFile(e.target.value)}
+        <div className="field">
+          <label>Cours</label>
+          <div className="chip-grid">
+            <button
+              type="button"
+              className={selectedCourseFiles.length === 0 ? "chip active" : "chip"}
+              onClick={() => setSelectedCourseFiles([])}
             >
-              {availableCourseFiles.map((entry) => (
-                <option key={entry.file} value={entry.file}>
-                  {entry.label}
-                </option>
-              ))}
-            </select>
+              Tous
+            </button>
+            {availableCourseFiles.map((entry) => (
+              <button
+                key={entry.file}
+                type="button"
+                className={selectedCourseFiles.includes(entry.file) ? "chip active" : "chip"}
+                style={getChipStyle(entry.matiere ?? "Mathématiques", "matiere")}
+                onClick={() =>
+                  setSelectedCourseFiles((prev) =>
+                    prev.includes(entry.file) ? prev.filter((item) => item !== entry.file) : [...prev, entry.file]
+                  )
+                }
+              >
+                {entry.label}
+              </button>
+            ))}
           </div>
-        ) : null}
+        </div>
       </section>
 
       <section className="results-header">
@@ -133,7 +233,7 @@ export default function PageClient({ resources }: { resources: Resource[] }) {
           <p className="eyebrow">Résultats</p>
           <h2>{resultats.length} ressource{resultats.length > 1 ? "s" : ""} affichée{resultats.length > 1 ? "s" : ""}</h2>
         </div>
-        <p className="mini-note">Filtres actifs : {niveau || "Tous les niveaux"} • {matiere || "Toutes les matières"}</p>
+        <p className="mini-note">Filtres actifs : {selectedNiveaux.length ? selectedNiveaux.join(", ") : "Tous les niveaux"} • {selectedMatieres.length ? selectedMatieres.join(", ") : "Toutes les matières"}</p>
       </section>
 
       <section className="results-grid">
@@ -148,6 +248,7 @@ export default function PageClient({ resources }: { resources: Resource[] }) {
           <article
             key={`${r.niveau}-${r.matiere}-${r.sourceFile ?? "unknown"}-${r.titre}-${r.url}-${r.chapitre}`}
             className="resource-card"
+            style={getResultStyle(r)}
           >
             <div className="resource-head">
               <p className="resource-meta">{r.niveau} • {r.matiere}</p>
@@ -264,20 +365,34 @@ export default function PageClient({ resources }: { resources: Resource[] }) {
           color: #24405c;
         }
 
-        select {
-          border: 1px solid #cdd9ef;
-          border-radius: 14px;
-          padding: 12px 14px;
-          background: #fff;
-          color: #17324d;
-          font-size: 1rem;
-          transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        .chip-grid {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
         }
 
-        select:focus {
-          outline: none;
-          border-color: #5b7cff;
-          box-shadow: 0 0 0 3px rgba(91, 124, 255, 0.18);
+        .chip {
+          border: 1px solid var(--chip-border, #cdd9ef);
+          border-radius: 999px;
+          padding: 8px 12px;
+          background: var(--chip-bg, #fff);
+          color: var(--chip-text, #17324d);
+          font-size: 0.95rem;
+          font-weight: 700;
+          cursor: pointer;
+          transition: all 0.18s ease;
+        }
+
+        .chip:hover {
+          border-color: var(--chip-active-border, #5b7cff);
+          background: var(--chip-hover-bg, #f4f7ff);
+        }
+
+        .chip.active {
+          background: var(--chip-active-bg, #dc2626);
+          border-color: var(--chip-active-border, #dc2626);
+          color: var(--chip-active-text, #fff);
+          box-shadow: 0 8px 18px rgba(220, 38, 38, 0.22);
         }
 
         .results-header {
@@ -312,6 +427,8 @@ export default function PageClient({ resources }: { resources: Resource[] }) {
         .resource-card,
         .empty-card {
           padding: 16px;
+          background: var(--resource-bg, rgba(255, 255, 255, 0.92));
+          border-color: var(--resource-border, #dbe6f7);
           transition: transform 0.15s ease, box-shadow 0.15s ease;
         }
 
@@ -339,8 +456,8 @@ export default function PageClient({ resources }: { resources: Resource[] }) {
           align-items: center;
           border-radius: 999px;
           padding: 6px 10px;
-          background: #edf3ff;
-          color: #3b5bd8;
+          background: var(--resource-badge-bg, #edf3ff);
+          color: var(--resource-badge-text, #3b5bd8);
           font-size: 0.85rem;
           font-weight: 700;
         }
@@ -354,7 +471,7 @@ export default function PageClient({ resources }: { resources: Resource[] }) {
         .resource-link {
           display: inline-block;
           margin-top: 10px;
-          color: #2858d4;
+          color: var(--resource-link, #2858d4);
           font-weight: 700;
           text-decoration: none;
         }

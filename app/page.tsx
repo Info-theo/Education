@@ -1,7 +1,31 @@
 import fs from "fs";
 import path from "path";
-import type { Resource } from "../types/resources";
+import type { Resource, StyleCatalog } from "../types/resources";
 import PageClient from "./page-client";
+
+function readLevelOrder(dir: string): string[] {
+  const orderFile = path.join(dir, "ordre-niveaux.json");
+
+  if (!fs.existsSync(orderFile)) {
+    return [];
+  }
+
+  const raw = JSON.parse(fs.readFileSync(orderFile, "utf8")) as { niveaux?: string[] };
+
+  return Array.isArray(raw.niveaux) ? raw.niveaux.filter((item): item is string => typeof item === "string") : [];
+}
+
+function readGenericStyles(dir: string): StyleCatalog {
+  const styleFile = path.join(dir, "generic_data.json");
+
+  if (!fs.existsSync(styleFile)) {
+    return {};
+  }
+
+  const raw = JSON.parse(fs.readFileSync(styleFile, "utf8")) as { styles?: StyleCatalog };
+
+  return raw.styles ?? {};
+}
 
 function readResources(dir: string): Resource[] {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
@@ -51,7 +75,10 @@ function readResources(dir: string): Resource[] {
 }
 
 export default function Home() {
-  const resources = readResources(path.join(process.cwd(), "data"));
+  const dataDir = path.join(process.cwd(), "data");
+  const resources = readResources(dataDir);
+  const levelOrder = readLevelOrder(dataDir);
+  const styleData = readGenericStyles(dataDir);
 
-  return <PageClient resources={resources} />;
+  return <PageClient resources={resources} levelOrder={levelOrder} styleData={styleData} />;
 }
