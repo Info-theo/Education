@@ -27,38 +27,16 @@ export default function PageClient({
 
   const niveaux = useMemo(() => {
     const unique = [...new Set(resources.map((r) => r.niveau))];
+    const preferredOrder = levelOrder.length > 0 ? levelOrder : (styleData.niveaux ?? []);
 
-    if (levelOrder.length > 0) {
-      const ordered = levelOrder.filter((item) => unique.includes(item));
-      const rest = unique.filter((item) => !levelOrder.includes(item)).sort((a, b) => a.localeCompare(b));
+    if (preferredOrder.length > 0) {
+      const ordered = preferredOrder.filter((item) => unique.includes(item));
+      const rest = unique.filter((item) => !preferredOrder.includes(item)).sort((a, b) => a.localeCompare(b));
       return [...ordered, ...rest];
     }
 
-    const preferredOrder = [
-      "CP",
-      "CE1",
-      "CE2",
-      "CM1",
-      "CM2",
-      "6eme",
-      "5eme",
-      "4eme",
-      "3eme",
-      "Seconde",
-      "Première",
-      "Terminale",
-      "L1",
-      "L2",
-      "L3",
-      "M1",
-      "M2",
-    ];
-
-    const ordered = preferredOrder.filter((item) => unique.includes(item));
-    const rest = unique.filter((item) => !preferredOrder.includes(item)).sort((a, b) => a.localeCompare(b));
-
-    return [...ordered, ...rest];
-  }, [resources, levelOrder]);
+    return unique.sort((a, b) => a.localeCompare(b));
+  }, [resources, levelOrder, styleData]);
 
   const levelGroups = useMemo(
     () => [
@@ -203,7 +181,8 @@ export default function PageClient({
                       )
                     }
                   >
-                    {niveauValue}
+                    <span className="chip-icon">{styleData.icons?.niveaux?.[niveauValue] ?? "📘"}</span>
+                    <span>{niveauValue}</span>
                   </button>
                 ))}
               </div>
@@ -219,7 +198,8 @@ export default function PageClient({
               className={selectedMatieres.length === 0 ? "chip active" : "chip"}
               onClick={() => setSelectedMatieres([])}
             >
-              Toutes
+              <span className="chip-icon">✨</span>
+              <span>Toutes</span>
             </button>
             {matieres.map((matiereValue) => (
               <button
@@ -235,7 +215,8 @@ export default function PageClient({
                   )
                 }
               >
-                {matiereValue}
+                <span className="chip-icon">{styleData.icons?.matieres?.[matiereValue] ?? "📘"}</span>
+                <span>{matiereValue}</span>
               </button>
             ))}
           </div>
@@ -251,7 +232,8 @@ export default function PageClient({
                 className={selectedCourseFiles.length === 0 ? "chip active" : "chip"}
                 onClick={() => setSelectedCourseFiles([])}
               >
-                Tous
+                <span className="chip-icon">📚</span>
+                <span>Tous</span>
               </button>
               {availableCourseFiles.map((entry) => (
                 <button
@@ -265,7 +247,8 @@ export default function PageClient({
                     )
                   }
                 >
-                  {entry.label}
+                  <span className="chip-icon">📄</span>
+                  <span>{entry.label}</span>
                 </button>
               ))}
             </div>
@@ -314,11 +297,16 @@ export default function PageClient({
       </section>
 
       <style jsx>{`
+        :global(html) {
+          background:
+            radial-gradient(circle at top, #ffffff 0%, #eef5ff 28%, #eef7ff 55%, #edf2fb 100%);
+        }
+
         :global(body) {
           margin: 0;
-          font-family: Arial, Helvetica, sans-serif;
+          font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
           background:
-            radial-gradient(circle at top, #ffffff 0%, #edf4ff 35%, #eff7ff 65%, #ecf3fb 100%);
+            radial-gradient(circle at top, #ffffff 0%, #eef5ff 28%, #eef7ff 55%, #edf2fb 100%);
           color: #17324d;
         }
 
@@ -327,6 +315,9 @@ export default function PageClient({
         .page-shell {
           min-height: 100vh;
           padding: 32px 18px 48px;
+          background:
+            linear-gradient(180deg, rgba(255,255,255,0.25), rgba(245,249,255,0.2)),
+            radial-gradient(circle at top, rgba(255,255,255,0.95), rgba(237,244,255,0.9) 35%, rgba(231,239,252,0.92) 100%);
         }
 
         .hero-card,
@@ -458,27 +449,41 @@ export default function PageClient({
         }
 
         .chip {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
           border: 1px solid var(--chip-border, #cdd9ef);
           border-radius: 999px;
-          padding: 8px 12px;
+          padding: 10px 13px;
           background: var(--chip-bg, #fff);
           color: var(--chip-text, #17324d);
           font-size: 0.95rem;
           font-weight: 700;
           cursor: pointer;
-          transition: all 0.18s ease;
+          transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+          box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
         }
 
         .chip:hover {
+          transform: translateY(-1px);
           border-color: var(--chip-active-border, #5b7cff);
           background: var(--chip-hover-bg, #f4f7ff);
+          box-shadow: 0 12px 24px rgba(79, 70, 229, 0.12);
         }
 
         .chip.active {
           background: var(--chip-active-bg, #dc2626);
           border-color: var(--chip-active-border, #dc2626);
           color: var(--chip-active-text, #fff);
-          box-shadow: 0 8px 18px rgba(220, 38, 38, 0.22);
+          box-shadow: 0 12px 24px rgba(220, 38, 38, 0.22);
+        }
+
+        .chip-icon {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 1.1rem;
+          font-size: 1rem;
         }
 
         .results-header {

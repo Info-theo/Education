@@ -22,9 +22,15 @@ function readGenericStyles(dir: string): StyleCatalog {
     return {};
   }
 
-  const raw = JSON.parse(fs.readFileSync(styleFile, "utf8")) as { styles?: StyleCatalog };
+  const raw = JSON.parse(fs.readFileSync(styleFile, "utf8")) as {
+    niveaux?: string[];
+    styles?: StyleCatalog;
+  };
 
-  return raw.styles ?? {};
+  return {
+    ...(raw.styles ?? {}),
+    niveaux: Array.isArray(raw.niveaux) ? raw.niveaux : [],
+  };
 }
 
 function readResources(dir: string): Resource[] {

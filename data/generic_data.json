@@ -1,4 +1,23 @@
 {
+  "niveaux": [
+    "CP",
+    "CE1",
+    "CE2",
+    "CM1",
+    "CM2",
+    "6eme",
+    "5eme",
+    "4eme",
+    "3eme",
+    "Seconde",
+    "Première",
+    "Terminale",
+    "L1",
+    "L2",
+    "L3",
+    "M1",
+    "M2"
+  ],
   "styles": {
     "niveaux": {
       "CP": { "base": "#fefce8", "selected": "#eab308", "border": "#fde047", "text": "#854d0e", "card": "#fffef5" },
@@ -71,6 +90,35 @@
         "border": "#67e8f9",
         "text": "#155e75",
         "card": "#f5feff"
+      }
+    },
+    "icons": {
+      "niveaux": {
+        "CP": "📘",
+        "CE1": "📗",
+        "CE2": "📘",
+        "CM1": "📙",
+        "CM2": "📕",
+        "6eme": "🏫",
+        "5eme": "📚",
+        "4eme": "📝",
+        "3eme": "🎒",
+        "Seconde": "🧠",
+        "Première": "🌟",
+        "Terminale": "🎓",
+        "L1": "💡",
+        "L2": "📘",
+        "L3": "🧭",
+        "M1": "🔬",
+        "M2": "🚀"
+      },
+      "matieres": {
+        "Mathématiques": "➗",
+        "Français": "📖",
+        "Histoire-Géographie": "🗺️",
+        "Physique-Chimie": "🧪",
+        "SVT": "🌱",
+        "Anglais": "🌍"
       }
     }
   }

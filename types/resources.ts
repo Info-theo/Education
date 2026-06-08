@@ -8,8 +8,12 @@ export interface ColorPalette {
 }
 
 export interface StyleCatalog {
-  niveaux?: Record<string, ColorPalette>;
+  niveaux?: string[];
   matieres?: Record<string, ColorPalette>;
+  icons?: {
+    niveaux?: Record<string, string>;
+    matieres?: Record<string, string>;
+  };
 }
 
 export interface Resource {
