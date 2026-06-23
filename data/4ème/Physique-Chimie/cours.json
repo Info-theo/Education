@@ -1,0 +1,33 @@
+[
+  {
+    "titre": "Cours de chimie 4ème",
+    "type": "link",
+    "source": "https://physique-chimie-college.fr/",
+    "url": "https://physique-chimie-college.fr/",
+    "chapitre": [
+    {
+      "titre": "Chimie",
+      "type": "link",
+      "url": "https://physique-chimie-college.fr/cours-4eme-chimie/"
+    },
+    {
+      "titre": "Electricité",
+      "type": "link",
+      "url": "https://physique-chimie-college.fr/cours-4eme-electricite/"
+    },
+    {
+      "titre": "Lumière",
+      "type": "link",
+      "url": "https://physique-chimie-college.fr/cours-4eme-lumiere/"
+    }
+  ]
+  },
+    {
+    "titre": "Physique Chimie 4ème",
+    "type": "link",
+    "source": "PCCL Physique Chimie Collège Lycée",
+    "url": "https://www.pccl.fr/quatrieme.htm"
+  }
+
+
+]

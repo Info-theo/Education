@@ -1,17 +1,9 @@
 [
   {
-    "chapitre": "Fractions",
-    "titre": "Découvrir les fractions",
+    "titre": "Physique Chimie Première",
     "type": "link",
-    "source": "Site pédagogique D",
-    "url": "https://monsite.fr/fractions"
-  },
-  {
-    "chapitre": "Géométrie",
-    "titre": "Découvrir les figures géométriques",
-    "type": "link",
-    "source": "Site pédagogique D",
-    "url": "https://monsite.fr/geometrie"
+    "source": "PCCL Physique Chimie Collège Lycée",
+    "url": "https://www.pccl.fr/lycee_premiere.htm"
   }
 
 ]

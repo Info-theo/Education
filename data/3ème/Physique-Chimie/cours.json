@@ -1,0 +1,35 @@
+[
+  {
+    "titre": "Cours de chimie 3ème",
+    "type": "link",
+    "source": "https://physique-chimie-college.fr/",
+    "url": "https://physique-chimie-college.fr/",
+    "chapitre": [
+    {
+      "titre": "Chimie",
+      "type": "link",
+      "url": "https://physique-chimie-college.fr/cours-3eme-chimie/"
+    },
+    {
+      "titre": "Electricité",
+      "type": "link",
+      "url": "https://physique-chimie-college.fr/cours-3eme-electricite/"
+    },
+    {
+      "titre": "Mécanique",
+      "type": "link",
+      "url": "https://physique-chimie-college.fr/cours-3eme-mecanique/"
+    }
+  ]
+
+    
+  },
+      {
+    "titre": "Physique Chimie 3ème",
+    "type": "link",
+    "source": "PCCL Physique Chimie Collège Lycée",
+    "url": "https://www.pccl.fr/troisieme.htm"
+  }
+
+
+]

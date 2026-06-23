@@ -1,17 +1,28 @@
 [
   {
-    "chapitre": "Fractions",
-    "titre": "Découvrir les fractions",
+    "titre": "Histoire 2nde",
     "type": "link",
-    "source": "Site pédagogique D",
-    "url": "https://monsite.fr/fractions"
+    "source": "histoiregeographie.net",
+    "url": "https://www.histoiregeographie.net/2de/histoire"
   },
   {
-    "chapitre": "Géométrie",
-    "titre": "Découvrir les figures géométriques",
+    "titre": "Géographie 2nde",
     "type": "link",
-    "source": "Site pédagogique D",
-    "url": "https://monsite.fr/geometrie"
+    "source": "histoiregeographie.net",
+    "url": "https://www.histoiregeographie.net/2de/géographie",
+    "chapitre": [
+    {
+      "titre": "Méthodologie",
+      "type": "link",
+      "url": "https://www.histoiregeographie.net/2de/g%C3%A9ographie/m%C3%A9thodologie"
+    }
+  ]
+  },
+  {
+    "titre": "Cours d'Histoire-Géographie seconde",
+    "type": "link",
+    "source": "histographie.net",
+    "url": "https://histographie.net/lycee/#seconde-lycee"
   }
 
 ]

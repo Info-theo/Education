@@ -1,0 +1,28 @@
+[
+  {
+    "titre": "Cours de SVT 6eme",
+    "type": "link",
+    "source": "Mon cours de SVT",
+    "url": "https://www.moncoursdesvt.com/College/Cycle3"
+  }, 
+  {
+    "titre": "Cours de SVT 6eme Collège Francois d'Assise",
+    "type": "link",
+    "source": "Cours de SVT 6eme Collège Francois d'Assise",
+    "url": "https://svt.francois-d-assise.fr/3.html",
+    "chapitre": [
+    {
+      "titre": "PARTIE B – LA TERRE, UNE PLANETE VIVANTE",
+      "type": "link",
+      "url": "https://svt.francois-d-assise.fr/7.html"
+    },
+    {
+      "titre": "PARTIE A – LE VIVANT ET SA DIVERSITE",
+      "type": "link",
+      "url": "https://svt.francois-d-assise.fr/6.html"
+    }
+  ] 
+  }
+
+
+]

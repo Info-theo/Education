@@ -1,0 +1,33 @@
+[
+  {
+    "titre": "Playlist de SVT 5eme/4eme/3eme",
+    "type": "video",
+    "source": "Mon Cours De SVT",
+    "url": "https://www.youtube.com/playlist?list=PLZVm1WQzNgrogv6Qefmd3j2tDjs0OWyjI"
+  },
+
+    {
+    "titre": "Cours de SVT 5eme Collège Francois d'Assise",
+    "type": "link",
+    "source": "Cours de SVT 5eme Collège Francois d'Assise",
+    "url": "https://svt.francois-d-assise.fr/cinquieme.html",
+    "chapitre": [
+    {
+      "titre": "PARTIE A – PLANETE TERRE, ENVIRONNEMENT ET ACTION HUMAINE",
+      "type": "link",
+      "url": "https://svt.francois-d-assise.fr/cinquiemepartiea.html"
+    },
+    {
+      "titre": "PARTIE B – LE CORPS HUMAIN ET SANTE",
+      "type": "link",
+      "url": "https://svt.francois-d-assise.fr/cinquiemepartieb.html"
+    },
+    {
+      "titre": "PARTIE C – LE VIVANT ET SON EVOLUTION",
+      "type": "link",
+      "url": "https://svt.francois-d-assise.fr/cinquiemepartiec.html"
+    }
+  ] 
+  }
+
+]

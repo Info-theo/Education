@@ -1,17 +1,34 @@
 [
   {
-    "chapitre": "Fractions",
-    "titre": "Découvrir les fractions",
+    "titre": "Histoire Terminale",
     "type": "link",
-    "source": "Site pédagogique D",
-    "url": "https://monsite.fr/fractions"
+    "source": "histoiregeographie.net",
+    "url": "https://www.histoiregeographie.net/tale/g%C3%A9n%C3%A9rale/histoire"
   },
   {
-    "chapitre": "Géométrie",
-    "titre": "Découvrir les figures géométriques",
+    "titre": "Géographie Terminale",
     "type": "link",
-    "source": "Site pédagogique D",
-    "url": "https://monsite.fr/geometrie"
+    "source": "histoiregeographie.net",
+    "url": "https://www.histoiregeographie.net/tale/g%C3%A9n%C3%A9rale/géographie"
+  },
+  {
+    "titre": "Histoire-géographie, Géopolitique et Sciences Politiques (H.G.G.S.P.)",
+    "type": "link",
+    "source": "histoiregeographie.net",
+    "url": "https://www.histoiregeographie.net/tale/h-g-g-s-p"
+  },
+  {
+    "titre": "Méthodologie",
+    "type": "link",
+    "source": "histoiregeographie.net",
+    "url": "https://www.histoiregeographie.net/tale/m%C3%A9thodologie"
+  },
+  {
+    "titre": "Aide préparation bac et grand oral",
+    "type": "link",
+    "source": "histographie.net",
+    "url": "https://histographie.net/lycee/bac-hggsp-fiches-methodes-grand-oral/"
   }
+
 
 ]

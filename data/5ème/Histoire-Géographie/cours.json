@@ -1,0 +1,21 @@
+[
+  {
+    "titre": "Histoire 5ème",
+    "type": "link",
+    "source": "histoiregeographie.net",
+    "url": "https://www.histoiregeographie.net/5%C3%A8me/histoire"
+  },
+  {
+    "titre": "Géographie 5ème",
+    "type": "link",
+    "source": "histoiregeographie.net",
+    "url": "https://www.histoiregeographie.net/5%C3%A8me/géographie"
+  },
+    {
+    "titre": "Cours d'Histoire-Géographie 5ème",
+    "type": "link",
+    "source": "histographie.net",
+    "url": "https://histographie.net/5e/"
+  }
+
+]

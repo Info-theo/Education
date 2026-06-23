@@ -1,17 +1,15 @@
 [
   {
-    "chapitre": "Fractions",
-    "titre": "Découvrir les fractions",
-    "type": "link",
-    "source": "Site pédagogique D",
-    "url": "https://monsite.fr/fractions"
+    "titre": "Playlist de Seconde SVT",
+    "type": "video",
+    "source": "Mon Cours De SVT",
+    "url": "https://www.youtube.com/watch?v=CQ4V_NgfVP8&list=PLZVm1WQzNgrqTI2Ya-TxNiXKjGmGbGXv8"
   },
   {
-    "chapitre": "Géométrie",
-    "titre": "Découvrir les figures géométriques",
-    "type": "link",
-    "source": "Site pédagogique D",
-    "url": "https://monsite.fr/geometrie"
+    "titre": "Playlist de Terminale SVT",
+    "type": "video",
+    "source": "Mon Cours De SVT",
+    "url": "  https://www.youtube.com/watch?v=TyI3uZC8Dh0&list=PLZVm1WQzNgrofQ8RWPVR1U_HIz4bf9Fym"
   }
 
 ]

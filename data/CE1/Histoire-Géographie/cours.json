@@ -1,17 +1,8 @@
 [
-  {
-    "chapitre": "Fractions",
-    "titre": "Découvrir les fractions",
+{
+    "titre": "Cours d'Histoire-Géographie pour le CE1",
     "type": "link",
-    "source": "Site pédagogique D",
-    "url": "https://monsite.fr/fractions"
-  },
-  {
-    "chapitre": "Géométrie",
-    "titre": "Découvrir les figures géométriques",
-    "type": "link",
-    "source": "Site pédagogique D",
-    "url": "https://monsite.fr/geometrie"
+    "source": "histographie.net",
+    "url": "https://histographie.net/ecole-primaire/ce1/"
   }
-
 ]

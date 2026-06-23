@@ -1,17 +1,28 @@
 [
   {
-    "chapitre": "Fractions",
-    "titre": "Découvrir les fractions",
+    "titre": "Histoire 1ère",
     "type": "link",
-    "source": "Site pédagogique D",
-    "url": "https://monsite.fr/fractions"
+    "source": "histoiregeographie.net",
+    "url": "https://www.histoiregeographie.net/1%C3%A8re/g%C3%A9n%C3%A9rale/histoire"
   },
   {
-    "chapitre": "Géométrie",
-    "titre": "Découvrir les figures géométriques",
+    "titre": "Géographie 1ère",
     "type": "link",
-    "source": "Site pédagogique D",
-    "url": "https://monsite.fr/geometrie"
+    "source": "histoiregeographie.net",
+    "url": "https://www.histoiregeographie.net/1%C3%A8re/g%C3%A9n%C3%A9rale/g%C3%A9ographie"
+  },
+  {
+    "titre": "Histoire-géographie, Géopolitique et Sciences Politiques (H.G.G.S.P.) 📍",
+    "type": "link",
+    "source": "histoiregeographie.net",
+    "url": "https://www.histoiregeographie.net/1%C3%A8re/h-g-g-s-p"
+  },
+  {
+    "titre": "Cours d'Histoire-Géographie première",
+    "type": "link",
+    "source": "histographie.net",
+    "url": "https://histographie.net/lycee/#premiere-hggsp-lycee"
   }
+
 
 ]

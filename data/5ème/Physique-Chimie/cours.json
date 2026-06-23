@@ -1,0 +1,34 @@
+[
+  {
+    "titre": "Cours de chimie 5ème",
+    "type": "link",
+    "source": "https://physique-chimie-college.fr/",
+    "url": "https://physique-chimie-college.fr/",
+    "chapitre": [
+    {
+      "titre": "Chimie",
+      "type": "link",
+      "url": "https://physique-chimie-college.fr/cours-5eme-chimie/"
+    },
+    {
+      "titre": "Electricité",
+      "type": "link",
+      "url": "https://physique-chimie-college.fr/cours-5eme-electricite/"
+    },
+    {
+      "titre": "Lumière",
+      "type": "link",
+      "url": "https://physique-chimie-college.fr/cours-5eme-lumiere/"
+    }
+  ]
+
+    
+  },
+  {
+    "titre": "Physique Chimie 5ème",
+    "type": "link",
+    "source": "PCCL Physique Chimie Collège Lycée",
+    "url": "https://www.pccl.fr/cinquieme.htm"
+  }
+
+]
