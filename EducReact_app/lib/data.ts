@@ -1,7 +1,14 @@
 import fs from "fs";
 import path from "path";
 import type { Resource, StyleCatalog, SubResource } from "../types/resources";
-import PageClient from "./page-client";
+
+/**
+ * Dossier des ressources (JSON des cours), partagé avec l'app Flutter.
+ * Par défaut : ../Resources par rapport à EducReact_app. Surchargeable via RESOURCES_DIR.
+ */
+export const resourcesDir = process.env.RESOURCES_DIR
+  ? path.resolve(process.env.RESOURCES_DIR)
+  : path.join(process.cwd(), "..", "Resources");
 
 function readLevelOrder(dir: string): string[] {
   const orderFile = path.join(dir, "ordre-niveaux.json");
@@ -43,7 +50,7 @@ function readResources(dir: string, rootDir: string = dir): Resource[] {
       return readResources(fullPath, rootDir);
     }
 
-    if (!entry.isFile() || !entry.name.endsWith(".json") || !/^cours.*\.json$/i.test(entry.name)) {
+    if (!entry.isFile() || !/^cours.*\.json$/i.test(entry.name)) {
       return [];
     }
 
@@ -52,18 +59,14 @@ function readResources(dir: string, rootDir: string = dir): Resource[] {
       | { nom?: string; name?: string; label?: string; resources?: Resource[] };
 
     const metadata = Array.isArray(raw) ? {} : raw;
-    const items = Array.isArray(raw)
-      ? raw
-      : Array.isArray(raw.resources)
-        ? raw.resources
-        : [];
+    const items = Array.isArray(raw) ? raw : Array.isArray(raw.resources) ? raw.resources : [];
     const courseLabel =
       (typeof metadata.nom === "string" && metadata.nom.trim()) ||
       (typeof metadata.name === "string" && metadata.name.trim()) ||
       (typeof metadata.label === "string" && metadata.label.trim()) ||
       undefined;
 
-    // Chemin relatif à data/ (ex. "CP/Mathématiques/cours2.json") : identifiant unique du cours.
+    // Chemin relatif au dossier Resources (ex. "CP/Mathématiques/cours2.json") : identifiant unique du cours.
     const relativePath = path.relative(rootDir, fullPath).split(path.sep).join("/").normalize("NFC");
     const [niveauFromPath = "", matiereFromPath = ""] = relativePath.split("/");
 
@@ -87,11 +90,10 @@ function readResources(dir: string, rootDir: string = dir): Resource[] {
   });
 }
 
-export default function Home() {
-  const dataDir = path.join(process.cwd(), "data");
-  const resources = readResources(dataDir);
-  const levelOrder = readLevelOrder(dataDir);
-  const styleData = readGenericStyles(dataDir);
-
-  return <PageClient resources={resources} levelOrder={levelOrder} styleData={styleData} />;
+export function loadCatalog() {
+  return {
+    resources: readResources(resourcesDir),
+    levelOrder: readLevelOrder(resourcesDir),
+    styleData: readGenericStyles(resourcesDir),
+  };
 }

@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
-import type { ColorPalette, Resource, StyleCatalog } from "../types/resources";
+import Link from "next/link";
+import type { ColorPalette, Resource, StyleCatalog } from "../../types/resources";
 
 const fallbackPalette: Required<ColorPalette> = {
   base: "#fff5f5",
@@ -137,19 +138,19 @@ export default function PageClient({
   );
 
   return (
-    <main className="page-shell">
+    <main className="adv-shell">
       <section className="hero-card">
         <div className="hero-copy">
-          <p className="eyebrow">Ressources pédagogiques</p>
-          <h1>Choisissez votre niveau et la matière que vous souhaitez explorer pour trouver les resources disponibles.</h1>
+          <p className="eyebrow">Recherche avancée</p>
+          <h1>Combinez librement plusieurs niveaux, matières et cours pour trouver les ressources disponibles.</h1>
           <p className="lede">
-            Le nom du cours est issu de la propriété "nom" du fichier JSON. Sélectionnez le niveau, la matière, puis basculez vers l’autre version si plusieurs cours existent.
+            Sélectionnez un ou plusieurs niveaux et matières. Le filtre « Cours » apparaît quand un seul niveau et une seule matière sont choisis.
           </p>
         </div>
         <div className="hero-pills">
-          <span>📘 Niveau</span>
-          <span>🧠 Matière</span>
-          <span>📚 Cours</span>
+          <Link href="/" className="switch-link">
+            ← Version guidée
+          </Link>
         </div>
       </section>
 
@@ -275,7 +276,7 @@ export default function PageClient({
         {resultats.map((r) => (
           <article
             key={`${r.niveau}-${r.matiere}-${r.sourceFile ?? "unknown"}-${r.titre}-${r.url}-${r.chapitre}`}
-            className="resource-card"
+            className="adv-card"
             style={getResultStyle(r)}
           >
             <div className="resource-head">
@@ -309,22 +310,8 @@ export default function PageClient({
       </section>
 
       <style jsx>{`
-        :global(html) {
-          background:
-            radial-gradient(circle at top, #ffffff 0%, #eef5ff 28%, #eef7ff 55%, #edf2fb 100%);
-        }
 
-        :global(body) {
-          margin: 0;
-          font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-          background:
-            radial-gradient(circle at top, #ffffff 0%, #eef5ff 28%, #eef7ff 55%, #edf2fb 100%);
-          color: #17324d;
-        }
-
-        * { box-sizing: border-box; }
-
-        .page-shell {
+        .adv-shell {
           min-height: 100vh;
           padding: 32px 18px 48px;
           background:
@@ -334,7 +321,7 @@ export default function PageClient({
 
         .hero-card,
         .panel,
-        .resource-card,
+        .adv-card,
         .empty-card {
           background: rgba(255, 255, 255, 0.92);
           border: 1px solid #dbe6f7;
@@ -384,13 +371,19 @@ export default function PageClient({
           justify-content: flex-end;
         }
 
-        .hero-pills span {
-          padding: 8px 10px;
+        .hero-pills :global(.switch-link) {
+          padding: 10px 14px;
           border-radius: 999px;
           background: #edf3ff;
           color: #3b5bd8;
           font-weight: 700;
           font-size: 0.92rem;
+          text-decoration: none;
+          white-space: nowrap;
+        }
+
+        .hero-pills :global(.switch-link:hover) {
+          background: #dfe9ff;
         }
 
         .panel {
@@ -527,7 +520,7 @@ export default function PageClient({
           gap: 18px;
         }
 
-        .resource-card,
+        .adv-card,
         .empty-card {
           padding: 16px;
           background: var(--resource-bg, rgba(255, 255, 255, 0.92));
@@ -535,7 +528,7 @@ export default function PageClient({
           transition: transform 0.15s ease, box-shadow 0.15s ease;
         }
 
-        .resource-card:hover {
+        .adv-card:hover {
           transform: translateY(-2px);
           box-shadow: 0 18px 34px rgba(31, 41, 55, 0.14);
         }

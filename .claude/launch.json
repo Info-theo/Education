@@ -1,0 +1,28 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "react",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "EducReact_app",
+        "run",
+        "dev"
+      ],
+      "port": 3000
+    },
+    {
+      "name": "flutter-web",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8085",
+        "--directory",
+        "Flutter_app/build/web"
+      ],
+      "port": 8085
+    }
+  ]
+}
