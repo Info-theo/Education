@@ -5,8 +5,7 @@
     "dev": "next dev",
     "validate": "node ../tools/build-catalog.mjs --check",
     "prebuild": "node ../tools/build-catalog.mjs --check --quiet",
-    "build": "next build",
-    "start": "next start"
+    "build": "next build"
   },
   "dependencies": {
     "next": "^15.0.0",

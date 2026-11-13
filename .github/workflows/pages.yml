@@ -1,0 +1,89 @@
+# Publie le site sur GitHub Pages :
+#   https://<compte>.github.io/<dépôt>/            → version React (guidée)
+#   https://<compte>.github.io/<dépôt>/avance/     → version React (recherche avancée)
+#   https://<compte>.github.io/<dépôt>/flutter/    → version Flutter (web)
+#   https://<compte>.github.io/<dépôt>/catalog.json → catalogue des ressources
+#
+# Prérequis (une seule fois) : Settings → Pages → Source : « GitHub Actions ».
+name: Déploiement GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: EducReact_app/package-lock.json
+
+      - name: Valider les ressources
+        run: node tools/build-catalog.mjs --check
+
+      - name: Configurer Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Installer les dépendances React
+        working-directory: EducReact_app
+        run: npm ci
+
+      - name: Construire la version React
+        working-directory: EducReact_app
+        env:
+          NEXT_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: npm run build
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.24.2
+          cache: true
+
+      - name: Générer le catalogue Flutter
+        run: node tools/build-catalog.mjs --quiet
+
+      - name: Construire la version Flutter (web)
+        working-directory: Flutter_app
+        run: |
+          flutter pub get
+          flutter build web --release --base-href "${{ steps.pages.outputs.base_path }}/flutter/"
+
+      - name: Assembler le site
+        run: |
+          mkdir -p site/flutter
+          cp -r EducReact_app/out/. site/
+          cp -r Flutter_app/build/web/. site/flutter/
+          node tools/build-catalog.mjs --quiet --out site/catalog.json
+          touch site/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Déployer sur GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -63,3 +63,18 @@ flutter run
 
 Le catalogue est embarqué dans l'application (`assets/catalog.json`) : après une modification,
 régénère-le puis appuie sur `R` dans `flutter run`, ou rebuild l'application.
+
+## Publication sur GitHub Pages
+
+Le workflow `.github/workflows/pages.yml` construit les deux applications et publie le site
+à chaque push sur `main` (ou à la demande depuis l'onglet **Actions**) :
+
+| Adresse | Contenu |
+|---|---|
+| `https://<compte>.github.io/<dépôt>/` | version React guidée |
+| `…/avance/` | version React, recherche avancée |
+| `…/flutter/` | version Flutter (web) |
+| `…/catalog.json` | catalogue complet des ressources |
+
+À faire une seule fois : **Settings → Pages → Build and deployment → Source : GitHub Actions**.
+Le déploiement échoue si `Resources/` contient des erreurs (`node tools/build-catalog.mjs --check`).
