@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import type { Resource, StyleCatalog } from "../types/resources";
+import type { Resource, StyleCatalog, SubResource } from "../types/resources";
 import PageClient from "./page-client";
 
 function readLevelOrder(dir: string): string[] {
@@ -29,18 +29,18 @@ function readGenericStyles(dir: string): StyleCatalog {
 
   return {
     ...(raw.styles ?? {}),
-    niveaux: Array.isArray(raw.niveaux) ? raw.niveaux : [],
+    ordreNiveaux: Array.isArray(raw.niveaux) ? raw.niveaux : [],
   };
 }
 
-function readResources(dir: string): Resource[] {
+function readResources(dir: string, rootDir: string = dir): Resource[] {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
 
   return entries.flatMap((entry) => {
     const fullPath = path.join(dir, entry.name);
 
     if (entry.isDirectory()) {
-      return readResources(fullPath);
+      return readResources(fullPath, rootDir);
     }
 
     if (!entry.isFile() || !entry.name.endsWith(".json") || !/^cours.*\.json$/i.test(entry.name)) {
@@ -63,20 +63,27 @@ function readResources(dir: string): Resource[] {
       (typeof metadata.label === "string" && metadata.label.trim()) ||
       undefined;
 
-    const parts = fullPath.split(path.sep);
-    const dataIndex = parts.indexOf("data");
-    const niveauFromPath = dataIndex >= 0 ? parts[dataIndex + 1] ?? "" : "";
-    const matiereFromPath = dataIndex >= 0 ? parts[dataIndex + 2] ?? "" : "";
-    const chapitreFromPath = path.basename(fullPath, ".json");
+    // Chemin relatif à data/ (ex. "CP/Mathématiques/cours2.json") : identifiant unique du cours.
+    const relativePath = path.relative(rootDir, fullPath).split(path.sep).join("/").normalize("NFC");
+    const [niveauFromPath = "", matiereFromPath = ""] = relativePath.split("/");
 
-    return items.map((item) => ({
-      ...item,
-      niveau: item.niveau || niveauFromPath,
-      matiere: item.matiere || matiereFromPath,
-      chapitre: item.chapitre || (chapitreFromPath !== "resources" ? chapitreFromPath : ""),
-      sourceFile: path.basename(fullPath),
-      courseLabel: item.courseLabel || courseLabel || path.basename(fullPath),
-    }));
+    return items.map((item) => {
+      // "chapitre" peut être une liste de sous-liens (parties d'un même cours).
+      const rawChapitre = item.chapitre as unknown;
+      const sousRessources = Array.isArray(rawChapitre)
+        ? (rawChapitre as SubResource[]).filter((sub) => sub && typeof sub.url === "string")
+        : undefined;
+
+      return {
+        ...item,
+        niveau: (item.niveau || niveauFromPath).normalize("NFC"),
+        matiere: (item.matiere || matiereFromPath).normalize("NFC"),
+        chapitre: typeof rawChapitre === "string" ? rawChapitre : "",
+        sousRessources,
+        sourceFile: relativePath,
+        courseLabel: item.courseLabel || courseLabel || path.basename(fullPath),
+      };
+    });
   });
 }
 

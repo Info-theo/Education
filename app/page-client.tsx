@@ -27,7 +27,7 @@ export default function PageClient({
 
   const niveaux = useMemo(() => {
     const unique = [...new Set(resources.map((r) => r.niveau))];
-    const preferredOrder = levelOrder.length > 0 ? levelOrder : (styleData.niveaux ?? []);
+    const preferredOrder = levelOrder.length > 0 ? levelOrder : (styleData.ordreNiveaux ?? []);
 
     if (preferredOrder.length > 0) {
       const ordered = preferredOrder.filter((item) => unique.includes(item));
@@ -41,7 +41,7 @@ export default function PageClient({
   const levelGroups = useMemo(
     () => [
       { label: "Primaire", values: niveaux.filter((item) => ["CP", "CE1", "CE2", "CM1", "CM2"].includes(item)) },
-      { label: "Collège", values: niveaux.filter((item) => ["6eme", "5eme", "4eme", "3eme"].includes(item)) },
+      { label: "Collège", values: niveaux.filter((item) => ["6ème", "5ème", "4ème", "3ème"].includes(item)) },
       { label: "Lycée", values: niveaux.filter((item) => ["Seconde", "Première", "Terminale"].includes(item)) },
       { label: "Supérieur", values: niveaux.filter((item) => ["L1", "L2", "L3", "M1", "M2"].includes(item)) },
     ],
@@ -64,7 +64,7 @@ export default function PageClient({
         (selectedNiveaux.length === 0 || selectedNiveaux.includes(r.niveau)) &&
         (selectedMatieres.length === 0 || selectedMatieres.includes(r.matiere)) &&
         typeof r.sourceFile === "string" &&
-        /^cours.*\.json$/i.test(r.sourceFile)
+        /(^|\/)cours[^/]*\.json$/i.test(r.sourceFile)
     );
 
     return [...new Map(
@@ -283,15 +283,27 @@ export default function PageClient({
               {r.chapitre ? <span className="badge">Chapitre : {r.chapitre}</span> : null}
             </div>
             <h2>{r.titre}</h2>
-            <p className="resource-source">Source : {r.source}</p>
+            {r.source ? <p className="resource-source">Source : {r.source}</p> : null}
 
-            {r.type === "link" ? (
-              <a className="resource-link" href={r.url} target="_blank" rel="noreferrer">
-                Ouvrir le site de la ressource
-              </a>
+            {r.type === "iframe" ? (
+              <iframe className="resource-frame" src={r.url} title={r.titre} loading="lazy" />
             ) : (
-              <iframe className="resource-frame" src={r.url} title={r.titre} />
+              <a className="resource-link" href={r.url} target="_blank" rel="noreferrer">
+                {r.type === "video" ? "Voir la vidéo" : "Ouvrir le site de la ressource"}
+              </a>
             )}
+
+            {r.sousRessources?.length ? (
+              <ul className="sub-resources">
+                {r.sousRessources.map((sub) => (
+                  <li key={sub.url}>
+                    <a href={sub.url} target="_blank" rel="noreferrer">
+                      {sub.titre}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
           </article>
         ))}
       </section>
@@ -565,6 +577,24 @@ export default function PageClient({
           color: var(--resource-link, #2858d4);
           font-weight: 700;
           text-decoration: none;
+        }
+
+        .sub-resources {
+          margin: 12px 0 0;
+          padding-left: 18px;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+
+        .sub-resources a {
+          color: var(--resource-link, #2858d4);
+          font-weight: 600;
+          text-decoration: none;
+        }
+
+        .sub-resources a:hover {
+          text-decoration: underline;
         }
 
         .resource-frame {
