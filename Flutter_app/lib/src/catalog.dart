@@ -5,7 +5,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'models.dart';
 
 /// Catalogue complet chargé depuis assets/catalog.json
-/// (généré par `dart run tool/sync_resources.dart`).
+/// (généré par `node tools/build-catalog.mjs` depuis la racine du dépôt).
 class Catalog {
   Catalog._({
     required this.resources,
@@ -31,7 +31,16 @@ class Catalog {
     return Catalog.fromJson(raw);
   }
 
+  /// Version du format de catalog.json comprise par cette app (voir tools/catalog.mjs).
+  static const supportedVersion = 1;
+
   factory Catalog.fromJson(Map<String, dynamic> raw) {
+    final version = raw['version'];
+    if (version is int && version > supportedVersion) {
+      throw FormatException(
+          'catalog.json en version $version, cette app ne comprend que la version $supportedVersion : mets-la à jour.');
+    }
+
     final styles = (raw['styles'] as Map<String, dynamic>?) ?? const {};
     final icons = (styles['icons'] as Map<String, dynamic>?) ?? const {};
 

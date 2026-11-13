@@ -1,1 +1,21 @@
-{"name":"cours-index-v1","private":true,"scripts":{"dev":"next dev","build":"next build","start":"next start"},"dependencies":{"next":"^15.0.0","react":"^19.0.0","react-dom":"^19.0.0"},"devDependencies":{"@types/node":"20.17.6","@types/react":"19.2.16","typescript":"5.8.2"}}
+{
+  "name": "cours-index-v1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "validate": "node ../tools/build-catalog.mjs --check",
+    "prebuild": "node ../tools/build-catalog.mjs --check --quiet",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.17.6",
+    "@types/react": "19.2.16",
+    "typescript": "5.8.2"
+  }
+}

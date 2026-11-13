@@ -91,6 +91,6 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 
-  # Généré par `dart run tool/sync_resources.dart` à partir de ../Resources
+  # Généré par `node tools/build-catalog.mjs` (racine du dépôt) à partir de Resources/
   assets:
     - assets/catalog.json

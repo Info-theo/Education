@@ -1,4 +1,6 @@
 {
+  "version": 1,
+  "generatedAt": "2026-11-13T15:12:14.608Z",
   "ordreNiveaux": [
     "CP",
     "CE1",
@@ -292,18 +294,15 @@
       "sousRessources": [
         {
           "titre": "Chimie",
-          "url": "https://physique-chimie-college.fr/cours-3eme-chimie/",
-          "type": "link"
+          "url": "https://physique-chimie-college.fr/cours-3eme-chimie/"
         },
         {
           "titre": "Electricité",
-          "url": "https://physique-chimie-college.fr/cours-3eme-electricite/",
-          "type": "link"
+          "url": "https://physique-chimie-college.fr/cours-3eme-electricite/"
         },
         {
           "titre": "Mécanique",
-          "url": "https://physique-chimie-college.fr/cours-3eme-mecanique/",
-          "type": "link"
+          "url": "https://physique-chimie-college.fr/cours-3eme-mecanique/"
         }
       ],
       "sourceFile": "3ème/Physique-Chimie/cours.json",
@@ -342,18 +341,15 @@
       "sousRessources": [
         {
           "titre": "PARTIE A – CORPS HUMAIN ET SANTE",
-          "url": "https://svt.francois-d-assise.fr/troisiemepartiea.html",
-          "type": "link"
+          "url": "https://svt.francois-d-assise.fr/troisiemepartiea.html"
         },
         {
           "titre": "PARTIE B – PLANETE TERRE, ENVIRONNEMENT ET ACTION HUMAINE",
-          "url": "https://svt.francois-d-assise.fr/troisiemepartieb.html",
-          "type": "link"
+          "url": "https://svt.francois-d-assise.fr/troisiemepartieb.html"
         },
         {
           "titre": "PARTIE C – LE VIVANT ET SON EVOLUTION",
-          "url": "https://svt.francois-d-assise.fr/troisiemepartiec.html",
-          "type": "link"
+          "url": "https://svt.francois-d-assise.fr/troisiemepartiec.html"
         }
       ],
       "sourceFile": "3ème/SVT/cours.json",
@@ -436,18 +432,15 @@
       "sousRessources": [
         {
           "titre": "Chimie",
-          "url": "https://physique-chimie-college.fr/cours-4eme-chimie/",
-          "type": "link"
+          "url": "https://physique-chimie-college.fr/cours-4eme-chimie/"
         },
         {
           "titre": "Electricité",
-          "url": "https://physique-chimie-college.fr/cours-4eme-electricite/",
-          "type": "link"
+          "url": "https://physique-chimie-college.fr/cours-4eme-electricite/"
         },
         {
           "titre": "Lumière",
-          "url": "https://physique-chimie-college.fr/cours-4eme-lumiere/",
-          "type": "link"
+          "url": "https://physique-chimie-college.fr/cours-4eme-lumiere/"
         }
       ],
       "sourceFile": "4ème/Physique-Chimie/cours.json",
@@ -486,18 +479,15 @@
       "sousRessources": [
         {
           "titre": "PARTIE A – PLANETE TERRE, ENVIRONNEMENT ET ACTION HUMAINE",
-          "url": "https://svt.francois-d-assise.fr/quatriemepartiea.html",
-          "type": "link"
+          "url": "https://svt.francois-d-assise.fr/quatriemepartiea.html"
         },
         {
           "titre": "PARTIE B – LE VIVANT ET SON EVOLUTION",
-          "url": "https://svt.francois-d-assise.fr/quatriemepartieb.html",
-          "type": "link"
+          "url": "https://svt.francois-d-assise.fr/quatriemepartieb.html"
         },
         {
           "titre": "PARTIE C – LE CORPS HUMAIN ET SANTE",
-          "url": "https://svt.francois-d-assise.fr/quatriemepartiec.html",
-          "type": "link"
+          "url": "https://svt.francois-d-assise.fr/quatriemepartiec.html"
         }
       ],
       "sourceFile": "4ème/SVT/cours.json",
@@ -580,18 +570,15 @@
       "sousRessources": [
         {
           "titre": "Chimie",
-          "url": "https://physique-chimie-college.fr/cours-5eme-chimie/",
-          "type": "link"
+          "url": "https://physique-chimie-college.fr/cours-5eme-chimie/"
         },
         {
           "titre": "Electricité",
-          "url": "https://physique-chimie-college.fr/cours-5eme-electricite/",
-          "type": "link"
+          "url": "https://physique-chimie-college.fr/cours-5eme-electricite/"
         },
         {
           "titre": "Lumière",
-          "url": "https://physique-chimie-college.fr/cours-5eme-lumiere/",
-          "type": "link"
+          "url": "https://physique-chimie-college.fr/cours-5eme-lumiere/"
         }
       ],
       "sourceFile": "5ème/Physique-Chimie/cours.json",
@@ -630,18 +617,15 @@
       "sousRessources": [
         {
           "titre": "PARTIE A – PLANETE TERRE, ENVIRONNEMENT ET ACTION HUMAINE",
-          "url": "https://svt.francois-d-assise.fr/cinquiemepartiea.html",
-          "type": "link"
+          "url": "https://svt.francois-d-assise.fr/cinquiemepartiea.html"
         },
         {
           "titre": "PARTIE B – LE CORPS HUMAIN ET SANTE",
-          "url": "https://svt.francois-d-assise.fr/cinquiemepartieb.html",
-          "type": "link"
+          "url": "https://svt.francois-d-assise.fr/cinquiemepartieb.html"
         },
         {
           "titre": "PARTIE C – LE VIVANT ET SON EVOLUTION",
-          "url": "https://svt.francois-d-assise.fr/cinquiemepartiec.html",
-          "type": "link"
+          "url": "https://svt.francois-d-assise.fr/cinquiemepartiec.html"
         }
       ],
       "sourceFile": "5ème/SVT/cours.json",
@@ -746,13 +730,11 @@
       "sousRessources": [
         {
           "titre": "PARTIE B – LA TERRE, UNE PLANETE VIVANTE",
-          "url": "https://svt.francois-d-assise.fr/7.html",
-          "type": "link"
+          "url": "https://svt.francois-d-assise.fr/7.html"
         },
         {
           "titre": "PARTIE A – LE VIVANT ET SA DIVERSITE",
-          "url": "https://svt.francois-d-assise.fr/6.html",
-          "type": "link"
+          "url": "https://svt.francois-d-assise.fr/6.html"
         }
       ],
       "sourceFile": "6ème/SVT/cours.json",
@@ -1189,17 +1171,6 @@
     },
     {
       "niveau": "CP",
-      "matiere": "Anglais",
-      "chapitre": "",
-      "titre": "",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CP/Anglais/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CP",
       "matiere": "Français",
       "chapitre": "Grammaire",
       "titre": "Nature des mots",
@@ -1539,8 +1510,7 @@
       "sousRessources": [
         {
           "titre": "Méthodologie",
-          "url": "https://www.histoiregeographie.net/2de/g%C3%A9ographie/m%C3%A9thodologie",
-          "type": "link"
+          "url": "https://www.histoiregeographie.net/2de/g%C3%A9ographie/m%C3%A9thodologie"
         }
       ],
       "sourceFile": "Seconde/Histoire-Géographie/cours.json",
@@ -1720,17 +1690,6 @@
       "source": "Site pédagogique D",
       "url": "https://monsite.fr/geometrie",
       "sourceFile": "Terminale/Mathématiques/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "Terminale",
-      "matiere": "NSI (option)",
-      "chapitre": "",
-      "titre": "NSI Saint-Aspais Première",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "data/Terminale/Mathématiques/cours.json",
-      "sourceFile": "Terminale/NSI (option)/cours.json",
       "courseLabel": "cours.json"
     },
     {

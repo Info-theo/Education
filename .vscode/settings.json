@@ -1,0 +1,8 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["/Resources/**/cours*.json"],
+      "url": "./tools/cours.schema.json"
+    }
+  ]
+}

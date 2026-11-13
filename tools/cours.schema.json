@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "cours.schema.json",
+  "title": "Fichier de cours",
+  "description": "Resources/<Niveau>/<Matière>/cours*.json : une liste de ressources, ou un cours nommé { nom, resources }. Le niveau et la matière sont déduits du chemin. Validation complète : node tools/build-catalog.mjs --check",
+  "oneOf": [
+    {
+      "type": "array",
+      "items": { "$ref": "#/definitions/ressource" }
+    },
+    {
+      "type": "object",
+      "required": ["resources"],
+      "properties": {
+        "nom": {
+          "type": "string",
+          "description": "Nom du cours affiché dans les onglets quand une matière a plusieurs cours."
+        },
+        "resources": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/ressource" }
+        }
+      },
+      "additionalProperties": false
+    }
+  ],
+  "definitions": {
+    "lien": {
+      "type": "string",
+      "pattern": "^https?://",
+      "description": "Adresse web complète (https://…)."
+    },
+    "ressource": {
+      "type": "object",
+      "required": ["titre", "url"],
+      "properties": {
+        "titre": { "type": "string", "minLength": 1 },
+        "type": {
+          "enum": ["link", "video", "iframe"],
+          "default": "link",
+          "description": "link : site web · video : vidéo (YouTube…) · iframe : page intégrée dans la carte."
+        },
+        "source": { "type": "string", "description": "Nom du site ou de l'auteur." },
+        "url": { "$ref": "#/definitions/lien" },
+        "chapitre": {
+          "description": "Nom du chapitre, ou liste des parties du cours.",
+          "oneOf": [
+            { "type": "string" },
+            {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["titre", "url"],
+                "properties": {
+                  "titre": { "type": "string" },
+                  "type": { "enum": ["link", "video", "iframe"] },
+                  "url": { "$ref": "#/definitions/lien" }
+                }
+              }
+            }
+          ]
+        },
+        "niveau": { "type": "string", "description": "Facultatif : remplace le niveau déduit du dossier." },
+        "matiere": { "type": "string", "description": "Facultatif : remplace la matière déduite du dossier." }
+      }
+    }
+  }
+}

@@ -3,7 +3,7 @@
 Version Flutter du parcours guidé (classe → matière → ressources), équivalente à la page `/` de `EducReact_app`.
 
 ```bash
-dart run tool/sync_resources.dart   # génère assets/catalog.json depuis ../Resources
+node ../tools/build-catalog.mjs     # génère assets/catalog.json depuis ../Resources
 flutter run                         # ou : flutter run -d chrome
 flutter test
 ```

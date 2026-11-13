@@ -50,7 +50,7 @@ class _CatalogLoaderState extends State<_CatalogLoader> {
                 padding: const EdgeInsets.all(24),
                 child: Text(
                   'Impossible de charger les ressources.\n'
-                  'Lance « dart run tool/sync_resources.dart » puis relance l’application.\n\n'
+                  'Depuis la racine du dépôt, lance « node tools/build-catalog.mjs » puis relance l’application.\n\n'
                   '${snapshot.error}',
                   textAlign: TextAlign.center,
                   style: const TextStyle(color: ink),
