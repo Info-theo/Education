@@ -19,5 +19,40 @@
     "source": "histographie.net",
     "url": "https://histographie.net/3e/",
     "titrePage": "3e - HISTOgraphie.net"
+  },
+  {
+    "titre": "Histoire en 3ème : vidéos et révisions",
+    "type": "link",
+    "source": "Lumni (France Télévisions)",
+    "url": "https://www.lumni.fr/college/troisieme/histoire",
+    "titrePage": "Histoire en Troisième - Révisions & vidéos | Lumni"
+  },
+  {
+    "titre": "Géographie en 3ème : vidéos et révisions",
+    "type": "link",
+    "source": "Lumni (France Télévisions)",
+    "url": "https://www.lumni.fr/college/troisieme/geographie",
+    "titrePage": "Géographie en Troisième - Révisions & vidéos | Lumni"
+  },
+  {
+    "titre": "L'Histoire par l'image : œuvres d'art et documents analysés",
+    "type": "link",
+    "source": "Histoire-image.org (GrandPalaisRmn)",
+    "url": "https://histoire-image.org/",
+    "titrePage": "Histoire-image.org | L’histoire analysée par l’image"
+  },
+  {
+    "titre": "Seterra : quiz de cartes (pays, capitales, régions)",
+    "type": "link",
+    "source": "Seterra",
+    "url": "https://www.seterra.com/fr/",
+    "titrePage": "Apprenez la géographie - Seterra"
+  },
+  {
+    "titre": "Le Dessous des cartes : géopolitique en vidéo",
+    "type": "video",
+    "source": "ARTE",
+    "url": "https://www.arte.tv/fr/videos/RC-014036/le-dessous-des-cartes/",
+    "titrePage": "Le dessous des cartes - Info et société | ARTE"
   }
 ]

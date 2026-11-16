@@ -5,5 +5,33 @@
     "source": "histographie.net",
     "url": "https://histographie.net/ecole-primaire/cm1/",
     "titrePage": "CM1 - HISTOgraphie.net"
+  },
+  {
+    "titre": "Histoire en CM1 : vidéos et révisions",
+    "type": "link",
+    "source": "Lumni (France Télévisions)",
+    "url": "https://www.lumni.fr/primaire/cm1/histoire",
+    "titrePage": "Histoire en Cm1 - Révisions & vidéos | Lumni"
+  },
+  {
+    "titre": "Géographie en CM1 : vidéos et révisions",
+    "type": "link",
+    "source": "Lumni (France Télévisions)",
+    "url": "https://www.lumni.fr/primaire/cm1/geographie",
+    "titrePage": "Géographie en Cm1 - Révisions & vidéos | Lumni"
+  },
+  {
+    "titre": "L'Histoire par l'image : œuvres d'art et documents analysés",
+    "type": "link",
+    "source": "Histoire-image.org (GrandPalaisRmn)",
+    "url": "https://histoire-image.org/",
+    "titrePage": "Histoire-image.org | L’histoire analysée par l’image"
+  },
+  {
+    "titre": "Seterra : quiz de cartes (pays, capitales, régions)",
+    "type": "link",
+    "source": "Seterra",
+    "url": "https://www.seterra.com/fr/",
+    "titrePage": "Apprenez la géographie - Seterra"
   }
 ]

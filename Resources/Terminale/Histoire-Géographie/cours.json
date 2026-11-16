@@ -33,5 +33,40 @@
     "source": "histographie.net",
     "url": "https://histographie.net/lycee/bac-hggsp-fiches-methodes-grand-oral/",
     "titrePage": "Bac HGGSP - HISTOgraphie.net"
+  },
+  {
+    "titre": "Histoire en Terminale : vidéos et révisions",
+    "type": "link",
+    "source": "Lumni (France Télévisions)",
+    "url": "https://www.lumni.fr/lycee/terminale/histoire",
+    "titrePage": "Histoire en Terminale - Révisions & vidéos | Lumni"
+  },
+  {
+    "titre": "Géographie en Terminale : vidéos et révisions",
+    "type": "link",
+    "source": "Lumni (France Télévisions)",
+    "url": "https://www.lumni.fr/lycee/terminale/geographie",
+    "titrePage": "Géographie en Terminale - Révisions & vidéos | Lumni"
+  },
+  {
+    "titre": "L'Histoire par l'image : œuvres d'art et documents analysés",
+    "type": "link",
+    "source": "Histoire-image.org (GrandPalaisRmn)",
+    "url": "https://histoire-image.org/",
+    "titrePage": "Histoire-image.org | L’histoire analysée par l’image"
+  },
+  {
+    "titre": "Géoconfluences : ressources de géographie pour le lycée",
+    "type": "link",
+    "source": "ENS de Lyon",
+    "url": "https://geoconfluences.ens-lyon.fr/",
+    "titrePage": "accueil-geoconfluences — Géoconfluences"
+  },
+  {
+    "titre": "Le Dessous des cartes : géopolitique en vidéo",
+    "type": "video",
+    "source": "ARTE",
+    "url": "https://www.arte.tv/fr/videos/RC-014036/le-dessous-des-cartes/",
+    "titrePage": "Le dessous des cartes - Info et société | ARTE"
   }
 ]
