@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16T21:42:05.267Z",
+  "generatedAt": "2026-11-16T21:49:46.259Z",
   "ordreNiveaux": [
     "CP",
     "CE1",
@@ -567,6 +567,42 @@
     },
     {
       "niveau": "3ème",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "Physique-chimie en 3ème : vidéos et révisions",
+      "type": "link",
+      "source": "Lumni (France Télévisions)",
+      "url": "https://www.lumni.fr/college/troisieme/physique-chimie",
+      "titrePage": "Physique-chimie en Troisième - Révisions & vidéos | Lumni",
+      "sourceFile": "3ème/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "3ème",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "PhET : simulations interactives de physique et de chimie",
+      "type": "link",
+      "source": "PhET (Université du Colorado)",
+      "url": "https://phet.colorado.edu/fr/",
+      "titrePage": "PhET: Des simulations gratuites en physique, chimie, biologie, sciences de la Terre et mathématiques | PhET Simulations",
+      "sourceFile": "3ème/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "3ème",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "Tableau périodique interactif des éléments",
+      "type": "link",
+      "source": "Ptable",
+      "url": "https://ptable.com/?lang=fr",
+      "titrePage": "Tableau Périodique - Ptable",
+      "sourceFile": "3ème/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "3ème",
       "matiere": "SVT",
       "chapitre": "",
       "titre": "Playlist de SVT 5eme/4eme/3eme",
@@ -603,6 +639,18 @@
           "titrePage": "SVT niveau 3ème partie C"
         }
       ],
+      "sourceFile": "3ème/SVT/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "3ème",
+      "matiere": "SVT",
+      "chapitre": "",
+      "titre": "SVT en 3ème : vidéos et révisions",
+      "type": "link",
+      "source": "Lumni (France Télévisions)",
+      "url": "https://www.lumni.fr/college/troisieme/sciences-de-la-vie-et-de-la-terre",
+      "titrePage": "Sciences de la vie et de la Terre en Troisième - Révisions & vidéos | Lumni",
       "sourceFile": "3ème/SVT/cours.json",
       "courseLabel": "cours.json"
     },
@@ -924,6 +972,42 @@
     },
     {
       "niveau": "4ème",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "Physique-chimie en 4ème : vidéos et révisions",
+      "type": "link",
+      "source": "Lumni (France Télévisions)",
+      "url": "https://www.lumni.fr/college/quatrieme/physique-chimie",
+      "titrePage": "Physique-chimie en Quatrième - Révisions & vidéos | Lumni",
+      "sourceFile": "4ème/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "4ème",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "PhET : simulations interactives de physique et de chimie",
+      "type": "link",
+      "source": "PhET (Université du Colorado)",
+      "url": "https://phet.colorado.edu/fr/",
+      "titrePage": "PhET: Des simulations gratuites en physique, chimie, biologie, sciences de la Terre et mathématiques | PhET Simulations",
+      "sourceFile": "4ème/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "4ème",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "Tableau périodique interactif des éléments",
+      "type": "link",
+      "source": "Ptable",
+      "url": "https://ptable.com/?lang=fr",
+      "titrePage": "Tableau Périodique - Ptable",
+      "sourceFile": "4ème/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "4ème",
       "matiere": "SVT",
       "chapitre": "",
       "titre": "Playlist de SVT 5eme/4eme/3eme",
@@ -960,6 +1044,18 @@
           "titrePage": "SVT niveau 4ème partie C"
         }
       ],
+      "sourceFile": "4ème/SVT/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "4ème",
+      "matiere": "SVT",
+      "chapitre": "",
+      "titre": "SVT en 4ème : vidéos et révisions",
+      "type": "link",
+      "source": "Lumni (France Télévisions)",
+      "url": "https://www.lumni.fr/college/quatrieme/sciences-de-la-vie-et-de-la-terre",
+      "titrePage": "Sciences de la vie et de la Terre en Quatrième - Révisions & vidéos | Lumni",
       "sourceFile": "4ème/SVT/cours.json",
       "courseLabel": "cours.json"
     },
@@ -1281,6 +1377,30 @@
     },
     {
       "niveau": "5ème",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "Physique-chimie en 5ème : vidéos et révisions",
+      "type": "link",
+      "source": "Lumni (France Télévisions)",
+      "url": "https://www.lumni.fr/college/cinquieme/physique-chimie",
+      "titrePage": "Physique-chimie en Cinquième - Révisions & vidéos | Lumni",
+      "sourceFile": "5ème/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "5ème",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "PhET : simulations interactives de physique et de chimie",
+      "type": "link",
+      "source": "PhET (Université du Colorado)",
+      "url": "https://phet.colorado.edu/fr/",
+      "titrePage": "PhET: Des simulations gratuites en physique, chimie, biologie, sciences de la Terre et mathématiques | PhET Simulations",
+      "sourceFile": "5ème/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "5ème",
       "matiere": "SVT",
       "chapitre": "",
       "titre": "Playlist de SVT 5eme/4eme/3eme",
@@ -1317,6 +1437,18 @@
           "titrePage": "SVT niveau 5ème partie C"
         }
       ],
+      "sourceFile": "5ème/SVT/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "5ème",
+      "matiere": "SVT",
+      "chapitre": "",
+      "titre": "SVT en 5ème : vidéos et révisions",
+      "type": "link",
+      "source": "Lumni (France Télévisions)",
+      "url": "https://www.lumni.fr/college/cinquieme/sciences-de-la-vie-et-de-la-terre",
+      "titrePage": "Sciences de la vie et de la Terre en Cinquième - Révisions & vidéos | Lumni",
       "sourceFile": "5ème/SVT/cours.json",
       "courseLabel": "cours.json"
     },
@@ -1573,6 +1705,30 @@
     },
     {
       "niveau": "6ème",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "Sciences et technologie en 6ème : vidéos et révisions",
+      "type": "link",
+      "source": "Lumni (France Télévisions)",
+      "url": "https://www.lumni.fr/college/sixieme/sciences-et-technologie",
+      "titrePage": "Sciences et technologie en Sixième - Révisions & vidéos | Lumni",
+      "sourceFile": "6ème/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "6ème",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "PhET : simulations interactives de physique et de chimie",
+      "type": "link",
+      "source": "PhET (Université du Colorado)",
+      "url": "https://phet.colorado.edu/fr/",
+      "titrePage": "PhET: Des simulations gratuites en physique, chimie, biologie, sciences de la Terre et mathématiques | PhET Simulations",
+      "sourceFile": "6ème/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "6ème",
       "matiere": "SVT",
       "chapitre": "",
       "titre": "Cours de SVT 6eme",
@@ -1604,6 +1760,18 @@
           "titrePage": "SVT niveau 6ème partie A"
         }
       ],
+      "sourceFile": "6ème/SVT/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "6ème",
+      "matiere": "SVT",
+      "chapitre": "",
+      "titre": "Sciences et technologie en 6ème : vidéos et révisions",
+      "type": "link",
+      "source": "Lumni (France Télévisions)",
+      "url": "https://www.lumni.fr/college/sixieme/sciences-et-technologie",
+      "titrePage": "Sciences et technologie en Sixième - Révisions & vidéos | Lumni",
       "sourceFile": "6ème/SVT/cours.json",
       "courseLabel": "cours.json"
     },
@@ -2531,6 +2699,66 @@
     },
     {
       "niveau": "Première",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "Physique-chimie en Première : vidéos et révisions",
+      "type": "link",
+      "source": "Lumni (France Télévisions)",
+      "url": "https://www.lumni.fr/lycee/premiere/physique-chimie",
+      "titrePage": "Physique-chimie en Première - Révisions & vidéos | Lumni",
+      "sourceFile": "Première/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Première",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "PhET : simulations interactives de physique et de chimie",
+      "type": "link",
+      "source": "PhET (Université du Colorado)",
+      "url": "https://phet.colorado.edu/fr/",
+      "titrePage": "PhET: Des simulations gratuites en physique, chimie, biologie, sciences de la Terre et mathématiques | PhET Simulations",
+      "sourceFile": "Première/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Première",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "Tableau périodique interactif des éléments",
+      "type": "link",
+      "source": "Ptable",
+      "url": "https://ptable.com/?lang=fr",
+      "titrePage": "Tableau Périodique - Ptable",
+      "sourceFile": "Première/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Première",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "CultureSciences-Physique : articles et dossiers",
+      "type": "link",
+      "source": "ENS de Lyon",
+      "url": "https://culturesciencesphysique.ens-lyon.fr/",
+      "titrePage": "Accueil — Culture Sciences Physique",
+      "sourceFile": "Première/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Première",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "CultureSciences-Chimie : articles et dossiers",
+      "type": "link",
+      "source": "ENS (Paris)",
+      "url": "https://culturesciences.chimie.ens.fr/",
+      "titrePage": "Accueil | CultureSciences-Chimie",
+      "sourceFile": "Première/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Première",
       "matiere": "SVT",
       "chapitre": "",
       "titre": "Premiere spécialité SVT",
@@ -2550,6 +2778,42 @@
       "source": "Mon Cours De SVT",
       "url": "https://www.youtube.com/watch?v=yU77o4g1udo&list=PLZVm1WQzNgrqaGIfYbtQDyk-1aanyxVDF",
       "titrePage": "Cristaux : les roches, des associations de cristaux - Enseignement scientifique - 1ère",
+      "sourceFile": "Première/SVT/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Première",
+      "matiere": "SVT",
+      "chapitre": "",
+      "titre": "SVT en Première : vidéos et révisions",
+      "type": "link",
+      "source": "Lumni (France Télévisions)",
+      "url": "https://www.lumni.fr/lycee/premiere/sciences-de-la-vie-et-de-la-terre",
+      "titrePage": "Sciences de la vie et de la Terre en Première - Révisions & vidéos | Lumni",
+      "sourceFile": "Première/SVT/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Première",
+      "matiere": "SVT",
+      "chapitre": "",
+      "titre": "Planet-Vie : ressources en biologie",
+      "type": "link",
+      "source": "ENS (Paris)",
+      "url": "https://planet-vie.ens.fr/",
+      "titrePage": "Accueil | Planet-Vie",
+      "sourceFile": "Première/SVT/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Première",
+      "matiere": "SVT",
+      "chapitre": "",
+      "titre": "Planet-Terre : ressources en sciences de la Terre",
+      "type": "link",
+      "source": "ENS de Lyon",
+      "url": "https://planet-terre.ens-lyon.fr/",
+      "titrePage": "Accueil : ressources scientifiques pour l'enseignement des sciences de la Terre — Planet-Terre",
       "sourceFile": "Première/SVT/cours.json",
       "courseLabel": "cours.json"
     },
@@ -2872,6 +3136,42 @@
     },
     {
       "niveau": "Seconde",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "Physique-chimie en Seconde : vidéos et révisions",
+      "type": "link",
+      "source": "Lumni (France Télévisions)",
+      "url": "https://www.lumni.fr/lycee/seconde/physique-chimie",
+      "titrePage": "Physique-chimie en Seconde - Révisions & vidéos | Lumni",
+      "sourceFile": "Seconde/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Seconde",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "PhET : simulations interactives de physique et de chimie",
+      "type": "link",
+      "source": "PhET (Université du Colorado)",
+      "url": "https://phet.colorado.edu/fr/",
+      "titrePage": "PhET: Des simulations gratuites en physique, chimie, biologie, sciences de la Terre et mathématiques | PhET Simulations",
+      "sourceFile": "Seconde/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Seconde",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "Tableau périodique interactif des éléments",
+      "type": "link",
+      "source": "Ptable",
+      "url": "https://ptable.com/?lang=fr",
+      "titrePage": "Tableau Périodique - Ptable",
+      "sourceFile": "Seconde/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Seconde",
       "matiere": "SVT",
       "chapitre": "",
       "titre": "Playlist de Seconde SVT",
@@ -2879,6 +3179,42 @@
       "source": "Mon Cours De SVT",
       "url": "https://www.youtube.com/watch?v=CQ4V_NgfVP8&list=PLZVm1WQzNgrqTI2Ya-TxNiXKjGmGbGXv8",
       "titrePage": "L'organisation des organismes pluricellulaire - Seconde",
+      "sourceFile": "Seconde/SVT/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Seconde",
+      "matiere": "SVT",
+      "chapitre": "",
+      "titre": "SVT en Seconde : vidéos et révisions",
+      "type": "link",
+      "source": "Lumni (France Télévisions)",
+      "url": "https://www.lumni.fr/lycee/seconde/sciences-de-la-vie-et-de-la-terre",
+      "titrePage": "Sciences de la vie et de la Terre en Seconde - Révisions & vidéos | Lumni",
+      "sourceFile": "Seconde/SVT/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Seconde",
+      "matiere": "SVT",
+      "chapitre": "",
+      "titre": "Planet-Vie : ressources en biologie",
+      "type": "link",
+      "source": "ENS (Paris)",
+      "url": "https://planet-vie.ens.fr/",
+      "titrePage": "Accueil | Planet-Vie",
+      "sourceFile": "Seconde/SVT/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Seconde",
+      "matiere": "SVT",
+      "chapitre": "",
+      "titre": "Planet-Terre : ressources en sciences de la Terre",
+      "type": "link",
+      "source": "ENS de Lyon",
+      "url": "https://planet-terre.ens-lyon.fr/",
+      "titrePage": "Accueil : ressources scientifiques pour l'enseignement des sciences de la Terre — Planet-Terre",
       "sourceFile": "Seconde/SVT/cours.json",
       "courseLabel": "cours.json"
     },
@@ -3219,6 +3555,66 @@
     },
     {
       "niveau": "Terminale",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "Physique-chimie en Terminale : vidéos et révisions",
+      "type": "link",
+      "source": "Lumni (France Télévisions)",
+      "url": "https://www.lumni.fr/lycee/terminale/physique-chimie",
+      "titrePage": "Physique-chimie en Terminale - Révisions & vidéos | Lumni",
+      "sourceFile": "Terminale/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Terminale",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "PhET : simulations interactives de physique et de chimie",
+      "type": "link",
+      "source": "PhET (Université du Colorado)",
+      "url": "https://phet.colorado.edu/fr/",
+      "titrePage": "PhET: Des simulations gratuites en physique, chimie, biologie, sciences de la Terre et mathématiques | PhET Simulations",
+      "sourceFile": "Terminale/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Terminale",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "Tableau périodique interactif des éléments",
+      "type": "link",
+      "source": "Ptable",
+      "url": "https://ptable.com/?lang=fr",
+      "titrePage": "Tableau Périodique - Ptable",
+      "sourceFile": "Terminale/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Terminale",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "CultureSciences-Physique : articles et dossiers",
+      "type": "link",
+      "source": "ENS de Lyon",
+      "url": "https://culturesciencesphysique.ens-lyon.fr/",
+      "titrePage": "Accueil — Culture Sciences Physique",
+      "sourceFile": "Terminale/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Terminale",
+      "matiere": "Physique-Chimie",
+      "chapitre": "",
+      "titre": "CultureSciences-Chimie : articles et dossiers",
+      "type": "link",
+      "source": "ENS (Paris)",
+      "url": "https://culturesciences.chimie.ens.fr/",
+      "titrePage": "Accueil | CultureSciences-Chimie",
+      "sourceFile": "Terminale/Physique-Chimie/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Terminale",
       "matiere": "SVT",
       "chapitre": "",
       "titre": "Playlist de Seconde SVT",
@@ -3238,6 +3634,42 @@
       "source": "Mon Cours De SVT",
       "url": "https://www.youtube.com/watch?v=TyI3uZC8Dh0&list=PLZVm1WQzNgrofQ8RWPVR1U_HIz4bf9Fym",
       "titrePage": "De l'atmosphère primitive à l'atmosphère actuelle - Enseignement scientifique - Terminale",
+      "sourceFile": "Terminale/SVT/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Terminale",
+      "matiere": "SVT",
+      "chapitre": "",
+      "titre": "SVT en Terminale : vidéos et révisions",
+      "type": "link",
+      "source": "Lumni (France Télévisions)",
+      "url": "https://www.lumni.fr/lycee/terminale/sciences-de-la-vie-et-de-la-terre",
+      "titrePage": "Sciences de la vie et de la Terre en Terminale - Révisions & vidéos | Lumni",
+      "sourceFile": "Terminale/SVT/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Terminale",
+      "matiere": "SVT",
+      "chapitre": "",
+      "titre": "Planet-Vie : ressources en biologie",
+      "type": "link",
+      "source": "ENS (Paris)",
+      "url": "https://planet-vie.ens.fr/",
+      "titrePage": "Accueil | Planet-Vie",
+      "sourceFile": "Terminale/SVT/cours.json",
+      "courseLabel": "cours.json"
+    },
+    {
+      "niveau": "Terminale",
+      "matiere": "SVT",
+      "chapitre": "",
+      "titre": "Planet-Terre : ressources en sciences de la Terre",
+      "type": "link",
+      "source": "ENS de Lyon",
+      "url": "https://planet-terre.ens-lyon.fr/",
+      "titrePage": "Accueil : ressources scientifiques pour l'enseignement des sciences de la Terre — Planet-Terre",
       "sourceFile": "Terminale/SVT/cours.json",
       "courseLabel": "cours.json"
     }

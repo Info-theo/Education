@@ -5,5 +5,19 @@
     "source": "PCCL Physique Chimie Collège Lycée",
     "url": "https://www.pccl.fr/physique_chimie_college_lycee/programme_rentree_2016/cycle3_cm1_cm2_6e_sciences/cycle3_cm1_cm2_6e_sciences.htm",
     "titrePage": "PCCL - Physique Chimie - Sciences pour le cycle 3 : CM1 - CM2 - 6e - Soutien scolaire aux cours, gratuit et libre d'accès, en animations pédagogiques interactives, définitions et exercices corrigés pour EPI : On y aborde mouvement, vitesse, trajectoire, système solaire, énergie"
+  },
+  {
+    "titre": "Sciences et technologie en 6ème : vidéos et révisions",
+    "type": "link",
+    "source": "Lumni (France Télévisions)",
+    "url": "https://www.lumni.fr/college/sixieme/sciences-et-technologie",
+    "titrePage": "Sciences et technologie en Sixième - Révisions & vidéos | Lumni"
+  },
+  {
+    "titre": "PhET : simulations interactives de physique et de chimie",
+    "type": "link",
+    "source": "PhET (Université du Colorado)",
+    "url": "https://phet.colorado.edu/fr/",
+    "titrePage": "PhET: Des simulations gratuites en physique, chimie, biologie, sciences de la Terre et mathématiques | PhET Simulations"
   }
 ]

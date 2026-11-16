@@ -12,5 +12,26 @@
     "source": "Mon Cours De SVT",
     "url": "  https://www.youtube.com/watch?v=yU77o4g1udo&list=PLZVm1WQzNgrqaGIfYbtQDyk-1aanyxVDF",
     "titrePage": "Cristaux : les roches, des associations de cristaux - Enseignement scientifique - 1ère"
+  },
+  {
+    "titre": "SVT en Première : vidéos et révisions",
+    "type": "link",
+    "source": "Lumni (France Télévisions)",
+    "url": "https://www.lumni.fr/lycee/premiere/sciences-de-la-vie-et-de-la-terre",
+    "titrePage": "Sciences de la vie et de la Terre en Première - Révisions & vidéos | Lumni"
+  },
+  {
+    "titre": "Planet-Vie : ressources en biologie",
+    "type": "link",
+    "source": "ENS (Paris)",
+    "url": "https://planet-vie.ens.fr/",
+    "titrePage": "Accueil | Planet-Vie"
+  },
+  {
+    "titre": "Planet-Terre : ressources en sciences de la Terre",
+    "type": "link",
+    "source": "ENS de Lyon",
+    "url": "https://planet-terre.ens-lyon.fr/",
+    "titrePage": "Accueil : ressources scientifiques pour l'enseignement des sciences de la Terre — Planet-Terre"
   }
 ]

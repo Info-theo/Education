@@ -5,5 +5,26 @@
     "source": "PCCL Physique Chimie Collège Lycée",
     "url": "https://www.pccl.fr/lycee_seconde.htm",
     "titrePage": "PCCL - Animations flash interactives gratuites - Physique Chimie lycée 2e - seconde - Soutien scolaire gratuit et libre d'accès. Idéal pour la classe inversée."
+  },
+  {
+    "titre": "Physique-chimie en Seconde : vidéos et révisions",
+    "type": "link",
+    "source": "Lumni (France Télévisions)",
+    "url": "https://www.lumni.fr/lycee/seconde/physique-chimie",
+    "titrePage": "Physique-chimie en Seconde - Révisions & vidéos | Lumni"
+  },
+  {
+    "titre": "PhET : simulations interactives de physique et de chimie",
+    "type": "link",
+    "source": "PhET (Université du Colorado)",
+    "url": "https://phet.colorado.edu/fr/",
+    "titrePage": "PhET: Des simulations gratuites en physique, chimie, biologie, sciences de la Terre et mathématiques | PhET Simulations"
+  },
+  {
+    "titre": "Tableau périodique interactif des éléments",
+    "type": "link",
+    "source": "Ptable",
+    "url": "https://ptable.com/?lang=fr",
+    "titrePage": "Tableau Périodique - Ptable"
   }
 ]

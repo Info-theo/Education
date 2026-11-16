@@ -5,5 +5,40 @@
     "source": "PCCL Physique Chimie Collège Lycée",
     "url": "https://www.pccl.fr/lycee_premiere.htm",
     "titrePage": "PCCL - Physique Chimie lycée 1e - première - 1e - Soutien scolaire gratuit et libre d'accès. Idéal pour la classe inversée."
+  },
+  {
+    "titre": "Physique-chimie en Première : vidéos et révisions",
+    "type": "link",
+    "source": "Lumni (France Télévisions)",
+    "url": "https://www.lumni.fr/lycee/premiere/physique-chimie",
+    "titrePage": "Physique-chimie en Première - Révisions & vidéos | Lumni"
+  },
+  {
+    "titre": "PhET : simulations interactives de physique et de chimie",
+    "type": "link",
+    "source": "PhET (Université du Colorado)",
+    "url": "https://phet.colorado.edu/fr/",
+    "titrePage": "PhET: Des simulations gratuites en physique, chimie, biologie, sciences de la Terre et mathématiques | PhET Simulations"
+  },
+  {
+    "titre": "Tableau périodique interactif des éléments",
+    "type": "link",
+    "source": "Ptable",
+    "url": "https://ptable.com/?lang=fr",
+    "titrePage": "Tableau Périodique - Ptable"
+  },
+  {
+    "titre": "CultureSciences-Physique : articles et dossiers",
+    "type": "link",
+    "source": "ENS de Lyon",
+    "url": "https://culturesciencesphysique.ens-lyon.fr/",
+    "titrePage": "Accueil — Culture Sciences Physique"
+  },
+  {
+    "titre": "CultureSciences-Chimie : articles et dossiers",
+    "type": "link",
+    "source": "ENS (Paris)",
+    "url": "https://culturesciences.chimie.ens.fr/",
+    "titrePage": "Accueil | CultureSciences-Chimie"
   }
 ]
