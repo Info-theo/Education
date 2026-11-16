@@ -16,6 +16,8 @@
           "type": "string",
           "description": "Nom du cours affiché dans les onglets quand une matière a plusieurs cours."
         },
+        "statut": { "$ref": "#/definitions/statut" },
+        "motif": { "$ref": "#/definitions/motif" },
         "resources": {
           "type": "array",
           "items": { "$ref": "#/definitions/ressource" }
@@ -25,6 +27,19 @@
     }
   ],
   "definitions": {
+    "statut": {
+      "enum": ["actif", "archive"],
+      "default": "actif",
+      "description": "actif : publié dans les applications · archive : conservé ici mais masqué (lien cassé, contenu obsolète…)."
+    },
+    "motif": {
+      "type": "string",
+      "description": "Pourquoi la ressource est archivée (ex. « lien cassé depuis mars 2026 »)."
+    },
+    "titrePage": {
+      "type": "string",
+      "description": "Titre attendu de la page (balise <title>, ou titre YouTube). Vérifié par node tools/check-links.mjs ; rempli automatiquement avec --save-titles."
+    },
     "lien": {
       "type": "string",
       "pattern": "^https?://",
@@ -34,6 +49,8 @@
       "type": "object",
       "required": ["titre", "url"],
       "properties": {
+        "statut": { "$ref": "#/definitions/statut" },
+        "motif": { "$ref": "#/definitions/motif" },
         "titre": { "type": "string", "minLength": 1 },
         "type": {
           "enum": ["link", "video", "iframe"],
@@ -42,6 +59,7 @@
         },
         "source": { "type": "string", "description": "Nom du site ou de l'auteur." },
         "url": { "$ref": "#/definitions/lien" },
+        "titrePage": { "$ref": "#/definitions/titrePage" },
         "chapitre": {
           "description": "Nom du chapitre, ou liste des parties du cours.",
           "oneOf": [
@@ -54,7 +72,8 @@
                 "properties": {
                   "titre": { "type": "string" },
                   "type": { "enum": ["link", "video", "iframe"] },
-                  "url": { "$ref": "#/definitions/lien" }
+                  "url": { "$ref": "#/definitions/lien" },
+                  "titrePage": { "$ref": "#/definitions/titrePage" }
                 }
               }
             }

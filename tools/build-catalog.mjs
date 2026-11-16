@@ -7,6 +7,7 @@
 //   node tools/build-catalog.mjs --out a.json --out b.json   destinations personnalisées
 //   node tools/build-catalog.mjs --quiet    masque les avertissements
 //   node tools/build-catalog.mjs --force    écrit quand même, sans les ressources invalides
+//   node tools/build-catalog.mjs --archives liste les ressources archivées ("statut": "archive")
 //
 // Code de sortie : 1 s'il y a au moins une erreur (rien n'est écrit, sauf avec --force).
 import fs from "node:fs";
@@ -26,11 +27,21 @@ const resourcesDir = process.env.RESOURCES_DIR
   : path.join(repoRoot, "Resources");
 const destinations = outs.length ? outs : [path.join(repoRoot, "Flutter_app", "assets", "catalog.json")];
 
-const { catalog, issues } = loadCatalog(resourcesDir);
+const { catalog, issues, archived } = loadCatalog(resourcesDir);
 const errorCount = printIssues(issues, { warnings: !quiet });
 
+if (args.includes("--archives") && archived.length) {
+  console.log(`\n🗄 ${archived.length} ressource(s) archivée(s) :`);
+  archived.forEach((a) =>
+    console.log(`  - ${a.sourceFile} : ${a.titre}${a.motif ? ` (${a.motif})` : ""}${a.url ? `\n      ${a.url}` : ""}`)
+  );
+}
+
 const files = new Set(catalog.resources.map((r) => r.sourceFile)).size;
-console.log(`\n${catalog.resources.length} ressources dans ${files} fichiers de cours.`);
+console.log(
+  `\n${catalog.resources.length} ressources publiées dans ${files} fichiers de cours` +
+    (archived.length ? `, ${archived.length} archivée(s) (non publiées, --archives pour la liste).` : ".")
+);
 
 if (errorCount > 0 && !force) {
   console.error("Catalogue NON généré : corrige les erreurs ci-dessus (ou relance avec --force).");

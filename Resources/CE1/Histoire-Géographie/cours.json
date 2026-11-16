@@ -1,8 +1,9 @@
 [
-{
+  {
     "titre": "Cours d'Histoire-Géographie pour le CE1",
     "type": "link",
     "source": "histographie.net",
-    "url": "https://histographie.net/ecole-primaire/ce1/"
+    "url": "https://histographie.net/ecole-primaire/ce1/",
+    "titrePage": "CE1 - HISTOgraphie.net"
   }
 ]

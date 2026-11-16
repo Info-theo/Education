@@ -1,0 +1,35 @@
+# Vérifie chaque semaine que les liens des ressources répondent encore.
+# Le rapport apparaît dans le résumé de l'exécution (onglet Actions).
+name: Vérification des liens
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # chaque lundi à 6 h UTC
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "Resources/**"
+
+permissions:
+  contents: read
+
+jobs:
+  liens:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Vérifier les liens (archives comprises)
+        run: node tools/check-links.mjs --archives --report rapport-liens.md
+
+      - name: Joindre le rapport
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rapport-liens
+          path: rapport-liens.md
+          if-no-files-found: ignore

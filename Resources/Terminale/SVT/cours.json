@@ -3,13 +3,14 @@
     "titre": "Playlist de Seconde SVT",
     "type": "video",
     "source": "Mon Cours De SVT",
-    "url": "https://www.youtube.com/watch?v=CQ4V_NgfVP8&list=PLZVm1WQzNgrqTI2Ya-TxNiXKjGmGbGXv8"
+    "url": "https://www.youtube.com/watch?v=CQ4V_NgfVP8&list=PLZVm1WQzNgrqTI2Ya-TxNiXKjGmGbGXv8",
+    "titrePage": "L'organisation des organismes pluricellulaire - Seconde"
   },
   {
     "titre": "Playlist de Terminale SVT",
     "type": "video",
     "source": "Mon Cours De SVT",
-    "url": "  https://www.youtube.com/watch?v=TyI3uZC8Dh0&list=PLZVm1WQzNgrofQ8RWPVR1U_HIz4bf9Fym"
+    "url": "  https://www.youtube.com/watch?v=TyI3uZC8Dh0&list=PLZVm1WQzNgrofQ8RWPVR1U_HIz4bf9Fym",
+    "titrePage": "De l'atmosphère primitive à l'atmosphère actuelle - Enseignement scientifique - Terminale"
   }
-
 ]

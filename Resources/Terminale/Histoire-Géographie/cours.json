@@ -3,32 +3,35 @@
     "titre": "Histoire Terminale",
     "type": "link",
     "source": "histoiregeographie.net",
-    "url": "https://www.histoiregeographie.net/tale/g%C3%A9n%C3%A9rale/histoire"
+    "url": "https://www.histoiregeographie.net/tale/g%C3%A9n%C3%A9rale/histoire",
+    "titrePage": "Histoire – Géographie - Histoire 👑"
   },
   {
     "titre": "Géographie Terminale",
     "type": "link",
     "source": "histoiregeographie.net",
-    "url": "https://www.histoiregeographie.net/tale/g%C3%A9n%C3%A9rale/géographie"
+    "url": "https://www.histoiregeographie.net/tale/g%C3%A9n%C3%A9rale/géographie",
+    "titrePage": "Histoire – Géographie - Géographie 🌍"
   },
   {
     "titre": "Histoire-géographie, Géopolitique et Sciences Politiques (H.G.G.S.P.)",
     "type": "link",
     "source": "histoiregeographie.net",
-    "url": "https://www.histoiregeographie.net/tale/h-g-g-s-p"
+    "url": "https://www.histoiregeographie.net/tale/h-g-g-s-p",
+    "titrePage": "Histoire – Géographie - H.G.G.S.P. 📍"
   },
   {
     "titre": "Méthodologie",
     "type": "link",
     "source": "histoiregeographie.net",
-    "url": "https://www.histoiregeographie.net/tale/m%C3%A9thodologie"
+    "url": "https://www.histoiregeographie.net/tale/m%C3%A9thodologie",
+    "titrePage": "Histoire – Géographie - Méthodologie 📝"
   },
   {
     "titre": "Aide préparation bac et grand oral",
     "type": "link",
     "source": "histographie.net",
-    "url": "https://histographie.net/lycee/bac-hggsp-fiches-methodes-grand-oral/"
+    "url": "https://histographie.net/lycee/bac-hggsp-fiches-methodes-grand-oral/",
+    "titrePage": "Bac HGGSP - HISTOgraphie.net"
   }
-
-
 ]

@@ -1,10 +1,9 @@
 [
-{
+  {
     "titre": "Cours d'Histoire-Géographie pour le CP",
     "type": "link",
     "source": "histographie.net",
-    "url": "https://histographie.net/ecole-primaire/cp/"
+    "url": "https://histographie.net/ecole-primaire/cp/",
+    "titrePage": "CP - HISTOgraphie.net"
   }
-  
-
 ]

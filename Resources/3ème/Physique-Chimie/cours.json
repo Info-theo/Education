@@ -4,32 +4,33 @@
     "type": "link",
     "source": "https://physique-chimie-college.fr/",
     "url": "https://physique-chimie-college.fr/",
+    "titrePage": "Physique Chimie Collège - cours gratuits",
     "chapitre": [
-    {
-      "titre": "Chimie",
-      "type": "link",
-      "url": "https://physique-chimie-college.fr/cours-3eme-chimie/"
-    },
-    {
-      "titre": "Electricité",
-      "type": "link",
-      "url": "https://physique-chimie-college.fr/cours-3eme-electricite/"
-    },
-    {
-      "titre": "Mécanique",
-      "type": "link",
-      "url": "https://physique-chimie-college.fr/cours-3eme-mecanique/"
-    }
-  ]
-
-    
-  },
       {
+        "titre": "Chimie",
+        "type": "link",
+        "url": "https://physique-chimie-college.fr/cours-3eme-chimie/",
+        "titrePage": "Cours de chimie de 3eme"
+      },
+      {
+        "titre": "Electricité",
+        "type": "link",
+        "url": "https://physique-chimie-college.fr/cours-3eme-electricite/",
+        "titrePage": "Cours d'électricité de 3eme"
+      },
+      {
+        "titre": "Mécanique",
+        "type": "link",
+        "url": "https://physique-chimie-college.fr/cours-3eme-mecanique/",
+        "titrePage": "Cours de mécanique de 3eme"
+      }
+    ]
+  },
+  {
     "titre": "Physique Chimie 3ème",
     "type": "link",
     "source": "PCCL Physique Chimie Collège Lycée",
-    "url": "https://www.pccl.fr/troisieme.htm"
+    "url": "https://www.pccl.fr/troisieme.htm",
+    "titrePage": "PCCL - Physique Chimie pour la troisieme - 3e - 3eme - Soutien scolaire gratuit et libre d'accès. Animations flash interactives pédagogiques, définitions, exercices corrigés pour : Chimie - Optique - Mécanique - Energie - Electricité - Ions - Tension alternative. Pédagogie. Idéal pour la classe inversée."
   }
-
-
 ]

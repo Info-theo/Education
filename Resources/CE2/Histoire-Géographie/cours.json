@@ -1,8 +1,9 @@
 [
-{
+  {
     "titre": "Cours d'Histoire-Géographie pour le CE2",
     "type": "link",
     "source": "histographie.net",
-    "url": "https://histographie.net/ecole-primaire/ce2/"
+    "url": "https://histographie.net/ecole-primaire/ce2/",
+    "titrePage": "CE2 - HISTOgraphie.net"
   }
 ]

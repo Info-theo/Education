@@ -9,6 +9,8 @@ export interface CatalogIssue {
 export interface CatalogSubResource {
   titre: string;
   url: string;
+  /** Titre attendu de la page, vérifié par tools/check-links.mjs. */
+  titrePage?: string;
 }
 
 export interface CatalogResource {
@@ -19,6 +21,8 @@ export interface CatalogResource {
   type: "link" | "video" | "iframe";
   source: string;
   url: string;
+  /** Titre attendu de la page, vérifié par tools/check-links.mjs. */
+  titrePage?: string;
   sousRessources?: CatalogSubResource[];
   sourceFile: string;
   courseLabel: string;
@@ -45,7 +49,23 @@ export interface Catalog {
   resources: CatalogResource[];
 }
 
-export function loadCatalog(resourcesDir: string): { catalog: Catalog; issues: CatalogIssue[] };
+export const STATUTS: readonly ("actif" | "archive")[];
+
+/** Ressource conservée dans les JSON avec "statut": "archive", absente du catalogue publié. */
+export interface ArchivedResource {
+  sourceFile: string;
+  titre: string;
+  url: string;
+  titrePage?: string;
+  sousRessources: CatalogSubResource[];
+  motif: string;
+}
+
+export function loadCatalog(resourcesDir: string): {
+  catalog: Catalog;
+  issues: CatalogIssue[];
+  archived: ArchivedResource[];
+};
 
 export function printIssues(
   issues: CatalogIssue[],

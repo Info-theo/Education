@@ -3,18 +3,21 @@
     "titre": "Histoire 3ème",
     "type": "link",
     "source": "histoiregeographie.net",
-    "url": "https://www.histoiregeographie.net/3%C3%A8me/histoire"
+    "url": "https://www.histoiregeographie.net/3%C3%A8me/histoire",
+    "titrePage": "Histoire – Géographie - Histoire 👑"
   },
   {
     "titre": "Géographie 3ème",
     "type": "link",
     "source": "histoiregeographie.net",
-    "url": "https://www.histoiregeographie.net/3%C3%A8me/géographie"
+    "url": "https://www.histoiregeographie.net/3%C3%A8me/géographie",
+    "titrePage": "Histoire – Géographie - Géographie 🌍"
   },
-    {
+  {
     "titre": "Cours d'Histoire-Géographie 3ème",
     "type": "link",
     "source": "histographie.net",
-    "url": "https://histographie.net/3e/"
+    "url": "https://histographie.net/3e/",
+    "titrePage": "3e - HISTOgraphie.net"
   }
 ]

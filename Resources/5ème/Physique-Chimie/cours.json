@@ -4,31 +4,33 @@
     "type": "link",
     "source": "https://physique-chimie-college.fr/",
     "url": "https://physique-chimie-college.fr/",
+    "titrePage": "Physique Chimie Collège - cours gratuits",
     "chapitre": [
-    {
-      "titre": "Chimie",
-      "type": "link",
-      "url": "https://physique-chimie-college.fr/cours-5eme-chimie/"
-    },
-    {
-      "titre": "Electricité",
-      "type": "link",
-      "url": "https://physique-chimie-college.fr/cours-5eme-electricite/"
-    },
-    {
-      "titre": "Lumière",
-      "type": "link",
-      "url": "https://physique-chimie-college.fr/cours-5eme-lumiere/"
-    }
-  ]
-
-    
+      {
+        "titre": "Chimie",
+        "type": "link",
+        "url": "https://physique-chimie-college.fr/cours-5eme-chimie/",
+        "titrePage": "Cours de chimie de 5eme"
+      },
+      {
+        "titre": "Electricité",
+        "type": "link",
+        "url": "https://physique-chimie-college.fr/cours-5eme-electricite/",
+        "titrePage": "Cours d'électricité de 5eme"
+      },
+      {
+        "titre": "Lumière",
+        "type": "link",
+        "url": "https://physique-chimie-college.fr/cours-5eme-lumiere/",
+        "titrePage": "Cours de lumière de 5eme"
+      }
+    ]
   },
   {
     "titre": "Physique Chimie 5ème",
     "type": "link",
     "source": "PCCL Physique Chimie Collège Lycée",
-    "url": "https://www.pccl.fr/cinquieme.htm"
+    "url": "https://www.pccl.fr/cinquieme.htm",
+    "titrePage": "PCCL Physique Chimie 5e"
   }
-
 ]

@@ -1,0 +1,10 @@
+[
+  {
+    "statut": "archive",
+    "motif": "l'URL est un chemin local, pas un lien web ; titre à vérifier (Première ?)",
+    "titre": "NSI Saint-Aspais Première",
+    "type": "link",
+    "source": "Site pédagogique D",
+    "url": "data/Terminale/Mathématiques/cours.json"
+  }
+]

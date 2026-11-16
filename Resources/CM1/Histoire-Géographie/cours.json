@@ -1,8 +1,9 @@
 [
-{
+  {
     "titre": "Cours d'Histoire-Géographie pour le CM1",
     "type": "link",
     "source": "histographie.net",
-    "url": "https://histographie.net/ecole-primaire/cm1/"
+    "url": "https://histographie.net/ecole-primaire/cm1/",
+    "titrePage": "CM1 - HISTOgraphie.net"
   }
 ]

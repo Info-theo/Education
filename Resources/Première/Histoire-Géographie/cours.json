@@ -3,26 +3,28 @@
     "titre": "Histoire 1ère",
     "type": "link",
     "source": "histoiregeographie.net",
-    "url": "https://www.histoiregeographie.net/1%C3%A8re/g%C3%A9n%C3%A9rale/histoire"
+    "url": "https://www.histoiregeographie.net/1%C3%A8re/g%C3%A9n%C3%A9rale/histoire",
+    "titrePage": "Histoire – Géographie - Histoire 👑"
   },
   {
     "titre": "Géographie 1ère",
     "type": "link",
     "source": "histoiregeographie.net",
-    "url": "https://www.histoiregeographie.net/1%C3%A8re/g%C3%A9n%C3%A9rale/g%C3%A9ographie"
+    "url": "https://www.histoiregeographie.net/1%C3%A8re/g%C3%A9n%C3%A9rale/g%C3%A9ographie",
+    "titrePage": "Histoire – Géographie - Géographie 🌍"
   },
   {
     "titre": "Histoire-géographie, Géopolitique et Sciences Politiques (H.G.G.S.P.) 📍",
     "type": "link",
     "source": "histoiregeographie.net",
-    "url": "https://www.histoiregeographie.net/1%C3%A8re/h-g-g-s-p"
+    "url": "https://www.histoiregeographie.net/1%C3%A8re/h-g-g-s-p",
+    "titrePage": "Histoire – Géographie - H.G.G.S.P. 📍"
   },
   {
     "titre": "Cours d'Histoire-Géographie première",
     "type": "link",
     "source": "histographie.net",
-    "url": "https://histographie.net/lycee/#premiere-hggsp-lycee"
+    "url": "https://histographie.net/lycee/#premiere-hggsp-lycee",
+    "titrePage": "Lycée - HISTOgraphie.net"
   }
-
-
 ]

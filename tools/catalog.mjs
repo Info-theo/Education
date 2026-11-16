@@ -12,6 +12,12 @@ export const CATALOG_VERSION = 1;
 
 const COURSE_FILE = /^cours.*\.json$/i;
 const RESOURCE_TYPES = new Set(["link", "video", "iframe"]);
+/**
+ * Statut d'une ressource (ou d'un fichier de cours entier) :
+ * - "actif" (par défaut) : publiée dans les applications ;
+ * - "archive" : conservée dans le JSON mais non publiée (lien cassé, contenu obsolète…).
+ */
+export const STATUTS = ["actif", "archive"];
 /** Domaines d'exemple qui ne doivent pas apparaître dans les données publiées. */
 const PLACEHOLDER_HOSTS = new Set(["monsite.fr", "monsite2.fr", "example.com", "example.org"]);
 
@@ -24,6 +30,9 @@ function hostOf(url) {
     return null;
   }
 }
+
+/** { titrePage } si la ressource en déclare un (titre attendu de la page, vérifié par check-links.mjs). */
+const optionalTitrePage = (obj) => (nfc(obj?.titrePage) ? { titrePage: nfc(obj.titrePage) } : {});
 
 function listCourseFiles(dir) {
   return fs
@@ -45,7 +54,7 @@ function readJson(file) {
  * ainsi que la liste des problèmes détectés.
  *
  * @param {string} resourcesDir
- * @returns {{ catalog: object, issues: { level: "error" | "warning", file: string, message: string }[] }}
+ * @returns {{ catalog: object, issues: { level: "error" | "warning", file: string, message: string }[], archived: object[] }}
  */
 export function loadCatalog(resourcesDir) {
   const issues = [];
@@ -71,6 +80,22 @@ export function loadCatalog(resourcesDir) {
   /* ---------- Fichiers de cours ---------- */
 
   const resources = [];
+  /** Ressources archivées : gardées dans les JSON, absentes du catalogue publié. */
+  const archived = [];
+
+  const checkTitrePage = (obj, where) => {
+    if (obj.titrePage !== undefined && typeof obj.titrePage !== "string") {
+      report("error", where, "« titrePage » doit être un texte");
+    }
+  };
+
+  const readStatut = (obj, where) => {
+    if (obj.statut === undefined) return "actif";
+    const statut = nfc(obj.statut);
+    if (STATUTS.includes(statut)) return statut;
+    report("error", where, `statut inconnu « ${obj.statut} » (attendu : ${STATUTS.join(", ")})`);
+    return "actif";
+  };
 
   for (const file of listCourseFiles(resourcesDir)) {
     const sourceFile = path.relative(resourcesDir, file).split(path.sep).join("/").normalize("NFC");
@@ -91,11 +116,15 @@ export function loadCatalog(resourcesDir) {
 
     let items;
     let courseLabel;
+    let fileStatut = "actif";
+    let fileMotif = "";
     if (Array.isArray(raw)) {
       items = raw;
     } else if (raw && typeof raw === "object" && Array.isArray(raw.resources)) {
       items = raw.resources;
       courseLabel = nfc(raw.nom) || nfc(raw.name) || nfc(raw.label) || undefined;
+      fileStatut = readStatut(raw, sourceFile);
+      fileMotif = nfc(raw.motif);
     } else {
       report("error", sourceFile, 'format attendu : une liste de ressources ou { "nom": "…", "resources": [ … ] }');
       continue;
@@ -104,12 +133,32 @@ export function loadCatalog(resourcesDir) {
     if (items.length === 0) report("warning", sourceFile, "aucune ressource");
 
     const seenUrls = new Set();
+    let activeCount = 0;
 
     items.forEach((item, i) => {
       if (!item || typeof item !== "object" || Array.isArray(item)) {
         report("error", where(i), "une ressource doit être un objet");
         return;
       }
+
+      // Ressource archivée (elle-même ou tout son fichier) : conservée, non publiée, non bloquante.
+      const statut = fileStatut === "archive" ? "archive" : readStatut(item, where(i));
+      if (statut === "archive") {
+        archived.push({
+          sourceFile,
+          titre: nfc(item.titre) || nfc(item.url) || `ressource n°${i + 1}`,
+          url: nfc(item.url),
+          ...optionalTitrePage(item),
+          sousRessources: Array.isArray(item.chapitre)
+            ? item.chapitre
+                .map((s) => ({ titre: nfc(s?.titre), url: nfc(s?.url), ...optionalTitrePage(s) }))
+                .filter((s) => s.url)
+            : [],
+          motif: nfc(item.motif) || fileMotif,
+        });
+        return;
+      }
+      activeCount++;
 
       const titre = nfc(item.titre);
       const url = nfc(item.url);
@@ -131,6 +180,8 @@ export function loadCatalog(resourcesDir) {
       if (seenUrls.has(url)) report("warning", where(i), `URL en double dans le fichier : ${url}`);
       seenUrls.add(url);
 
+      checkTitrePage(item, where(i));
+
       if (!RESOURCE_TYPES.has(type)) {
         report("error", where(i), `type inconnu « ${type} » (attendu : ${[...RESOURCE_TYPES].join(", ")})`);
       }
@@ -148,7 +199,8 @@ export function loadCatalog(resourcesDir) {
             report("error", `${where(i)} › partie n°${j + 1}`, "« url » manquante ou invalide");
             return;
           }
-          sousRessources.push({ titre: nfc(sub.titre) || subUrl, url: subUrl });
+          checkTitrePage(sub, `${where(i)} › partie n°${j + 1}`);
+          sousRessources.push({ titre: nfc(sub.titre) || subUrl, url: subUrl, ...optionalTitrePage(sub) });
         });
       } else if (item.chapitre !== undefined) {
         report("error", where(i), "« chapitre » doit être un texte ou une liste de { titre, url }");
@@ -162,11 +214,16 @@ export function loadCatalog(resourcesDir) {
         type: RESOURCE_TYPES.has(type) ? type : "link",
         source: nfc(item.source),
         url,
+        ...optionalTitrePage(item),
         ...(sousRessources?.length ? { sousRessources } : {}),
         sourceFile,
         courseLabel: nfc(item.courseLabel) || courseLabel || path.basename(file),
       });
     });
+
+    if (items.length > 0 && activeCount === 0 && fileStatut !== "archive") {
+      report("warning", sourceFile, "toutes les ressources sont archivées : le cours n'apparaît plus");
+    }
   }
 
   /* ---------- Cohérence avec generic_data.json ---------- */
@@ -194,6 +251,7 @@ export function loadCatalog(resourcesDir) {
       resources,
     },
     issues,
+    archived,
   };
 }
 

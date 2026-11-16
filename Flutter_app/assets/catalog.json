@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-13T15:12:14.608Z",
+  "generatedAt": "2026-11-16T05:42:08.807Z",
   "ordreNiveaux": [
     "CP",
     "CE1",
@@ -219,34 +219,13 @@
   "resources": [
     {
       "niveau": "3ème",
-      "matiere": "Anglais",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "3ème/Anglais/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "3ème",
-      "matiere": "Français",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "3ème/Français/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "3ème",
       "matiere": "Histoire-Géographie",
       "chapitre": "",
       "titre": "Histoire 3ème",
       "type": "link",
       "source": "histoiregeographie.net",
       "url": "https://www.histoiregeographie.net/3%C3%A8me/histoire",
+      "titrePage": "Histoire – Géographie - Histoire 👑",
       "sourceFile": "3ème/Histoire-Géographie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -258,6 +237,7 @@
       "type": "link",
       "source": "histoiregeographie.net",
       "url": "https://www.histoiregeographie.net/3%C3%A8me/géographie",
+      "titrePage": "Histoire – Géographie - Géographie 🌍",
       "sourceFile": "3ème/Histoire-Géographie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -269,18 +249,8 @@
       "type": "link",
       "source": "histographie.net",
       "url": "https://histographie.net/3e/",
+      "titrePage": "3e - HISTOgraphie.net",
       "sourceFile": "3ème/Histoire-Géographie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "3ème",
-      "matiere": "Mathématiques",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "3ème/Mathématiques/cours.json",
       "courseLabel": "cours.json"
     },
     {
@@ -291,18 +261,22 @@
       "type": "link",
       "source": "https://physique-chimie-college.fr/",
       "url": "https://physique-chimie-college.fr/",
+      "titrePage": "Physique Chimie Collège - cours gratuits",
       "sousRessources": [
         {
           "titre": "Chimie",
-          "url": "https://physique-chimie-college.fr/cours-3eme-chimie/"
+          "url": "https://physique-chimie-college.fr/cours-3eme-chimie/",
+          "titrePage": "Cours de chimie de 3eme"
         },
         {
           "titre": "Electricité",
-          "url": "https://physique-chimie-college.fr/cours-3eme-electricite/"
+          "url": "https://physique-chimie-college.fr/cours-3eme-electricite/",
+          "titrePage": "Cours d'électricité de 3eme"
         },
         {
           "titre": "Mécanique",
-          "url": "https://physique-chimie-college.fr/cours-3eme-mecanique/"
+          "url": "https://physique-chimie-college.fr/cours-3eme-mecanique/",
+          "titrePage": "Cours de mécanique de 3eme"
         }
       ],
       "sourceFile": "3ème/Physique-Chimie/cours.json",
@@ -316,6 +290,7 @@
       "type": "link",
       "source": "PCCL Physique Chimie Collège Lycée",
       "url": "https://www.pccl.fr/troisieme.htm",
+      "titrePage": "PCCL - Physique Chimie pour la troisieme - 3e - 3eme - Soutien scolaire gratuit et libre d'accès. Animations flash interactives pédagogiques, définitions, exercices corrigés pour : Chimie - Optique - Mécanique - Energie - Electricité - Ions - Tension alternative. Pédagogie. Idéal pour la classe inversée.",
       "sourceFile": "3ème/Physique-Chimie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -327,6 +302,7 @@
       "type": "video",
       "source": "Mon Cours De SVT",
       "url": "https://www.youtube.com/playlist?list=PLZVm1WQzNgrogv6Qefmd3j2tDjs0OWyjI",
+      "titrePage": "Cycle 4 (5ème, 4ème, 3ème)",
       "sourceFile": "3ème/SVT/cours.json",
       "courseLabel": "cours.json"
     },
@@ -338,43 +314,25 @@
       "type": "link",
       "source": "Cours de SVT 5eme Collège Francois d'Assise",
       "url": "https://svt.francois-d-assise.fr/cinquieme.html",
+      "titrePage": "Cours et activités de SVT niveau 5ème",
       "sousRessources": [
         {
           "titre": "PARTIE A – CORPS HUMAIN ET SANTE",
-          "url": "https://svt.francois-d-assise.fr/troisiemepartiea.html"
+          "url": "https://svt.francois-d-assise.fr/troisiemepartiea.html",
+          "titrePage": "SVT niveau 3ème partie A"
         },
         {
           "titre": "PARTIE B – PLANETE TERRE, ENVIRONNEMENT ET ACTION HUMAINE",
-          "url": "https://svt.francois-d-assise.fr/troisiemepartieb.html"
+          "url": "https://svt.francois-d-assise.fr/troisiemepartieb.html",
+          "titrePage": "SVT niveau 3ème partie B"
         },
         {
           "titre": "PARTIE C – LE VIVANT ET SON EVOLUTION",
-          "url": "https://svt.francois-d-assise.fr/troisiemepartiec.html"
+          "url": "https://svt.francois-d-assise.fr/troisiemepartiec.html",
+          "titrePage": "SVT niveau 3ème partie C"
         }
       ],
       "sourceFile": "3ème/SVT/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "4ème",
-      "matiere": "Anglais",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "4ème/Anglais/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "4ème",
-      "matiere": "Français",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "4ème/Français/cours.json",
       "courseLabel": "cours.json"
     },
     {
@@ -385,6 +343,7 @@
       "type": "link",
       "source": "histoiregeographie.net",
       "url": "https://www.histoiregeographie.net/4%C3%A8me/histoire",
+      "titrePage": "Histoire – Géographie - Histoire 👑",
       "sourceFile": "4ème/Histoire-Géographie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -396,6 +355,7 @@
       "type": "link",
       "source": "histoiregeographie.net",
       "url": "https://www.histoiregeographie.net/4%C3%A8me/géographie",
+      "titrePage": "Histoire – Géographie - Géographie 🌍",
       "sourceFile": "4ème/Histoire-Géographie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -407,18 +367,8 @@
       "type": "link",
       "source": "histographie.net",
       "url": "https://histographie.net/4e/",
+      "titrePage": "4e - HISTOgraphie.net",
       "sourceFile": "4ème/Histoire-Géographie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "4ème",
-      "matiere": "Mathématiques",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "4ème/Mathématiques/cours.json",
       "courseLabel": "cours.json"
     },
     {
@@ -429,18 +379,22 @@
       "type": "link",
       "source": "https://physique-chimie-college.fr/",
       "url": "https://physique-chimie-college.fr/",
+      "titrePage": "Physique Chimie Collège - cours gratuits",
       "sousRessources": [
         {
           "titre": "Chimie",
-          "url": "https://physique-chimie-college.fr/cours-4eme-chimie/"
+          "url": "https://physique-chimie-college.fr/cours-4eme-chimie/",
+          "titrePage": "Cours de chimie de 4eme"
         },
         {
           "titre": "Electricité",
-          "url": "https://physique-chimie-college.fr/cours-4eme-electricite/"
+          "url": "https://physique-chimie-college.fr/cours-4eme-electricite/",
+          "titrePage": "Cours de chimie de 4eme"
         },
         {
           "titre": "Lumière",
-          "url": "https://physique-chimie-college.fr/cours-4eme-lumiere/"
+          "url": "https://physique-chimie-college.fr/cours-4eme-lumiere/",
+          "titrePage": "Cours de lumière de 4eme"
         }
       ],
       "sourceFile": "4ème/Physique-Chimie/cours.json",
@@ -454,6 +408,7 @@
       "type": "link",
       "source": "PCCL Physique Chimie Collège Lycée",
       "url": "https://www.pccl.fr/quatrieme.htm",
+      "titrePage": "PCCL - Physique Chimie pour la quatrieme - 4e - 4eme - Soutien scolaire aux cours, gratuit et libre d'accès, en animations flash interactives pédagogiques, définitions et exercices corrigés pour EPI : Chimie - Optique - Electricité - Atomes - Molécules - Pression - Compressibilité - Expansibilité - Couleurs - Résistance - Loi d'Ohm - Tension - Intensité. Idéal pour la classe inversée.",
       "sourceFile": "4ème/Physique-Chimie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -465,6 +420,7 @@
       "type": "video",
       "source": "Mon Cours De SVT",
       "url": "https://www.youtube.com/playlist?list=PLZVm1WQzNgrogv6Qefmd3j2tDjs0OWyjI",
+      "titrePage": "Cycle 4 (5ème, 4ème, 3ème)",
       "sourceFile": "4ème/SVT/cours.json",
       "courseLabel": "cours.json"
     },
@@ -476,43 +432,25 @@
       "type": "link",
       "source": "Cours de SVT 4eme Collège Francois d'Assise",
       "url": "https://svt.francois-d-assise.fr/quatrieme.html",
+      "titrePage": "Cours et activités de SVT niveau 4ème",
       "sousRessources": [
         {
           "titre": "PARTIE A – PLANETE TERRE, ENVIRONNEMENT ET ACTION HUMAINE",
-          "url": "https://svt.francois-d-assise.fr/quatriemepartiea.html"
+          "url": "https://svt.francois-d-assise.fr/quatriemepartiea.html",
+          "titrePage": "SVT niveau 4ème partie A"
         },
         {
           "titre": "PARTIE B – LE VIVANT ET SON EVOLUTION",
-          "url": "https://svt.francois-d-assise.fr/quatriemepartieb.html"
+          "url": "https://svt.francois-d-assise.fr/quatriemepartieb.html",
+          "titrePage": "SVT niveau 4ème partie B"
         },
         {
           "titre": "PARTIE C – LE CORPS HUMAIN ET SANTE",
-          "url": "https://svt.francois-d-assise.fr/quatriemepartiec.html"
+          "url": "https://svt.francois-d-assise.fr/quatriemepartiec.html",
+          "titrePage": "SVT niveau 4ème partie C"
         }
       ],
       "sourceFile": "4ème/SVT/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "5ème",
-      "matiere": "Anglais",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "5ème/Anglais/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "5ème",
-      "matiere": "Français",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "5ème/Français/cours.json",
       "courseLabel": "cours.json"
     },
     {
@@ -523,6 +461,7 @@
       "type": "link",
       "source": "histoiregeographie.net",
       "url": "https://www.histoiregeographie.net/5%C3%A8me/histoire",
+      "titrePage": "Histoire – Géographie - Histoire 👑",
       "sourceFile": "5ème/Histoire-Géographie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -534,6 +473,7 @@
       "type": "link",
       "source": "histoiregeographie.net",
       "url": "https://www.histoiregeographie.net/5%C3%A8me/géographie",
+      "titrePage": "Histoire – Géographie - Géographie 🌍",
       "sourceFile": "5ème/Histoire-Géographie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -545,18 +485,8 @@
       "type": "link",
       "source": "histographie.net",
       "url": "https://histographie.net/5e/",
+      "titrePage": "5e - HISTOgraphie.net",
       "sourceFile": "5ème/Histoire-Géographie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "5ème",
-      "matiere": "Mathématiques",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "5ème/Mathématiques/cours.json",
       "courseLabel": "cours.json"
     },
     {
@@ -567,18 +497,22 @@
       "type": "link",
       "source": "https://physique-chimie-college.fr/",
       "url": "https://physique-chimie-college.fr/",
+      "titrePage": "Physique Chimie Collège - cours gratuits",
       "sousRessources": [
         {
           "titre": "Chimie",
-          "url": "https://physique-chimie-college.fr/cours-5eme-chimie/"
+          "url": "https://physique-chimie-college.fr/cours-5eme-chimie/",
+          "titrePage": "Cours de chimie de 5eme"
         },
         {
           "titre": "Electricité",
-          "url": "https://physique-chimie-college.fr/cours-5eme-electricite/"
+          "url": "https://physique-chimie-college.fr/cours-5eme-electricite/",
+          "titrePage": "Cours d'électricité de 5eme"
         },
         {
           "titre": "Lumière",
-          "url": "https://physique-chimie-college.fr/cours-5eme-lumiere/"
+          "url": "https://physique-chimie-college.fr/cours-5eme-lumiere/",
+          "titrePage": "Cours de lumière de 5eme"
         }
       ],
       "sourceFile": "5ème/Physique-Chimie/cours.json",
@@ -592,6 +526,7 @@
       "type": "link",
       "source": "PCCL Physique Chimie Collège Lycée",
       "url": "https://www.pccl.fr/cinquieme.htm",
+      "titrePage": "PCCL Physique Chimie 5e",
       "sourceFile": "5ème/Physique-Chimie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -603,6 +538,7 @@
       "type": "video",
       "source": "Mon Cours De SVT",
       "url": "https://www.youtube.com/playlist?list=PLZVm1WQzNgrogv6Qefmd3j2tDjs0OWyjI",
+      "titrePage": "Cycle 4 (5ème, 4ème, 3ème)",
       "sourceFile": "5ème/SVT/cours.json",
       "courseLabel": "cours.json"
     },
@@ -614,43 +550,25 @@
       "type": "link",
       "source": "Cours de SVT 5eme Collège Francois d'Assise",
       "url": "https://svt.francois-d-assise.fr/cinquieme.html",
+      "titrePage": "Cours et activités de SVT niveau 5ème",
       "sousRessources": [
         {
           "titre": "PARTIE A – PLANETE TERRE, ENVIRONNEMENT ET ACTION HUMAINE",
-          "url": "https://svt.francois-d-assise.fr/cinquiemepartiea.html"
+          "url": "https://svt.francois-d-assise.fr/cinquiemepartiea.html",
+          "titrePage": "SVT niveau 5ème partie A"
         },
         {
           "titre": "PARTIE B – LE CORPS HUMAIN ET SANTE",
-          "url": "https://svt.francois-d-assise.fr/cinquiemepartieb.html"
+          "url": "https://svt.francois-d-assise.fr/cinquiemepartieb.html",
+          "titrePage": "SVT niveau 5ème partie B"
         },
         {
           "titre": "PARTIE C – LE VIVANT ET SON EVOLUTION",
-          "url": "https://svt.francois-d-assise.fr/cinquiemepartiec.html"
+          "url": "https://svt.francois-d-assise.fr/cinquiemepartiec.html",
+          "titrePage": "SVT niveau 5ème partie C"
         }
       ],
       "sourceFile": "5ème/SVT/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "6ème",
-      "matiere": "Anglais",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "6ème/Anglais/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "6ème",
-      "matiere": "Français",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "6ème/Français/cours.json",
       "courseLabel": "cours.json"
     },
     {
@@ -661,6 +579,7 @@
       "type": "link",
       "source": "histoiregeographie.net",
       "url": "https://www.histoiregeographie.net/6%C3%A8me/histoire",
+      "titrePage": "Histoire – Géographie - Histoire 👑",
       "sourceFile": "6ème/Histoire-Géographie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -672,6 +591,7 @@
       "type": "link",
       "source": "histoiregeographie.net",
       "url": "https://www.histoiregeographie.net/6%C3%A8me/géographie",
+      "titrePage": "Histoire – Géographie - Géographie 🌍",
       "sourceFile": "6ème/Histoire-Géographie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -683,18 +603,8 @@
       "type": "link",
       "source": "histographie.net",
       "url": "https://histographie.net/6e/",
+      "titrePage": "6e - HISTOgraphie.net",
       "sourceFile": "6ème/Histoire-Géographie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "6ème",
-      "matiere": "Mathématiques",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "6ème/Mathématiques/cours.json",
       "courseLabel": "cours.json"
     },
     {
@@ -705,6 +615,7 @@
       "type": "link",
       "source": "PCCL Physique Chimie Collège Lycée",
       "url": "https://www.pccl.fr/physique_chimie_college_lycee/programme_rentree_2016/cycle3_cm1_cm2_6e_sciences/cycle3_cm1_cm2_6e_sciences.htm",
+      "titrePage": "PCCL - Physique Chimie - Sciences pour le cycle 3 : CM1 - CM2 - 6e - Soutien scolaire aux cours, gratuit et libre d'accès, en animations pédagogiques interactives, définitions et exercices corrigés pour EPI : On y aborde mouvement, vitesse, trajectoire, système solaire, énergie",
       "sourceFile": "6ème/Physique-Chimie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -716,6 +627,7 @@
       "type": "link",
       "source": "Mon cours de SVT",
       "url": "https://www.moncoursdesvt.com/College/Cycle3",
+      "titrePage": "Mon Cours De SVT - Cycle 3 (6e)",
       "sourceFile": "6ème/SVT/cours.json",
       "courseLabel": "cours.json"
     },
@@ -727,39 +639,20 @@
       "type": "link",
       "source": "Cours de SVT 6eme Collège Francois d'Assise",
       "url": "https://svt.francois-d-assise.fr/3.html",
+      "titrePage": "Cours et activités de SVT niveau 6ème",
       "sousRessources": [
         {
           "titre": "PARTIE B – LA TERRE, UNE PLANETE VIVANTE",
-          "url": "https://svt.francois-d-assise.fr/7.html"
+          "url": "https://svt.francois-d-assise.fr/7.html",
+          "titrePage": "SVT niveau 6ème partie A"
         },
         {
           "titre": "PARTIE A – LE VIVANT ET SA DIVERSITE",
-          "url": "https://svt.francois-d-assise.fr/6.html"
+          "url": "https://svt.francois-d-assise.fr/6.html",
+          "titrePage": "SVT niveau 6ème partie A"
         }
       ],
       "sourceFile": "6ème/SVT/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CE1",
-      "matiere": "Anglais",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CE1/Anglais/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CE1",
-      "matiere": "Français",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CE1/Français/cours.json",
       "courseLabel": "cours.json"
     },
     {
@@ -770,84 +663,8 @@
       "type": "link",
       "source": "histographie.net",
       "url": "https://histographie.net/ecole-primaire/ce1/",
+      "titrePage": "CE1 - HISTOgraphie.net",
       "sourceFile": "CE1/Histoire-Géographie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CE1",
-      "matiere": "Mathématiques",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CE1/Mathématiques/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CE1",
-      "matiere": "Physique-Chimie",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CE1/Physique-Chimie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CE1",
-      "matiere": "SVT",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CE1/SVT/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CE2",
-      "matiere": "Anglais",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CE2/Anglais/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CE2",
-      "matiere": "Anglais",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "CE2/Anglais/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CE2",
-      "matiere": "Français",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CE2/Français/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CE2",
-      "matiere": "Français",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "CE2/Français/cours.json",
       "courseLabel": "cours.json"
     },
     {
@@ -858,117 +675,8 @@
       "type": "link",
       "source": "histographie.net",
       "url": "https://histographie.net/ecole-primaire/ce2/",
+      "titrePage": "CE2 - HISTOgraphie.net",
       "sourceFile": "CE2/Histoire-Géographie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CE2",
-      "matiere": "Mathématiques",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CE2/Mathématiques/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CE2",
-      "matiere": "Mathématiques",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "CE2/Mathématiques/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CE2",
-      "matiere": "Physique-Chimie",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CE2/Physique-Chimie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CE2",
-      "matiere": "Physique-Chimie",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "CE2/Physique-Chimie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CE2",
-      "matiere": "SVT",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CE2/SVT/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CE2",
-      "matiere": "SVT",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "CE2/SVT/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM1",
-      "matiere": "Anglais",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CM1/Anglais/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM1",
-      "matiere": "Anglais",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "CM1/Anglais/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM1",
-      "matiere": "Français",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CM1/Français/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM1",
-      "matiere": "Français",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "CM1/Français/cours.json",
       "courseLabel": "cours.json"
     },
     {
@@ -979,117 +687,8 @@
       "type": "link",
       "source": "histographie.net",
       "url": "https://histographie.net/ecole-primaire/cm1/",
+      "titrePage": "CM1 - HISTOgraphie.net",
       "sourceFile": "CM1/Histoire-Géographie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM1",
-      "matiere": "Mathématiques",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CM1/Mathématiques/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM1",
-      "matiere": "Mathématiques",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "CM1/Mathématiques/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM1",
-      "matiere": "Physique-Chimie",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CM1/Physique-Chimie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM1",
-      "matiere": "Physique-Chimie",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "CM1/Physique-Chimie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM1",
-      "matiere": "SVT",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CM1/SVT/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM1",
-      "matiere": "SVT",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "CM1/SVT/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM2",
-      "matiere": "Anglais",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CM2/Anglais/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM2",
-      "matiere": "Anglais",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "CM2/Anglais/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM2",
-      "matiere": "Français",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CM2/Français/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM2",
-      "matiere": "Français",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "CM2/Français/cours.json",
       "courseLabel": "cours.json"
     },
     {
@@ -1100,84 +699,8 @@
       "type": "link",
       "source": "histographie.net",
       "url": "https://histographie.net/ecole-primaire/cm2/",
+      "titrePage": "CM2 - HISTOgraphie.net",
       "sourceFile": "CM2/Histoire-Géographie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM2",
-      "matiere": "Mathématiques",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CM2/Mathématiques/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM2",
-      "matiere": "Mathématiques",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "CM2/Mathématiques/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM2",
-      "matiere": "Physique-Chimie",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CM2/Physique-Chimie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM2",
-      "matiere": "Physique-Chimie",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "CM2/Physique-Chimie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM2",
-      "matiere": "SVT",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CM2/SVT/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CM2",
-      "matiere": "SVT",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "CM2/SVT/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CP",
-      "matiere": "Français",
-      "chapitre": "Grammaire",
-      "titre": "Nature des mots",
-      "type": "iframe",
-      "source": "Site pédagogique C",
-      "url": "https://monsite.fr/grammaire",
-      "sourceFile": "CP/Français/cours.json",
       "courseLabel": "cours.json"
     },
     {
@@ -1188,95 +711,8 @@
       "type": "link",
       "source": "histographie.net",
       "url": "https://histographie.net/ecole-primaire/cp/",
+      "titrePage": "CP - HISTOgraphie.net",
       "sourceFile": "CP/Histoire-Géographie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CP",
-      "matiere": "Mathématiques",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CP/Mathématiques/cours.json",
-      "courseLabel": "Cours principal"
-    },
-    {
-      "niveau": "CP",
-      "matiere": "Mathématiques",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "CP/Mathématiques/cours.json",
-      "courseLabel": "Cours principal"
-    },
-    {
-      "niveau": "CP",
-      "matiere": "Mathématiques",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D2",
-      "url": "https://monsite2.fr/fractions",
-      "sourceFile": "CP/Mathématiques/cours2.json",
-      "courseLabel": "Cours alternatif"
-    },
-    {
-      "niveau": "CP",
-      "matiere": "Mathématiques",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D2",
-      "url": "https://monsite2.fr/geometrie",
-      "sourceFile": "CP/Mathématiques/cours2.json",
-      "courseLabel": "Cours alternatif"
-    },
-    {
-      "niveau": "CP",
-      "matiere": "Physique-Chimie",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CP/Physique-Chimie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CP",
-      "matiere": "Physique-Chimie",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "CP/Physique-Chimie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CP",
-      "matiere": "SVT",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "CP/SVT/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "CP",
-      "matiere": "SVT",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "CP/SVT/cours.json",
       "courseLabel": "cours.json"
     },
     {
@@ -1287,51 +723,8 @@
       "type": "link",
       "source": "PCCL Physique Chimie Collège Lycée",
       "url": "https://www.pccl.fr/classes_preparatoires_scientifiques_cpge_mpsi_pcsi_ptsi.htm",
+      "titrePage": "PCCL - Physique Chimie Classes Préparatoires Scientifiques. CPGE - MPSI - PCSI - PTSI - Animations flash interactives gratuites",
       "sourceFile": "L1/Physique/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "Première",
-      "matiere": "Anglais",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "Première/Anglais/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "Première",
-      "matiere": "Anglais",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "Première/Anglais/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "Première",
-      "matiere": "Français",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "Première/Français/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "Première",
-      "matiere": "Français",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "Première/Français/cours.json",
       "courseLabel": "cours.json"
     },
     {
@@ -1342,6 +735,7 @@
       "type": "link",
       "source": "histoiregeographie.net",
       "url": "https://www.histoiregeographie.net/1%C3%A8re/g%C3%A9n%C3%A9rale/histoire",
+      "titrePage": "Histoire – Géographie - Histoire 👑",
       "sourceFile": "Première/Histoire-Géographie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -1353,6 +747,7 @@
       "type": "link",
       "source": "histoiregeographie.net",
       "url": "https://www.histoiregeographie.net/1%C3%A8re/g%C3%A9n%C3%A9rale/g%C3%A9ographie",
+      "titrePage": "Histoire – Géographie - Géographie 🌍",
       "sourceFile": "Première/Histoire-Géographie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -1364,6 +759,7 @@
       "type": "link",
       "source": "histoiregeographie.net",
       "url": "https://www.histoiregeographie.net/1%C3%A8re/h-g-g-s-p",
+      "titrePage": "Histoire – Géographie - H.G.G.S.P. 📍",
       "sourceFile": "Première/Histoire-Géographie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -1375,29 +771,8 @@
       "type": "link",
       "source": "histographie.net",
       "url": "https://histographie.net/lycee/#premiere-hggsp-lycee",
+      "titrePage": "Lycée - HISTOgraphie.net",
       "sourceFile": "Première/Histoire-Géographie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "Première",
-      "matiere": "Mathématiques",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "Première/Mathématiques/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "Première",
-      "matiere": "Mathématiques",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "Première/Mathématiques/cours.json",
       "courseLabel": "cours.json"
     },
     {
@@ -1408,6 +783,7 @@
       "type": "link",
       "source": "NSI Saint-Aspais Première",
       "url": "https://mcoilhac.forge.apps.education.fr/site-nsi/",
+      "titrePage": "🏡 Accueil - NSI Saint-Aspais Première",
       "sourceFile": "Première/NSI (option)/cours.json",
       "courseLabel": "cours.json"
     },
@@ -1419,6 +795,7 @@
       "type": "link",
       "source": "PCCL Physique Chimie Collège Lycée",
       "url": "https://www.pccl.fr/lycee_premiere.htm",
+      "titrePage": "PCCL - Physique Chimie lycée 1e - première - 1e - Soutien scolaire gratuit et libre d'accès. Idéal pour la classe inversée.",
       "sourceFile": "Première/Physique-Chimie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -1430,6 +807,7 @@
       "type": "video",
       "source": "Mon Cours De SVT",
       "url": "https://www.youtube.com/watch?v=nCvW6mIOX-s&list=PLZVm1WQzNgrrPzysCsO5wsVUlg5D0RR5u",
+      "titrePage": "Place de la mitose et de la méiose dans le cycle de vie de l'humain - Première Spécialité SVT",
       "sourceFile": "Première/SVT/cours.json",
       "courseLabel": "cours.json"
     },
@@ -1441,51 +819,8 @@
       "type": "video",
       "source": "Mon Cours De SVT",
       "url": "https://www.youtube.com/watch?v=yU77o4g1udo&list=PLZVm1WQzNgrqaGIfYbtQDyk-1aanyxVDF",
+      "titrePage": "Cristaux : les roches, des associations de cristaux - Enseignement scientifique - 1ère",
       "sourceFile": "Première/SVT/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "Seconde",
-      "matiere": "Anglais",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "Seconde/Anglais/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "Seconde",
-      "matiere": "Anglais",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "Seconde/Anglais/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "Seconde",
-      "matiere": "Français",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "Seconde/Français/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "Seconde",
-      "matiere": "Français",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "Seconde/Français/cours.json",
       "courseLabel": "cours.json"
     },
     {
@@ -1496,6 +831,7 @@
       "type": "link",
       "source": "histoiregeographie.net",
       "url": "https://www.histoiregeographie.net/2de/histoire",
+      "titrePage": "Histoire – Géographie - Histoire 👑",
       "sourceFile": "Seconde/Histoire-Géographie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -1507,10 +843,12 @@
       "type": "link",
       "source": "histoiregeographie.net",
       "url": "https://www.histoiregeographie.net/2de/géographie",
+      "titrePage": "Histoire – Géographie - Géographie 🌍",
       "sousRessources": [
         {
           "titre": "Méthodologie",
-          "url": "https://www.histoiregeographie.net/2de/g%C3%A9ographie/m%C3%A9thodologie"
+          "url": "https://www.histoiregeographie.net/2de/g%C3%A9ographie/m%C3%A9thodologie",
+          "titrePage": "Histoire – Géographie - Méthodologie 📝"
         }
       ],
       "sourceFile": "Seconde/Histoire-Géographie/cours.json",
@@ -1524,29 +862,8 @@
       "type": "link",
       "source": "histographie.net",
       "url": "https://histographie.net/lycee/#seconde-lycee",
+      "titrePage": "Lycée - HISTOgraphie.net",
       "sourceFile": "Seconde/Histoire-Géographie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "Seconde",
-      "matiere": "Mathématiques",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "Seconde/Mathématiques/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "Seconde",
-      "matiere": "Mathématiques",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "Seconde/Mathématiques/cours.json",
       "courseLabel": "cours.json"
     },
     {
@@ -1557,6 +874,7 @@
       "type": "link",
       "source": "PCCL Physique Chimie Collège Lycée",
       "url": "https://www.pccl.fr/lycee_seconde.htm",
+      "titrePage": "PCCL - Animations flash interactives gratuites - Physique Chimie lycée 2e - seconde - Soutien scolaire gratuit et libre d'accès. Idéal pour la classe inversée.",
       "sourceFile": "Seconde/Physique-Chimie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -1568,51 +886,8 @@
       "type": "video",
       "source": "Mon Cours De SVT",
       "url": "https://www.youtube.com/watch?v=CQ4V_NgfVP8&list=PLZVm1WQzNgrqTI2Ya-TxNiXKjGmGbGXv8",
+      "titrePage": "L'organisation des organismes pluricellulaire - Seconde",
       "sourceFile": "Seconde/SVT/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "Terminale",
-      "matiere": "Anglais",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "Terminale/Anglais/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "Terminale",
-      "matiere": "Anglais",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "Terminale/Anglais/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "Terminale",
-      "matiere": "Français",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "Terminale/Français/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "Terminale",
-      "matiere": "Français",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "Terminale/Français/cours.json",
       "courseLabel": "cours.json"
     },
     {
@@ -1623,6 +898,7 @@
       "type": "link",
       "source": "histoiregeographie.net",
       "url": "https://www.histoiregeographie.net/tale/g%C3%A9n%C3%A9rale/histoire",
+      "titrePage": "Histoire – Géographie - Histoire 👑",
       "sourceFile": "Terminale/Histoire-Géographie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -1634,6 +910,7 @@
       "type": "link",
       "source": "histoiregeographie.net",
       "url": "https://www.histoiregeographie.net/tale/g%C3%A9n%C3%A9rale/géographie",
+      "titrePage": "Histoire – Géographie - Géographie 🌍",
       "sourceFile": "Terminale/Histoire-Géographie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -1645,6 +922,7 @@
       "type": "link",
       "source": "histoiregeographie.net",
       "url": "https://www.histoiregeographie.net/tale/h-g-g-s-p",
+      "titrePage": "Histoire – Géographie - H.G.G.S.P. 📍",
       "sourceFile": "Terminale/Histoire-Géographie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -1656,6 +934,7 @@
       "type": "link",
       "source": "histoiregeographie.net",
       "url": "https://www.histoiregeographie.net/tale/m%C3%A9thodologie",
+      "titrePage": "Histoire – Géographie - Méthodologie 📝",
       "sourceFile": "Terminale/Histoire-Géographie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -1667,29 +946,8 @@
       "type": "link",
       "source": "histographie.net",
       "url": "https://histographie.net/lycee/bac-hggsp-fiches-methodes-grand-oral/",
+      "titrePage": "Bac HGGSP - HISTOgraphie.net",
       "sourceFile": "Terminale/Histoire-Géographie/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "Terminale",
-      "matiere": "Mathématiques",
-      "chapitre": "Fractions",
-      "titre": "Découvrir les fractions",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/fractions",
-      "sourceFile": "Terminale/Mathématiques/cours.json",
-      "courseLabel": "cours.json"
-    },
-    {
-      "niveau": "Terminale",
-      "matiere": "Mathématiques",
-      "chapitre": "Géométrie",
-      "titre": "Découvrir les figures géométriques",
-      "type": "link",
-      "source": "Site pédagogique D",
-      "url": "https://monsite.fr/geometrie",
-      "sourceFile": "Terminale/Mathématiques/cours.json",
       "courseLabel": "cours.json"
     },
     {
@@ -1700,6 +958,7 @@
       "type": "link",
       "source": "Cours de philosophie en série générale (2024-2025) - M. Eyssette",
       "url": "https://eyssette.forge.apps.education.fr/2024/philo-g/c/index.html",
+      "titrePage": "Accueil - Cours de philosophie en série générale (2024-2025) - M. Eyssette",
       "sourceFile": "Terminale/Philosophie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -1711,6 +970,7 @@
       "type": "link",
       "source": "PCCL Physique Chimie Collège Lycée",
       "url": "https://www.pccl.fr/lycee_terminale.htm",
+      "titrePage": "PCCL - Animations flash interactives gratuites - Physique Chimie lycée - terminale - Spécialité Physique-Chimie - bac 2021 - Soutien scolaire gratuit et libre d'accès. Idéal pour la classe inversée.",
       "sourceFile": "Terminale/Physique-Chimie/cours.json",
       "courseLabel": "cours.json"
     },
@@ -1722,6 +982,7 @@
       "type": "video",
       "source": "Mon Cours De SVT",
       "url": "https://www.youtube.com/watch?v=CQ4V_NgfVP8&list=PLZVm1WQzNgrqTI2Ya-TxNiXKjGmGbGXv8",
+      "titrePage": "L'organisation des organismes pluricellulaire - Seconde",
       "sourceFile": "Terminale/SVT/cours.json",
       "courseLabel": "cours.json"
     },
@@ -1733,6 +994,7 @@
       "type": "video",
       "source": "Mon Cours De SVT",
       "url": "https://www.youtube.com/watch?v=TyI3uZC8Dh0&list=PLZVm1WQzNgrofQ8RWPVR1U_HIz4bf9Fym",
+      "titrePage": "De l'atmosphère primitive à l'atmosphère actuelle - Enseignement scientifique - Terminale",
       "sourceFile": "Terminale/SVT/cours.json",
       "courseLabel": "cours.json"
     }

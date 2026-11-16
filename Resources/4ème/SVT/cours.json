@@ -3,30 +3,34 @@
     "titre": "Playlist de SVT 5eme/4eme/3eme",
     "type": "video",
     "source": "Mon Cours De SVT",
-    "url": "https://www.youtube.com/playlist?list=PLZVm1WQzNgrogv6Qefmd3j2tDjs0OWyjI"
+    "url": "https://www.youtube.com/playlist?list=PLZVm1WQzNgrogv6Qefmd3j2tDjs0OWyjI",
+    "titrePage": "Cycle 4 (5ème, 4ème, 3ème)"
   },
   {
     "titre": "Cours de SVT 4eme Collège Francois d'Assise",
     "type": "link",
     "source": "Cours de SVT 4eme Collège Francois d'Assise",
     "url": "https://svt.francois-d-assise.fr/quatrieme.html",
+    "titrePage": "Cours et activités de SVT niveau 4ème",
     "chapitre": [
-    {
-      "titre": "PARTIE A – PLANETE TERRE, ENVIRONNEMENT ET ACTION HUMAINE",
-      "type": "link",
-      "url": "https://svt.francois-d-assise.fr/quatriemepartiea.html"
-    },
-    {
-      "titre": "PARTIE B – LE VIVANT ET SON EVOLUTION",
-      "type": "link",
-      "url": "https://svt.francois-d-assise.fr/quatriemepartieb.html"
-    },
-    {
-      "titre": "PARTIE C – LE CORPS HUMAIN ET SANTE",
-      "type": "link",
-      "url": "https://svt.francois-d-assise.fr/quatriemepartiec.html"
-    }
-  ] 
+      {
+        "titre": "PARTIE A – PLANETE TERRE, ENVIRONNEMENT ET ACTION HUMAINE",
+        "type": "link",
+        "url": "https://svt.francois-d-assise.fr/quatriemepartiea.html",
+        "titrePage": "SVT niveau 4ème partie A"
+      },
+      {
+        "titre": "PARTIE B – LE VIVANT ET SON EVOLUTION",
+        "type": "link",
+        "url": "https://svt.francois-d-assise.fr/quatriemepartieb.html",
+        "titrePage": "SVT niveau 4ème partie B"
+      },
+      {
+        "titre": "PARTIE C – LE CORPS HUMAIN ET SANTE",
+        "type": "link",
+        "url": "https://svt.francois-d-assise.fr/quatriemepartiec.html",
+        "titrePage": "SVT niveau 4ème partie C"
+      }
+    ]
   }
-
 ]

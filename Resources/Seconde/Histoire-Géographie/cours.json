@@ -3,26 +3,29 @@
     "titre": "Histoire 2nde",
     "type": "link",
     "source": "histoiregeographie.net",
-    "url": "https://www.histoiregeographie.net/2de/histoire"
+    "url": "https://www.histoiregeographie.net/2de/histoire",
+    "titrePage": "Histoire – Géographie - Histoire 👑"
   },
   {
     "titre": "Géographie 2nde",
     "type": "link",
     "source": "histoiregeographie.net",
     "url": "https://www.histoiregeographie.net/2de/géographie",
+    "titrePage": "Histoire – Géographie - Géographie 🌍",
     "chapitre": [
-    {
-      "titre": "Méthodologie",
-      "type": "link",
-      "url": "https://www.histoiregeographie.net/2de/g%C3%A9ographie/m%C3%A9thodologie"
-    }
-  ]
+      {
+        "titre": "Méthodologie",
+        "type": "link",
+        "url": "https://www.histoiregeographie.net/2de/g%C3%A9ographie/m%C3%A9thodologie",
+        "titrePage": "Histoire – Géographie - Méthodologie 📝"
+      }
+    ]
   },
   {
     "titre": "Cours d'Histoire-Géographie seconde",
     "type": "link",
     "source": "histographie.net",
-    "url": "https://histographie.net/lycee/#seconde-lycee"
+    "url": "https://histographie.net/lycee/#seconde-lycee",
+    "titrePage": "Lycée - HISTOgraphie.net"
   }
-
 ]

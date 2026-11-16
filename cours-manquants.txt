@@ -1,0 +1,77 @@
+COURS MANQUANTS
+Généré le 16/11/2026 à partir de Resources/ (après suppression des exemples monsite.fr).
+Matières attendues : programme officiel simplifié (tronc commun + spécialités les plus courantes).
+Entre parenthèses : nombre de ressources déjà présentes.
+Pour ajouter un cours : Resources/<Niveau>/<Matière>/cours.json
+
+CP
+  Présent : Histoire-Géographie (1)
+  ✗ Manquant : Français, Mathématiques, Anglais, Sciences
+
+CE1
+  Présent : Histoire-Géographie (1)
+  ✗ Manquant : Français, Mathématiques, Anglais, Sciences
+
+CE2
+  Présent : Histoire-Géographie (1)
+  ✗ Manquant : Français, Mathématiques, Anglais, Sciences
+
+CM1
+  Présent : Histoire-Géographie (1)
+  ✗ Manquant : Français, Mathématiques, Anglais, Sciences
+
+CM2
+  Présent : Histoire-Géographie (1)
+  ✗ Manquant : Français, Mathématiques, Anglais, Sciences
+
+6ème
+  Présent : Histoire-Géographie (3), Physique-Chimie (1), SVT (2)
+  ✗ Manquant : Français, Mathématiques, Anglais, Technologie
+
+5ème
+  Présent : Histoire-Géographie (3), Physique-Chimie (2), SVT (2)
+  ✗ Manquant : Français, Mathématiques, Anglais, Technologie
+
+4ème
+  Présent : Histoire-Géographie (3), Physique-Chimie (2), SVT (2)
+  ✗ Manquant : Français, Mathématiques, Anglais, Technologie
+
+3ème
+  Présent : Histoire-Géographie (3), Physique-Chimie (2), SVT (2)
+  ✗ Manquant : Français, Mathématiques, Anglais, Technologie
+
+Seconde
+  Présent : Histoire-Géographie (3), Physique-Chimie (1), SVT (1)
+  ✗ Manquant : Français, Mathématiques, Anglais, SES, SNT
+
+Première
+  Présent : Histoire-Géographie (4), NSI (option) (1), Physique-Chimie (1), SVT (2)
+  ✗ Manquant : Français, Mathématiques, Anglais
+  ~ Partiel : Enseignement scientifique (en partie via SVT, Physique-Chimie)
+
+Terminale
+  Présent : Histoire-Géographie (5), Philosophie (1), Physique-Chimie (1), SVT (2)
+  ✗ Manquant : Mathématiques, Anglais, NSI (option)
+  ~ Partiel : Enseignement scientifique (en partie via SVT, Physique-Chimie)
+
+L1
+  Présent : Physique (1)
+  (pas de programme fixe : à compléter selon les filières visées)
+
+L2
+  Présent : aucune
+  ✗ Aucune ressource
+
+L3
+  Présent : aucune
+  ✗ Aucune ressource
+
+M1
+  Présent : aucune
+  ✗ Aucune ressource
+
+M2
+  Présent : aucune
+  ✗ Aucune ressource
+
+Total : 51 cours manquants.
