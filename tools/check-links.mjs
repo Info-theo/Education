@@ -188,7 +188,22 @@ const hostOf = (u) => {
   }
 };
 
-const isYoutube = (url) => /(^|\.)youtube\.com$|^youtu\.be$/.test(hostOf(url));
+/**
+ * Vidéo ou playlist YouTube (vérifiée via oEmbed). Les chaînes (/@nom, /c/, /channel/, /user/)
+ * ne sont pas connues d'oEmbed : elles sont vérifiées comme une page classique
+ * (YouTube répond bien 404 pour une chaîne inexistante).
+ */
+const isYoutube = (url) => {
+  const host = hostOf(url);
+  if (host === "youtu.be") return true;
+  if (!/(^|\.)youtube\.com$/.test(host)) return false;
+  try {
+    const { pathname, searchParams } = new URL(url);
+    return searchParams.has("v") || /^\/(playlist|shorts|embed|live)\b/.test(pathname);
+  } catch {
+    return false;
+  }
+};
 
 /**
  * YouTube répond 200 même pour une vidéo supprimée : son API oEmbed est plus fiable

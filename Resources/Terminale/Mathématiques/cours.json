@@ -1,0 +1,29 @@
+[
+  {
+    "titre": "Cours et exercices de maths Terminale - Yvan Monka",
+    "type": "link",
+    "source": "Maths et Tiques (Yvan Monka)",
+    "url": "https://www.maths-et-tiques.fr/index.php/cours-maths/niveau-terminale",
+    "titrePage": "Tale"
+  },
+  {
+    "titre": "Maths en Terminale : vidéos et révisions",
+    "type": "link",
+    "source": "Lumni (France Télévisions)",
+    "url": "https://www.lumni.fr/lycee/terminale/mathematiques",
+    "titrePage": "Maths en Terminale - Révisions & vidéos | Lumni"
+  },
+  {
+    "titre": "Vidéos de cours et d'exercices - Yvan Monka",
+    "type": "video",
+    "source": "Yvan Monka (YouTube)",
+    "url": "https://www.youtube.com/@YMONKA"
+  },
+  {
+    "titre": "Mathenpoche : cours, exercices et aides animées",
+    "type": "link",
+    "source": "Sésamath",
+    "url": "https://mathenpoche.sesamath.net/",
+    "titrePage": "Mathenpoche - accueil - index"
+  }
+]

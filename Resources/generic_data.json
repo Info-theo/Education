@@ -90,6 +90,14 @@
         "border": "#67e8f9",
         "text": "#155e75",
         "card": "#f5feff"
+      },
+
+      "Espagnol": {
+        "base": "#fff7ed",
+        "selected": "#ea580c",
+        "border": "#fdba74",
+        "text": "#9a3412",
+        "card": "#fffaf5"
       }
     },
     "icons": {
@@ -118,7 +126,8 @@
         "Histoire-Géographie": "🗺️",
         "Physique-Chimie": "🧪",
         "SVT": "🌱",
-        "Anglais": "🌍"
+        "Anglais": "🌍",
+        "Espagnol": "🗣️"
       }
     }
   }
