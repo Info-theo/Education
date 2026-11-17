@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:educ_app/src/catalog.dart';
+import 'package:educ_app/src/feedback.dart';
 import 'package:educ_app/src/models.dart';
 import 'package:educ_app/src/screens.dart';
 import 'package:flutter/material.dart';
@@ -72,5 +73,20 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('$cours · Cours complets'), findsOneWidget);
     expect(find.text('📚 Cours complet'), findsNWidgets(cours));
+  });
+
+  test('liens de note et de suggestion pré-remplis', () {
+    final r = catalog.resources.first;
+    final rate = Uri.parse(rateUrl(r, 4));
+    expect(rate.host, 'github.com');
+    expect(rate.path, '/$feedbackRepo/issues/new');
+    expect(rate.queryParameters['template'], 'note.yml');
+    expect(rate.queryParameters['url'], r.url);
+    expect(rate.queryParameters['note'], '4 - Bien');
+
+    final suggest = Uri.parse(suggestUrl(niveau: '3ème', matiere: 'SVT'));
+    expect(suggest.queryParameters['template'], 'suggestion.yml');
+    expect(suggest.queryParameters['niveau'], '3ème');
+    expect(suggest.queryParameters['title'], '[Suggestion] 3ème · SVT');
   });
 }

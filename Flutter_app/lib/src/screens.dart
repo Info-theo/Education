@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'catalog.dart';
+import 'feedback.dart';
 import 'models.dart';
 import 'widgets.dart';
 
@@ -346,6 +347,35 @@ class _ResourcesScreenState extends State<ResourcesScreen> {
               )
             else if (groups.isEmpty)
               EmptyState(onBack: () => Navigator.of(context).pop()),
+            const SizedBox(height: 8),
+            Card(
+              elevation: 0,
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+                side: const BorderSide(color: line),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Wrap(
+                  spacing: 12,
+                  runSpacing: 12,
+                  alignment: WrapAlignment.spaceBetween,
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  children: [
+                    Text('💡 Tu connais une bonne ressource pour ${_all ? 'la $niveau' : '$label en $niveau'} ?',
+                        style: const TextStyle(fontWeight: FontWeight.w700, color: ink)),
+                    FilledButton.tonal(
+                      onPressed: () => openUrl(
+                        context,
+                        suggestUrl(niveau: niveau, matiere: _all ? null : widget.matiere),
+                      ),
+                      child: const Text('Suggérer une ressource ↗'),
+                    ),
+                  ],
+                ),
+              ),
+            ),
             for (final g in groups.entries) ...[
               Padding(
                 padding: const EdgeInsets.only(top: 8, bottom: 12),

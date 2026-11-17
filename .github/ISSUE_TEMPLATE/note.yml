@@ -1,0 +1,41 @@
+name: ⭐ Noter une ressource
+description: Donne une note de 1 à 5 à une ressource du catalogue.
+title: "[Note] "
+labels: ["note"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci ! Les champs sont pré-remplis depuis le site : choisis ta note, ajoute un commentaire si tu veux, puis clique sur « Create ».
+        ⚠️ Ce message sera **public** : n'y mets ni ton nom, ni ton e-mail, ni d'information personnelle.
+  - type: input
+    id: url
+    attributes:
+      label: Adresse de la ressource
+    validations:
+      required: true
+  - type: input
+    id: ressource
+    attributes:
+      label: Ressource
+  - type: input
+    id: contexte
+    attributes:
+      label: Niveau et matière
+  - type: dropdown
+    id: note
+    attributes:
+      label: Note
+      options:
+        - "5 - Excellent"
+        - "4 - Bien"
+        - "3 - Moyen"
+        - "2 - Décevant"
+        - "1 - Inutile ou hors programme"
+    validations:
+      required: true
+  - type: textarea
+    id: commentaire
+    attributes:
+      label: Commentaire (facultatif)
+      description: Ce qui est bien, ce qui manque, si c'est adapté au niveau…

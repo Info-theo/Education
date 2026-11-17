@@ -1,0 +1,53 @@
+name: 💡 Suggérer une ressource
+description: Propose un cours, des exercices ou une vidéo à ajouter au catalogue.
+title: "[Suggestion] "
+labels: ["suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci ! Indique l'adresse de la ressource et pour quelle classe elle est utile, puis clique sur « Create ».
+        ⚠️ Ce message sera **public** : n'y mets ni ton nom, ni ton e-mail, ni d'information personnelle.
+  - type: input
+    id: url
+    attributes:
+      label: Adresse de la ressource
+      placeholder: https://…
+    validations:
+      required: true
+  - type: input
+    id: titre
+    attributes:
+      label: Titre
+      placeholder: "Ex. : Cours de maths 3ème"
+    validations:
+      required: true
+  - type: input
+    id: niveau
+    attributes:
+      label: Niveau
+      placeholder: "Ex. : 3ème"
+    validations:
+      required: true
+  - type: input
+    id: matiere
+    attributes:
+      label: Matière
+      placeholder: "Ex. : Mathématiques"
+    validations:
+      required: true
+  - type: dropdown
+    id: nature
+    attributes:
+      label: Catégorie
+      options:
+        - "Cours complet (propre au niveau, suit le programme)"
+        - "Exercices"
+        - "Ressource (outil, site de référence…)"
+        - "Vidéo"
+    validations:
+      required: true
+  - type: textarea
+    id: commentaire
+    attributes:
+      label: Pourquoi cette ressource ? (facultatif)

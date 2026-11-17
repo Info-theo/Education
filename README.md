@@ -17,6 +17,9 @@ Flutter_app/      application Flutter (mobile, web, Windows) — version guidée
   Le fichier est soit une liste de ressources, soit un objet `{ "nom": "…", "resources": [ … ] }`.
 - Une ressource : `titre`, `url` (obligatoires), `type` (`link`, `video` ou `iframe`), `source`, et `chapitre`
   (texte, ou liste de sous-liens `{ titre, url }` pour les cours en plusieurs parties).
+- `nature` : `cours` (cours complet, propre au niveau et qui suit le programme), `exercices` (entraînement, quiz)
+  ou `ressource` (outil, site de référence ou général ; valeur par défaut). Les applications proposent un filtre
+  Cours complets / Exercices / Ressources / Vidéos (« Vidéos » vient du `type`).
 - `titrePage` (facultatif, aussi sur les sous-liens) : titre attendu de la page, pour détecter un contenu remplacé
   (voir « Vérifier les liens »).
 - `generic_data.json` : ordre des niveaux, couleurs et icônes des niveaux et des matières.
@@ -119,3 +122,25 @@ Le workflow `.github/workflows/pages.yml` construit les deux applications et pub
 
 À faire une seule fois : **Settings → Pages → Build and deployment → Source : GitHub Actions**.
 Le déploiement échoue si `Resources/` contient des erreurs (`node tools/build-catalog.mjs --check`).
+
+## Notes et suggestions des utilisateurs
+
+Sur chaque carte, les étoiles ⭐ ouvrent le formulaire **« Noter une ressource »**, pré-rempli
+(ressource, niveau, matière, note). Le bouton **💡 Suggérer une ressource** ouvre le formulaire de suggestion.
+Ce sont des formulaires d'issue GitHub (`.github/ISSUE_TEMPLATE/`) : pas de serveur, pas de secret,
+les réponses arrivent dans l'onglet **Issues** du dépôt.
+
+Pour récupérer les résultats :
+
+```bash
+node tools/feedback.mjs                       # notes moyennes (les plus basses d'abord) + suggestions ouvertes
+node tools/feedback.mjs --report retours.md   # rapport Markdown, avec le JSON de chaque suggestion prêt à coller
+```
+
+- Une suggestion retenue : colle son bloc JSON dans le bon `cours.json`, lance `node tools/check-links.mjs`,
+  puis ferme l'issue (elle disparaît du rapport ; `--all` l'y remet).
+- Pour filtrer dans l'onglet Issues, crée les labels `note` et `suggestion` (Issues → Labels) : les formulaires
+  les appliquent automatiquement. Le script, lui, reconnaît aussi les issues par leur titre.
+- Limite : il faut un compte GitHub pour envoyer une note ou une suggestion, et les messages sont publics.
+- Autre dépôt : `NEXT_PUBLIC_FEEDBACK_REPO=compte/depot` au build React, `--dart-define=FEEDBACK_REPO=compte/depot`
+  pour Flutter, `--repo compte/depot` pour le script.

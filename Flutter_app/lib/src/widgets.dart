@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'catalog.dart';
+import 'feedback.dart';
 import 'models.dart';
 
 const ink = Color(0xFF17324D);
@@ -454,6 +455,10 @@ class ResourceCard extends StatelessWidget {
                   icon: const Icon(Icons.open_in_new, size: 18),
                   label: Text(action),
                 ),
+                const SizedBox(height: 8),
+                const Divider(height: 1, color: line),
+                const SizedBox(height: 4),
+                StarRating(resource: r),
               ],
             ),
           ),

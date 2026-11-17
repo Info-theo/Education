@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import type { ColorPalette, Resource, StyleCatalog } from "../types/resources";
+import { rateUrl, readRatings, saveRating, suggestUrl } from "../lib/feedback";
 import { KINDS, byNature, kindInfo, matchesKind, natureOf, type Kind } from "../lib/kinds";
 
 /* ------------------------------------------------------------------ */
@@ -233,9 +234,19 @@ export default function PageClient({
         <div>
           <div className="hero-top">
             <p className="eyebrow">Ressources pédagogiques</p>
-            <Link href="/avance" className="switch-link">
-              Recherche avancée →
-            </Link>
+            <span className="hero-links">
+              <a
+                href={suggestUrl(niveau, matiere && matiere !== ALL_SUBJECTS ? matiere : null)}
+                target="_blank"
+                rel="noreferrer"
+                className="switch-link"
+              >
+                💡 Suggérer une ressource
+              </a>
+              <Link href="/avance" className="switch-link">
+                Recherche avancée →
+              </Link>
+            </span>
           </div>
           <h1>
             {step === 1 && "Trouve des cours et des vidéos pour réviser, du CP à la fac."}
@@ -505,6 +516,18 @@ export default function PageClient({
               </div>
             </section>
           ))}
+
+          <aside className="suggest card-surface">
+            <span>💡 Tu connais une bonne ressource pour {matiere === ALL_SUBJECTS ? `la ${niveau}` : `${matiereLabel} en ${niveau}`} ?</span>
+            <a
+              className="resume-btn"
+              href={suggestUrl(niveau, matiere !== ALL_SUBJECTS ? matiere : null)}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Suggérer une ressource ↗
+            </a>
+          </aside>
         </>
       ) : null}
     </main>
@@ -593,8 +616,50 @@ function ResourceCard({
         <a className="open-btn" href={r.url} target="_blank" rel="noreferrer">
           {info.action} ↗
         </a>
+
+        <StarRating resource={r} />
       </div>
     </article>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Note d'une ressource (ouvre le formulaire GitHub pré-rempli)        */
+/* ------------------------------------------------------------------ */
+
+function StarRating({ resource: r }: { resource: Resource }) {
+  const [given, setGiven] = useState<number | null>(null);
+  const [hover, setHover] = useState(0);
+
+  useEffect(() => {
+    setGiven(readRatings()[r.url] ?? null);
+  }, [r.url]);
+
+  const shown = hover || given || 0;
+
+  return (
+    <div className="rating" onMouseLeave={() => setHover(0)}>
+      <span className="rating-label">{given ? `Ta note : ${given}/5` : "Noter :"}</span>
+      {[1, 2, 3, 4, 5].map((n) => (
+        <a
+          key={n}
+          className={`star ${n <= shown ? "on" : ""}`}
+          href={rateUrl(r, n)}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`Noter ${n} sur 5`}
+          title={`${n}/5 : ouvre le formulaire de note`}
+          onMouseEnter={() => setHover(n)}
+          onFocus={() => setHover(n)}
+          onClick={() => {
+            saveRating(r.url, n);
+            setGiven(n);
+          }}
+        >
+          ★
+        </a>
+      ))}
+    </div>
   );
 }
 

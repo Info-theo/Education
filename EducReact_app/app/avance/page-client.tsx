@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
+import { rateUrl, suggestUrl } from "../../lib/feedback";
 import { KINDS, kindInfo, matchesKind, natureOf, type Kind } from "../../lib/kinds";
 import Link from "next/link";
 import type { ColorPalette, Resource, StyleCatalog } from "../../types/resources";
@@ -154,6 +155,17 @@ export default function PageClient({
           <Link href="/" className="switch-link">
             ← Version guidée
           </Link>
+          <a
+            href={suggestUrl(
+              selectedNiveaux.length === 1 ? selectedNiveaux[0] : null,
+              selectedMatieres.length === 1 ? selectedMatieres[0] : null
+            )}
+            target="_blank"
+            rel="noreferrer"
+            className="switch-link"
+          >
+            💡 Suggérer une ressource
+          </a>
         </div>
       </section>
 
@@ -340,6 +352,10 @@ export default function PageClient({
                 ))}
               </ul>
             ) : null}
+
+            <a className="rate-link" href={rateUrl(r)} target="_blank" rel="noreferrer">
+              ⭐ Noter cette ressource
+            </a>
           </article>
         ))}
       </section>
@@ -605,6 +621,19 @@ export default function PageClient({
           color: var(--resource-link, #2858d4);
           font-weight: 700;
           text-decoration: none;
+        }
+
+        .rate-link {
+          display: inline-block;
+          margin-top: 12px;
+          color: #b45309;
+          font-size: 0.9rem;
+          font-weight: 700;
+          text-decoration: none;
+        }
+
+        .rate-link:hover {
+          text-decoration: underline;
         }
 
         .sub-resources {

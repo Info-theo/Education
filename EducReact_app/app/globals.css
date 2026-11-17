@@ -87,6 +87,60 @@ button {
   background: var(--accent-soft);
 }
 
+.hero-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ---------- Notes et suggestions ---------- */
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--resource-border, var(--line));
+}
+
+.rating-label {
+  margin-right: 6px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.star {
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.12s ease, transform 0.12s ease;
+}
+
+.star.on {
+  color: #f59e0b;
+}
+
+.star:hover,
+.star:focus-visible {
+  transform: scale(1.2);
+}
+
+.suggest {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  font-weight: 700;
+}
+
+.suggest .resume-btn {
+  text-decoration: none;
+}
+
 .eyebrow {
   margin: 0;
   text-transform: uppercase;
