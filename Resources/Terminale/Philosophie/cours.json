@@ -2,6 +2,7 @@
   {
     "titre": "Cours de philosophie Terminale générale - M. Eyssette",
     "type": "link",
+    "nature": "cours",
     "source": "Cours de philosophie en série générale (2024-2025) - M. Eyssette",
     "url": "https://eyssette.forge.apps.education.fr/2024/philo-g/c/index.html",
     "titrePage": "Accueil - Cours de philosophie en série générale (2024-2025) - M. Eyssette"
@@ -9,6 +10,7 @@
   {
     "titre": "Philo en Terminale : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/lycee/terminale/philosophie",
     "titrePage": "Philo en Terminale - Révisions & vidéos | Lumni"
@@ -16,6 +18,7 @@
   {
     "titre": "PhiloLog : cours de philosophie de Simone Manon",
     "type": "link",
+    "nature": "cours",
     "source": "PhiloLog (Simone Manon)",
     "url": "https://www.philolog.fr/",
     "titrePage": "- PhiloLog"
@@ -23,6 +26,7 @@
   {
     "titre": "Les Chemins de la philosophie (podcast)",
     "type": "link",
+    "nature": "ressource",
     "source": "France Culture",
     "url": "https://www.radiofrance.fr/franceculture/podcasts/les-chemins-de-la-philosophie",
     "titrePage": "Les Chemins de la philosophie en podcast sur France Culture"

@@ -19,6 +19,8 @@ export interface CatalogResource {
   chapitre: string;
   titre: string;
   type: "link" | "video" | "iframe";
+  /** cours : cours complet du niveau · exercices : entraînement · ressource : outil ou site général. */
+  nature: CatalogNature;
   source: string;
   url: string;
   /** Titre attendu de la page, vérifié par tools/check-links.mjs. */
@@ -48,6 +50,9 @@ export interface Catalog {
   };
   resources: CatalogResource[];
 }
+
+export type CatalogNature = "cours" | "exercices" | "ressource";
+export const NATURES: readonly CatalogNature[];
 
 export const STATUTS: readonly ("actif" | "archive")[];
 

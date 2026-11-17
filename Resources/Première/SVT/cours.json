@@ -2,6 +2,7 @@
   {
     "titre": "Premiere spécialité SVT",
     "type": "video",
+    "nature": "cours",
     "source": "Mon Cours De SVT",
     "url": "https://www.youtube.com/watch?v=nCvW6mIOX-s&list=PLZVm1WQzNgrrPzysCsO5wsVUlg5D0RR5u",
     "titrePage": "Place de la mitose et de la méiose dans le cycle de vie de l'humain - Première Spécialité SVT"
@@ -9,6 +10,7 @@
   {
     "titre": "Cours première SVT",
     "type": "video",
+    "nature": "cours",
     "source": "Mon Cours De SVT",
     "url": "  https://www.youtube.com/watch?v=yU77o4g1udo&list=PLZVm1WQzNgrqaGIfYbtQDyk-1aanyxVDF",
     "titrePage": "Cristaux : les roches, des associations de cristaux - Enseignement scientifique - 1ère"
@@ -16,6 +18,7 @@
   {
     "titre": "SVT en Première : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/lycee/premiere/sciences-de-la-vie-et-de-la-terre",
     "titrePage": "Sciences de la vie et de la Terre en Première - Révisions & vidéos | Lumni"
@@ -23,6 +26,7 @@
   {
     "titre": "Planet-Vie : ressources en biologie",
     "type": "link",
+    "nature": "ressource",
     "source": "ENS (Paris)",
     "url": "https://planet-vie.ens.fr/",
     "titrePage": "Accueil | Planet-Vie"
@@ -30,6 +34,7 @@
   {
     "titre": "Planet-Terre : ressources en sciences de la Terre",
     "type": "link",
+    "nature": "ressource",
     "source": "ENS de Lyon",
     "url": "https://planet-terre.ens-lyon.fr/",
     "titrePage": "Accueil : ressources scientifiques pour l'enseignement des sciences de la Terre — Planet-Terre"

@@ -57,6 +57,34 @@ class SubResource {
 
 enum ResourceKind { video, iframe, site }
 
+/// Catégories proposées dans le filtre de l'écran des ressources.
+///
+/// [cours], [exercices] et [ressource] viennent du champ « nature » du JSON ;
+/// [video] vient du type d'affichage. Une playlist de cours est donc à la fois
+/// un cours complet et une vidéo.
+enum Category {
+  cours('📚', 'Cours complets', 'Cours complet', 'Un cours structuré, propre au niveau et qui suit le programme.'),
+  exercices('✏️', 'Exercices', 'Exercices', "Pour s'entraîner : exercices, quiz, calcul mental…"),
+  ressource('🧰', 'Ressources', 'Ressource',
+      'Outils, sites de référence, révisions : utiles, mais pas un cours complet.'),
+  video('🎬', 'Vidéos', 'Vidéo', 'Vidéos et playlists.');
+
+  const Category(this.icon, this.label, this.tag, this.hint);
+
+  final String icon;
+  final String label;
+
+  /// Libellé court, au singulier, affiché sur les cartes.
+  final String tag;
+  final String hint;
+
+  static Category natureFromJson(String? value) => switch (value) {
+        'cours' => Category.cours,
+        'exercices' => Category.exercices,
+        _ => Category.ressource,
+      };
+}
+
 class Resource {
   const Resource({
     required this.niveau,
@@ -64,6 +92,7 @@ class Resource {
     required this.chapitre,
     required this.titre,
     required this.type,
+    this.nature = Category.ressource,
     required this.source,
     required this.url,
     required this.sousRessources,
@@ -76,6 +105,9 @@ class Resource {
   final String chapitre;
   final String titre;
   final String type;
+
+  /// Nature : [Category.cours], [Category.exercices] ou [Category.ressource].
+  final Category nature;
   final String source;
   final String url;
   final List<SubResource> sousRessources;
@@ -88,6 +120,7 @@ class Resource {
         chapitre: json['chapitre'] as String? ?? '',
         titre: json['titre'] as String? ?? '',
         type: json['type'] as String? ?? 'link',
+        nature: Category.natureFromJson(json['nature'] as String?),
         source: json['source'] as String? ?? '',
         url: json['url'] as String? ?? '',
         sousRessources: (json['sousRessources'] as List? ?? const [])
@@ -109,6 +142,9 @@ class Resource {
     if (type == 'iframe') return ResourceKind.iframe;
     return ResourceKind.site;
   }
+
+  bool matches(Category category) =>
+      category == Category.video ? kind == ResourceKind.video : nature == category;
 
   /// Identifiant de vidéo YouTube (absent pour les playlists).
   String? get youtubeId {

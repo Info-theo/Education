@@ -2,6 +2,7 @@
   {
     "titre": "Histoire 3ème",
     "type": "link",
+    "nature": "cours",
     "source": "histoiregeographie.net",
     "url": "https://www.histoiregeographie.net/3%C3%A8me/histoire",
     "titrePage": "Histoire – Géographie - Histoire 👑"
@@ -9,6 +10,7 @@
   {
     "titre": "Géographie 3ème",
     "type": "link",
+    "nature": "cours",
     "source": "histoiregeographie.net",
     "url": "https://www.histoiregeographie.net/3%C3%A8me/géographie",
     "titrePage": "Histoire – Géographie - Géographie 🌍"
@@ -16,6 +18,7 @@
   {
     "titre": "Cours d'Histoire-Géographie 3ème",
     "type": "link",
+    "nature": "cours",
     "source": "histographie.net",
     "url": "https://histographie.net/3e/",
     "titrePage": "3e - HISTOgraphie.net"
@@ -23,6 +26,7 @@
   {
     "titre": "Histoire en 3ème : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/college/troisieme/histoire",
     "titrePage": "Histoire en Troisième - Révisions & vidéos | Lumni"
@@ -30,6 +34,7 @@
   {
     "titre": "Géographie en 3ème : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/college/troisieme/geographie",
     "titrePage": "Géographie en Troisième - Révisions & vidéos | Lumni"
@@ -37,6 +42,7 @@
   {
     "titre": "L'Histoire par l'image : œuvres d'art et documents analysés",
     "type": "link",
+    "nature": "ressource",
     "source": "Histoire-image.org (GrandPalaisRmn)",
     "url": "https://histoire-image.org/",
     "titrePage": "Histoire-image.org | L’histoire analysée par l’image"
@@ -44,6 +50,7 @@
   {
     "titre": "Seterra : quiz de cartes (pays, capitales, régions)",
     "type": "link",
+    "nature": "exercices",
     "source": "Seterra",
     "url": "https://www.seterra.com/fr/",
     "titrePage": "Apprenez la géographie - Seterra"
@@ -51,6 +58,7 @@
   {
     "titre": "Le Dessous des cartes : géopolitique en vidéo",
     "type": "video",
+    "nature": "ressource",
     "source": "ARTE",
     "url": "https://www.arte.tv/fr/videos/RC-014036/le-dessous-des-cartes/",
     "titrePage": "Le dessous des cartes - Info et société | ARTE"

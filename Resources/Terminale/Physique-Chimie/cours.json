@@ -2,6 +2,7 @@
   {
     "titre": "Physique Chimie Terminale",
     "type": "link",
+    "nature": "cours",
     "source": "PCCL Physique Chimie Collège Lycée",
     "url": "https://www.pccl.fr/lycee_terminale.htm",
     "titrePage": "PCCL - Animations flash interactives gratuites - Physique Chimie lycée - terminale - Spécialité Physique-Chimie - bac 2021 - Soutien scolaire gratuit et libre d'accès. Idéal pour la classe inversée."
@@ -9,6 +10,7 @@
   {
     "titre": "Physique-chimie en Terminale : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/lycee/terminale/physique-chimie",
     "titrePage": "Physique-chimie en Terminale - Révisions & vidéos | Lumni"
@@ -16,6 +18,7 @@
   {
     "titre": "PhET : simulations interactives de physique et de chimie",
     "type": "link",
+    "nature": "ressource",
     "source": "PhET (Université du Colorado)",
     "url": "https://phet.colorado.edu/fr/",
     "titrePage": "PhET: Des simulations gratuites en physique, chimie, biologie, sciences de la Terre et mathématiques | PhET Simulations"
@@ -23,6 +26,7 @@
   {
     "titre": "Tableau périodique interactif des éléments",
     "type": "link",
+    "nature": "ressource",
     "source": "Ptable",
     "url": "https://ptable.com/?lang=fr",
     "titrePage": "Tableau Périodique - Ptable"
@@ -30,6 +34,7 @@
   {
     "titre": "CultureSciences-Physique : articles et dossiers",
     "type": "link",
+    "nature": "ressource",
     "source": "ENS de Lyon",
     "url": "https://culturesciencesphysique.ens-lyon.fr/",
     "titrePage": "Accueil — Culture Sciences Physique"
@@ -37,6 +42,7 @@
   {
     "titre": "CultureSciences-Chimie : articles et dossiers",
     "type": "link",
+    "nature": "ressource",
     "source": "ENS (Paris)",
     "url": "https://culturesciences.chimie.ens.fr/",
     "titrePage": "Accueil | CultureSciences-Chimie"

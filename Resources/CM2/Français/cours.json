@@ -2,6 +2,7 @@
   {
     "titre": "Français en CM2 : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/primaire/cm2/francais",
     "titrePage": "Français en Cm2 - Révisions & vidéos | Lumni"
@@ -9,6 +10,7 @@
   {
     "titre": "OrthoLud : jeux et exercices d'orthographe, de grammaire et de conjugaison",
     "type": "link",
+    "nature": "exercices",
     "source": "OrthoLud",
     "url": "https://www.ortholud.com/index.html",
     "titrePage": "OrthoLud : jeux et exercices pour apprendre le français| OrthoLud: French Learning Games and Exercises"

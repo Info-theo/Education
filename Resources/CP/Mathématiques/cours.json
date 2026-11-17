@@ -2,6 +2,7 @@
   {
     "titre": "Maths en CP : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/primaire/cp/mathematiques",
     "titrePage": "Maths en Cp - Révisions & vidéos | Lumni"
@@ -9,6 +10,7 @@
   {
     "titre": "Calcul mental : exercices et rallyes",
     "type": "link",
+    "nature": "exercices",
     "source": "calcul@TICE (Académie de Lille)",
     "url": "https://calculatice.ac-lille.fr/",
     "titrePage": "calcul@TICE"

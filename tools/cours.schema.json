@@ -57,6 +57,11 @@
           "default": "link",
           "description": "link : site web · video : vidéo (YouTube…) · iframe : page intégrée dans la carte."
         },
+        "nature": {
+          "enum": ["cours", "exercices", "ressource"],
+          "default": "ressource",
+          "description": "cours : cours complet, propre au niveau et qui suit le programme · exercices : entraînement, quiz · ressource : outil, référence ou site général (non spécifique au niveau)."
+        },
         "source": { "type": "string", "description": "Nom du site ou de l'auteur." },
         "url": { "$ref": "#/definitions/lien" },
         "titrePage": { "$ref": "#/definitions/titrePage" },

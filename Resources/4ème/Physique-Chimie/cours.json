@@ -2,6 +2,7 @@
   {
     "titre": "Cours de chimie 4ème",
     "type": "link",
+    "nature": "cours",
     "source": "https://physique-chimie-college.fr/",
     "url": "https://physique-chimie-college.fr/",
     "titrePage": "Physique Chimie Collège - cours gratuits",
@@ -29,6 +30,7 @@
   {
     "titre": "Physique Chimie 4ème",
     "type": "link",
+    "nature": "cours",
     "source": "PCCL Physique Chimie Collège Lycée",
     "url": "https://www.pccl.fr/quatrieme.htm",
     "titrePage": "PCCL - Physique Chimie pour la quatrieme - 4e - 4eme - Soutien scolaire aux cours, gratuit et libre d'accès, en animations flash interactives pédagogiques, définitions et exercices corrigés pour EPI : Chimie - Optique - Electricité - Atomes - Molécules - Pression - Compressibilité - Expansibilité - Couleurs - Résistance - Loi d'Ohm - Tension - Intensité. Idéal pour la classe inversée."
@@ -36,6 +38,7 @@
   {
     "titre": "Physique-chimie en 4ème : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/college/quatrieme/physique-chimie",
     "titrePage": "Physique-chimie en Quatrième - Révisions & vidéos | Lumni"
@@ -43,6 +46,7 @@
   {
     "titre": "PhET : simulations interactives de physique et de chimie",
     "type": "link",
+    "nature": "ressource",
     "source": "PhET (Université du Colorado)",
     "url": "https://phet.colorado.edu/fr/",
     "titrePage": "PhET: Des simulations gratuites en physique, chimie, biologie, sciences de la Terre et mathématiques | PhET Simulations"
@@ -50,6 +54,7 @@
   {
     "titre": "Tableau périodique interactif des éléments",
     "type": "link",
+    "nature": "ressource",
     "source": "Ptable",
     "url": "https://ptable.com/?lang=fr",
     "titrePage": "Tableau Périodique - Ptable"

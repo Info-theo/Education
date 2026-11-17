@@ -2,6 +2,7 @@
   {
     "titre": "Cours et exercices de maths 6ème - Yvan Monka",
     "type": "link",
+    "nature": "cours",
     "source": "Maths et Tiques (Yvan Monka)",
     "url": "https://www.maths-et-tiques.fr/index.php/cours-maths/cours-de-maths-niveau-sixieme",
     "titrePage": "6e"
@@ -9,6 +10,7 @@
   {
     "titre": "Maths en 6ème : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/college/sixieme/mathematiques",
     "titrePage": "Maths en Sixième - Révisions & vidéos | Lumni"
@@ -16,6 +18,7 @@
   {
     "titre": "Mathenpoche : cours, exercices et aides animées",
     "type": "link",
+    "nature": "exercices",
     "source": "Sésamath",
     "url": "https://mathenpoche.sesamath.net/",
     "titrePage": "Mathenpoche - accueil - index"
@@ -23,6 +26,7 @@
   {
     "titre": "Manuels et cahiers Sésamath en ligne",
     "type": "link",
+    "nature": "ressource",
     "source": "Sésamath",
     "url": "https://manuel.sesamath.net/",
     "titrePage": "Manuels et Cahiers Sésamath - Accueil"
@@ -30,6 +34,7 @@
   {
     "titre": "Calcul mental : exercices et rallyes",
     "type": "link",
+    "nature": "exercices",
     "source": "calcul@TICE (Académie de Lille)",
     "url": "https://calculatice.ac-lille.fr/",
     "titrePage": "calcul@TICE"

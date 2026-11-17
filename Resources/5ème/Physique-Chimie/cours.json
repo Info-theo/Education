@@ -2,6 +2,7 @@
   {
     "titre": "Cours de chimie 5ème",
     "type": "link",
+    "nature": "cours",
     "source": "https://physique-chimie-college.fr/",
     "url": "https://physique-chimie-college.fr/",
     "titrePage": "Physique Chimie Collège - cours gratuits",
@@ -29,6 +30,7 @@
   {
     "titre": "Physique Chimie 5ème",
     "type": "link",
+    "nature": "cours",
     "source": "PCCL Physique Chimie Collège Lycée",
     "url": "https://www.pccl.fr/cinquieme.htm",
     "titrePage": "PCCL Physique Chimie 5e"
@@ -36,6 +38,7 @@
   {
     "titre": "Physique-chimie en 5ème : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/college/cinquieme/physique-chimie",
     "titrePage": "Physique-chimie en Cinquième - Révisions & vidéos | Lumni"
@@ -43,6 +46,7 @@
   {
     "titre": "PhET : simulations interactives de physique et de chimie",
     "type": "link",
+    "nature": "ressource",
     "source": "PhET (Université du Colorado)",
     "url": "https://phet.colorado.edu/fr/",
     "titrePage": "PhET: Des simulations gratuites en physique, chimie, biologie, sciences de la Terre et mathématiques | PhET Simulations"

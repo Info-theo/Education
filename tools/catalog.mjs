@@ -18,6 +18,13 @@ const RESOURCE_TYPES = new Set(["link", "video", "iframe"]);
  * - "archive" : conservée dans le JSON mais non publiée (lien cassé, contenu obsolète…).
  */
 export const STATUTS = ["actif", "archive"];
+/**
+ * Nature d'une ressource (indépendante du type d'affichage link / video / iframe) :
+ * - "cours" : cours complet, propre au niveau et qui suit le programme ;
+ * - "exercices" : entraînement, exercices, quiz ;
+ * - "ressource" (par défaut) : outil, référence, site général non spécifique au niveau.
+ */
+export const NATURES = ["cours", "exercices", "ressource"];
 /** Domaines d'exemple qui ne doivent pas apparaître dans les données publiées. */
 const PLACEHOLDER_HOSTS = new Set(["monsite.fr", "monsite2.fr", "example.com", "example.org"]);
 
@@ -163,6 +170,10 @@ export function loadCatalog(resourcesDir) {
       const titre = nfc(item.titre);
       const url = nfc(item.url);
       const type = nfc(item.type) || "link";
+      const nature = nfc(item.nature) || "ressource";
+      if (!NATURES.includes(nature)) {
+        report("error", where(i), `nature inconnue « ${item.nature} » (attendu : ${NATURES.join(", ")})`);
+      }
 
       if (!titre) report("error", where(i), "« titre » manquant");
       if (!url) {
@@ -212,6 +223,7 @@ export function loadCatalog(resourcesDir) {
         chapitre,
         titre: titre || url,
         type: RESOURCE_TYPES.has(type) ? type : "link",
+        nature: NATURES.includes(nature) ? nature : "ressource",
         source: nfc(item.source),
         url,
         ...optionalTitrePage(item),

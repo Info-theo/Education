@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
+import { KINDS, kindInfo, matchesKind, natureOf, type Kind } from "../../lib/kinds";
 import Link from "next/link";
 import type { ColorPalette, Resource, StyleCatalog } from "../../types/resources";
 
@@ -25,6 +26,7 @@ export default function PageClient({
   const [selectedNiveaux, setSelectedNiveaux] = useState<string[]>([]);
   const [selectedMatieres, setSelectedMatieres] = useState<string[]>([]);
   const [selectedCourseFiles, setSelectedCourseFiles] = useState<string[]>([]);
+  const [selectedKinds, setSelectedKinds] = useState<Kind[]>([]);
 
   const niveaux = useMemo(() => {
     const unique = [...new Set(resources.map((r) => r.niveau))];
@@ -132,9 +134,10 @@ export default function PageClient({
         const matchNiveau = selectedNiveaux.length === 0 || selectedNiveaux.includes(r.niveau);
         const matchMatiere = selectedMatieres.length === 0 || selectedMatieres.includes(r.matiere);
         const matchCourse = selectedCourseFiles.length === 0 || selectedCourseFiles.includes(r.sourceFile ?? "");
-        return matchNiveau && matchMatiere && matchCourse;
+        const matchKind = selectedKinds.length === 0 || selectedKinds.some((k) => matchesKind(r, k));
+        return matchNiveau && matchMatiere && matchCourse && matchKind;
       }),
-    [resources, selectedNiveaux, selectedMatieres, selectedCourseFiles]
+    [resources, selectedNiveaux, selectedMatieres, selectedCourseFiles, selectedKinds]
   );
 
   return (
@@ -223,6 +226,35 @@ export default function PageClient({
           </div>
         </div>
 
+        <div className="field filter-card">
+          <label>Catégories</label>
+          <p className="helper-text">Cours complets du niveau, exercices, ressources générales ou vidéos (cumulables).</p>
+          <div className="chip-grid">
+            <button
+              type="button"
+              className={selectedKinds.length === 0 ? "chip active" : "chip"}
+              onClick={() => setSelectedKinds([])}
+            >
+              <span className="chip-icon">✨</span>
+              <span>Toutes</span>
+            </button>
+            {KINDS.map((k) => (
+              <button
+                key={k.id}
+                type="button"
+                title={k.hint}
+                className={selectedKinds.includes(k.id) ? "chip active" : "chip"}
+                onClick={() =>
+                  setSelectedKinds((prev) => (prev.includes(k.id) ? prev.filter((item) => item !== k.id) : [...prev, k.id]))
+                }
+              >
+                <span className="chip-icon">{k.icon}</span>
+                <span>{k.label}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+
         {canShowCourseFilters ? (
           <div className="field filter-card">
             <label>Cours</label>
@@ -262,7 +294,7 @@ export default function PageClient({
           <p className="eyebrow">Résultats</p>
           <h2>{resultats.length} ressource{resultats.length > 1 ? "s" : ""} affichée{resultats.length > 1 ? "s" : ""}</h2>
         </div>
-        <p className="mini-note">Filtres actifs : {selectedNiveaux.length ? selectedNiveaux.join(", ") : "Tous les niveaux"} • {selectedMatieres.length ? selectedMatieres.join(", ") : "Toutes les matières"}</p>
+        <p className="mini-note">Filtres actifs : {selectedNiveaux.length ? selectedNiveaux.join(", ") : "Tous les niveaux"} • {selectedMatieres.length ? selectedMatieres.join(", ") : "Toutes les matières"} • {selectedKinds.length ? selectedKinds.map((k) => kindInfo(k).label).join(", ") : "Toutes les catégories"}</p>
       </section>
 
       <section className="results-grid">
@@ -281,6 +313,9 @@ export default function PageClient({
           >
             <div className="resource-head">
               <p className="resource-meta">{r.niveau} • {r.matiere}</p>
+              <span className="badge">
+                {kindInfo(natureOf(r)).icon} {kindInfo(natureOf(r)).tag}
+              </span>
               {r.chapitre ? <span className="badge">Chapitre : {r.chapitre}</span> : null}
             </div>
             <h2>{r.titre}</h2>

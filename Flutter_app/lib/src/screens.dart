@@ -8,6 +8,9 @@ import 'widgets.dart';
 const _lastLevelKey = 'education:dernier-niveau';
 const allSubjects = '__toutes__';
 
+/// Filtre par catégorie, conservé d'une matière à l'autre pendant la session.
+Category? _lastCategory;
+
 /// Thème d'ambiance : la couleur du niveau choisi devient la couleur principale.
 Widget withLevelTheme(BuildContext context, Palette palette, Widget child) {
   if (palette == Palette.neutral) return child;
@@ -230,6 +233,11 @@ class ResourcesScreen extends StatefulWidget {
 
 class _ResourcesScreenState extends State<ResourcesScreen> {
   String? _course;
+  Category? _category = _lastCategory;
+
+  void _setCategory(Category? value) => setState(() => _category = _lastCategory = value);
+
+  static const _natureOrder = [Category.cours, Category.exercices, Category.ressource];
 
   bool get _all => widget.matiere == allSubjects;
 
@@ -250,7 +258,14 @@ class _ResourcesScreenState extends State<ResourcesScreen> {
       }
     }
 
-    final results = _course == null ? ofSubject : ofSubject.where((r) => r.sourceFile == _course).toList();
+    final ofCourse = _course == null ? ofSubject : ofSubject.where((r) => r.sourceFile == _course).toList();
+    final counts = {for (final c in Category.values) c: ofCourse.where((r) => r.matches(c)).length};
+
+    // Filtre par catégorie, puis cours complets en premier (tri stable).
+    final filtered = _category == null ? ofCourse : ofCourse.where((r) => r.matches(_category!)).toList();
+    final results = [
+      for (final n in _natureOrder) ...filtered.where((r) => r.nature == n),
+    ];
 
     // Regroupement : par matière en vue « tout voir », sinon par chapitre.
     final groups = <String, List<Resource>>{};
@@ -274,7 +289,9 @@ class _ResourcesScreenState extends State<ResourcesScreen> {
             ]),
             SectionTitle(
               eyebrow: 'Étape 3',
-              title: '${plural(results.length, 'ressource')} pour toi',
+              title: _category == null
+                  ? '${plural(results.length, 'ressource')} pour toi'
+                  : '${results.length} · ${_category!.label}',
               trailing: courses.length > 1
                   ? SegmentedButton<String?>(
                       showSelectedIcon: false,
@@ -287,7 +304,48 @@ class _ResourcesScreenState extends State<ResourcesScreen> {
                     )
                   : null,
             ),
-            if (groups.isEmpty) EmptyState(onBack: () => Navigator.of(context).pop()),
+            Wrap(spacing: 8, runSpacing: 8, children: [
+              ChoiceChip(
+                label: Text('Tout (${ofCourse.length})'),
+                selected: _category == null,
+                onSelected: (_) => _setCategory(null),
+              ),
+              for (final c in Category.values)
+                if (counts[c]! > 0 || c == _category)
+                  Tooltip(
+                    message: c.hint,
+                    child: ChoiceChip(
+                      label: Text('${c.icon} ${c.label} (${counts[c]})'),
+                      selected: _category == c,
+                      onSelected: (on) => _setCategory(on ? c : null),
+                    ),
+                  ),
+            ]),
+            if (_category != null)
+              Padding(
+                padding: const EdgeInsets.only(top: 8),
+                child: Text(_category!.hint, style: const TextStyle(color: muted)),
+              ),
+            const SizedBox(height: 16),
+            if (groups.isEmpty && _category != null && ofCourse.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 24),
+                child: Center(
+                  child: Column(children: [
+                    Text(_category!.icon, style: const TextStyle(fontSize: 40)),
+                    const SizedBox(height: 8),
+                    Text('Pas encore de « ${_category!.label.toLowerCase()} » ici',
+                        style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: ink)),
+                    const SizedBox(height: 12),
+                    FilledButton(
+                      onPressed: () => _setCategory(null),
+                      child: Text('Tout afficher (${ofCourse.length})'),
+                    ),
+                  ]),
+                ),
+              )
+            else if (groups.isEmpty)
+              EmptyState(onBack: () => Navigator.of(context).pop()),
             for (final g in groups.entries) ...[
               Padding(
                 padding: const EdgeInsets.only(top: 8, bottom: 12),

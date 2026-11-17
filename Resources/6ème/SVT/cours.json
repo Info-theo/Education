@@ -2,6 +2,7 @@
   {
     "titre": "Cours de SVT 6eme",
     "type": "link",
+    "nature": "cours",
     "source": "Mon cours de SVT",
     "url": "https://www.moncoursdesvt.com/College/Cycle3",
     "titrePage": "Mon Cours De SVT - Cycle 3 (6e)"
@@ -9,6 +10,7 @@
   {
     "titre": "Cours de SVT 6eme Collège Francois d'Assise",
     "type": "link",
+    "nature": "cours",
     "source": "Cours de SVT 6eme Collège Francois d'Assise",
     "url": "https://svt.francois-d-assise.fr/3.html",
     "titrePage": "Cours et activités de SVT niveau 6ème",
@@ -30,6 +32,7 @@
   {
     "titre": "Sciences et technologie en 6ème : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/college/sixieme/sciences-et-technologie",
     "titrePage": "Sciences et technologie en Sixième - Révisions & vidéos | Lumni"

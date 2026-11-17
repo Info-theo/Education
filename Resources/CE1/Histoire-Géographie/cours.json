@@ -2,6 +2,7 @@
   {
     "titre": "Cours d'Histoire-Géographie pour le CE1",
     "type": "link",
+    "nature": "cours",
     "source": "histographie.net",
     "url": "https://histographie.net/ecole-primaire/ce1/",
     "titrePage": "CE1 - HISTOgraphie.net"
@@ -9,6 +10,7 @@
   {
     "titre": "Questionner le monde en CE1 (temps, espace, vivant) : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/primaire/ce1/questionner-le-monde",
     "titrePage": "Questionner le monde en Ce1 - Révisions & vidéos | Lumni"

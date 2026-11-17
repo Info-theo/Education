@@ -2,13 +2,17 @@
   {
     "titre": "Playlist de Seconde SVT",
     "type": "video",
+    "nature": "cours",
     "source": "Mon Cours De SVT",
     "url": "https://www.youtube.com/watch?v=CQ4V_NgfVP8&list=PLZVm1WQzNgrqTI2Ya-TxNiXKjGmGbGXv8",
-    "titrePage": "L'organisation des organismes pluricellulaire - Seconde"
+    "titrePage": "L'organisation des organismes pluricellulaire - Seconde",
+    "statut": "archive",
+    "motif": "playlist du programme de Seconde, pas de Terminale"
   },
   {
     "titre": "Playlist de Terminale SVT",
     "type": "video",
+    "nature": "cours",
     "source": "Mon Cours De SVT",
     "url": "  https://www.youtube.com/watch?v=TyI3uZC8Dh0&list=PLZVm1WQzNgrofQ8RWPVR1U_HIz4bf9Fym",
     "titrePage": "De l'atmosphère primitive à l'atmosphère actuelle - Enseignement scientifique - Terminale"
@@ -16,6 +20,7 @@
   {
     "titre": "SVT en Terminale : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/lycee/terminale/sciences-de-la-vie-et-de-la-terre",
     "titrePage": "Sciences de la vie et de la Terre en Terminale - Révisions & vidéos | Lumni"
@@ -23,6 +28,7 @@
   {
     "titre": "Planet-Vie : ressources en biologie",
     "type": "link",
+    "nature": "ressource",
     "source": "ENS (Paris)",
     "url": "https://planet-vie.ens.fr/",
     "titrePage": "Accueil | Planet-Vie"
@@ -30,6 +36,7 @@
   {
     "titre": "Planet-Terre : ressources en sciences de la Terre",
     "type": "link",
+    "nature": "ressource",
     "source": "ENS de Lyon",
     "url": "https://planet-terre.ens-lyon.fr/",
     "titrePage": "Accueil : ressources scientifiques pour l'enseignement des sciences de la Terre — Planet-Terre"

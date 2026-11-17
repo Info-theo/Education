@@ -2,6 +2,7 @@
   {
     "titre": "Français en 3ème : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/college/troisieme/francais",
     "titrePage": "Français en Troisième - Révisions & vidéos | Lumni"
@@ -9,6 +10,7 @@
   {
     "titre": "OrthoLud : jeux et exercices d'orthographe, de grammaire et de conjugaison",
     "type": "link",
+    "nature": "exercices",
     "source": "OrthoLud",
     "url": "https://www.ortholud.com/index.html",
     "titrePage": "OrthoLud : jeux et exercices pour apprendre le français| OrthoLud: French Learning Games and Exercises"
@@ -16,12 +18,14 @@
   {
     "titre": "Français facile : cours, exercices et dictées",
     "type": "link",
+    "nature": "ressource",
     "source": "francaisfacile.com",
     "url": "https://www.francaisfacile.com/"
   },
   {
     "titre": "Espace Français : grammaire, orthographe et littérature",
     "type": "link",
+    "nature": "ressource",
     "source": "EspaceFrancais.com",
     "url": "https://www.espacefrancais.com/",
     "titrePage": "EspaceFrancais.com"

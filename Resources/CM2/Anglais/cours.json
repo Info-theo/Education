@@ -2,6 +2,7 @@
   {
     "titre": "Anglais en CM2 : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/primaire/cm2/anglais",
     "titrePage": "Anglais en Cm2 | Lumni"
@@ -9,6 +10,7 @@
   {
     "titre": "LearnEnglish Kids : chansons, histoires et jeux en anglais",
     "type": "link",
+    "nature": "ressource",
     "source": "British Council",
     "url": "https://learnenglishkids.britishcouncil.org/",
     "titrePage": "Home | LearnEnglish Kids"
@@ -16,6 +18,7 @@
   {
     "titre": "Audio-Lingua : écouter des locuteurs anglophones (niveaux A1 à C2)",
     "type": "link",
+    "nature": "ressource",
     "source": "Audio-Lingua (Académie de Versailles)",
     "url": "https://audio-lingua.ac-versailles.fr/spip.php?rubrique2",
     "titrePage": "Audio Lingua - - mp3 en anglais, allemand, arabe, catalan, chinois, corse, créole, espagnol, hébreu, italien, russe, occitan, portugais et français"

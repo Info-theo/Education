@@ -2,6 +2,7 @@
   {
     "titre": "Français en Première : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/lycee/premiere/francais",
     "titrePage": "Français en Première - Révisions & vidéos | Lumni"
@@ -9,6 +10,7 @@
   {
     "titre": "Espace Français : grammaire, orthographe et littérature",
     "type": "link",
+    "nature": "ressource",
     "source": "EspaceFrancais.com",
     "url": "https://www.espacefrancais.com/",
     "titrePage": "EspaceFrancais.com"
@@ -16,6 +18,7 @@
   {
     "titre": "Wikisource : les œuvres littéraires du programme en texte intégral",
     "type": "link",
+    "nature": "ressource",
     "source": "Wikisource",
     "url": "https://fr.wikisource.org/wiki/Wikisource:Accueil",
     "titrePage": "Wikisource"
@@ -23,6 +26,7 @@
   {
     "titre": "Français facile : cours, exercices et dictées",
     "type": "link",
+    "nature": "ressource",
     "source": "francaisfacile.com",
     "url": "https://www.francaisfacile.com/"
   }

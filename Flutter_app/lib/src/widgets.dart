@@ -383,6 +383,10 @@ class ResourceCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Wrap(spacing: 6, runSpacing: 6, children: [
+                  if (r.nature == Category.cours)
+                    _Tag(text: '${r.nature.icon} ${r.nature.tag}', bg: const Color(0xFFDCFCE7), fg: const Color(0xFF166534)),
+                  if (r.nature == Category.exercices)
+                    _Tag(text: '${r.nature.icon} ${r.nature.tag}', bg: const Color(0xFFFEF3C7), fg: const Color(0xFF92400E)),
                   _Tag(text: '$typeIcon $typeLabel', bg: palette.base, fg: palette.text),
                   if (r.chapitre.isNotEmpty)
                     _Tag(text: r.chapitre, bg: Colors.white, fg: muted, border: palette.border),

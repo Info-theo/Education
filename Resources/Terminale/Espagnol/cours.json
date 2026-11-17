@@ -2,6 +2,7 @@
   {
     "titre": "Espagnol en Terminale : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/lycee/terminale/espagnol",
     "titrePage": "Espagnol en Terminale | Lumni"
@@ -9,6 +10,7 @@
   {
     "titre": "Espagnol facile : cours, exercices et tests de niveau",
     "type": "link",
+    "nature": "ressource",
     "source": "espagnolfacile.com",
     "url": "https://www.espagnolfacile.com/",
     "titrePage": "Apprendre l'espagnol - cours d'espagnol gratuits"
@@ -16,6 +18,7 @@
   {
     "titre": "Ver-taal : exercices sur des vidéos, chansons et reportages",
     "type": "link",
+    "nature": "exercices",
     "source": "ver-taal.com",
     "url": "https://www.ver-taal.com/",
     "titrePage": "Ejercicios de español"
@@ -23,6 +26,7 @@
   {
     "titre": "Audio-Lingua : écouter des locuteurs hispanophones (niveaux A1 à C2)",
     "type": "link",
+    "nature": "ressource",
     "source": "Audio-Lingua (Académie de Versailles)",
     "url": "https://audio-lingua.ac-versailles.fr/spip.php?rubrique4",
     "titrePage": "Audio Lingua - - mp3 en anglais, allemand, arabe, catalan, chinois, corse, créole, espagnol, hébreu, italien, russe, occitan, portugais et français"

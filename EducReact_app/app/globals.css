@@ -372,6 +372,59 @@ button {
   color: #fff;
 }
 
+/* ---------- Filtre par catégorie (cours complets, exercices…) ---------- */
+
+.kind-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.kind-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.kind-chip:hover {
+  border-color: var(--accent);
+}
+
+.kind-chip[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.kind-count {
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.kind-chip[aria-pressed="true"] .kind-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.kind-hint {
+  margin: -4px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 /* ---------- Groupes et cartes de ressources ---------- */
 
 .group {
@@ -481,6 +534,16 @@ button {
   color: var(--resource-badge-text, var(--accent));
   font-size: 0.8rem;
   font-weight: 800;
+}
+
+.tag.nature-cours {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.tag.nature-exercices {
+  background: #fef3c7;
+  color: #92400e;
 }
 
 .tag.neutral {

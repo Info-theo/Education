@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import type { ColorPalette, Resource, StyleCatalog } from "../types/resources";
+import { KINDS, byNature, kindInfo, matchesKind, natureOf, type Kind } from "../lib/kinds";
 
 /* ------------------------------------------------------------------ */
 /* Constantes                                                          */
@@ -106,6 +107,8 @@ export default function PageClient({
   const [niveau, setNiveau] = useState<string | null>(null);
   const [matiere, setMatiere] = useState<string | null>(null);
   const [course, setCourse] = useState<string | null>(null);
+  /** Filtre par catégorie (cours complets, exercices…) ; conservé quand on change de matière. */
+  const [kind, setKind] = useState<Kind | null>(null);
   const [lastNiveau, setLastNiveau] = useState<string | null>(null);
 
   const step = !niveau ? 1 : !matiere ? 2 : 3;
@@ -167,9 +170,19 @@ export default function PageClient({
     return [...map.entries()].map(([file, label]) => ({ file, label }));
   }, [ressourcesMatiere, matiere]);
 
-  const resultats = useMemo(
+  const ressourcesCours = useMemo(
     () => (course ? ressourcesMatiere.filter((r) => r.sourceFile === course) : ressourcesMatiere),
     [ressourcesMatiere, course]
+  );
+
+  const kindCounts = useMemo(
+    () => KINDS.map((k) => ({ ...k, count: ressourcesCours.filter((r) => matchesKind(r, k.id)).length })),
+    [ressourcesCours]
+  );
+
+  const resultats = useMemo(
+    () => (kind ? ressourcesCours.filter((r) => matchesKind(r, kind)) : ressourcesCours).slice().sort(byNature),
+    [ressourcesCours, kind]
   );
 
   // Regroupement : par matière en vue « toutes », sinon par chapitre.
@@ -414,7 +427,9 @@ export default function PageClient({
           <section className="section-head">
             <div>
               <p className="eyebrow">Étape 3</p>
-              <h2>{plural(resultats.length, "ressource")} pour toi</h2>
+              <h2>
+                {kind ? `${resultats.length} · ${kindInfo(kind).label}` : `${plural(resultats.length, "ressource")} pour toi`}
+              </h2>
             </div>
             {courses.length > 1 ? (
               <div className="tabs" role="group" aria-label="Choix du cours">
@@ -436,7 +451,41 @@ export default function PageClient({
             ) : null}
           </section>
 
-          {groupes.length === 0 ? <EmptyState onBack={() => setMatiere(null)} /> : null}
+          <div className="kind-filter" role="group" aria-label="Filtrer par catégorie">
+            <button type="button" className="kind-chip" aria-pressed={kind === null} onClick={() => setKind(null)}>
+              Tout <span className="kind-count">{ressourcesCours.length}</span>
+            </button>
+            {kindCounts
+              .filter((k) => k.count > 0 || k.id === kind)
+              .map((k) => (
+                <button
+                  key={k.id}
+                  type="button"
+                  className="kind-chip"
+                  title={k.hint}
+                  aria-pressed={kind === k.id}
+                  onClick={() => setKind((prev) => (prev === k.id ? null : k.id))}
+                >
+                  {k.icon} {k.label} <span className="kind-count">{k.count}</span>
+                </button>
+              ))}
+          </div>
+          {kind ? <p className="kind-hint">{kindInfo(kind).hint}</p> : null}
+
+          {groupes.length === 0 && kind && ressourcesCours.length > 0 ? (
+            <div className="empty card-surface">
+              <div className="empty-icon">{kindInfo(kind).icon}</div>
+              <h3>Pas encore de « {kindInfo(kind).label.toLowerCase()} » ici</h3>
+              <p>D'autres ressources existent pour ce choix.</p>
+              <p style={{ marginTop: 14 }}>
+                <button type="button" className="resume-btn" onClick={() => setKind(null)}>
+                  Tout afficher ({ressourcesCours.length})
+                </button>
+              </p>
+            </div>
+          ) : groupes.length === 0 ? (
+            <EmptyState onBack={() => setMatiere(null)} />
+          ) : null}
 
           {groupes.map(([titre, items]) => (
             <section key={titre} className="group">
@@ -502,6 +551,11 @@ function ResourceCard({
 
       <div className="resource-body">
         <div className="resource-tags">
+          {natureOf(r) !== "ressource" ? (
+            <span className={`tag nature-${natureOf(r)}`}>
+              {kindInfo(natureOf(r)).icon} {kindInfo(natureOf(r)).tag}
+            </span>
+          ) : null}
           <span className="tag">
             {info.icon} {info.label}
           </span>

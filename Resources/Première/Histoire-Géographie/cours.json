@@ -2,6 +2,7 @@
   {
     "titre": "Histoire 1ère",
     "type": "link",
+    "nature": "cours",
     "source": "histoiregeographie.net",
     "url": "https://www.histoiregeographie.net/1%C3%A8re/g%C3%A9n%C3%A9rale/histoire",
     "titrePage": "Histoire – Géographie - Histoire 👑"
@@ -9,6 +10,7 @@
   {
     "titre": "Géographie 1ère",
     "type": "link",
+    "nature": "cours",
     "source": "histoiregeographie.net",
     "url": "https://www.histoiregeographie.net/1%C3%A8re/g%C3%A9n%C3%A9rale/g%C3%A9ographie",
     "titrePage": "Histoire – Géographie - Géographie 🌍"
@@ -16,6 +18,7 @@
   {
     "titre": "Histoire-géographie, Géopolitique et Sciences Politiques (H.G.G.S.P.) 📍",
     "type": "link",
+    "nature": "cours",
     "source": "histoiregeographie.net",
     "url": "https://www.histoiregeographie.net/1%C3%A8re/h-g-g-s-p",
     "titrePage": "Histoire – Géographie - H.G.G.S.P. 📍"
@@ -23,6 +26,7 @@
   {
     "titre": "Cours d'Histoire-Géographie première",
     "type": "link",
+    "nature": "cours",
     "source": "histographie.net",
     "url": "https://histographie.net/lycee/#premiere-hggsp-lycee",
     "titrePage": "Lycée - HISTOgraphie.net"
@@ -30,6 +34,7 @@
   {
     "titre": "Histoire en Première : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/lycee/premiere/histoire",
     "titrePage": "Histoire en Première - Révisions & vidéos | Lumni"
@@ -37,6 +42,7 @@
   {
     "titre": "Géographie en Première : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/lycee/premiere/geographie",
     "titrePage": "Géographie en Première - Révisions & vidéos | Lumni"
@@ -44,6 +50,7 @@
   {
     "titre": "L'Histoire par l'image : œuvres d'art et documents analysés",
     "type": "link",
+    "nature": "ressource",
     "source": "Histoire-image.org (GrandPalaisRmn)",
     "url": "https://histoire-image.org/",
     "titrePage": "Histoire-image.org | L’histoire analysée par l’image"
@@ -51,6 +58,7 @@
   {
     "titre": "Géoconfluences : ressources de géographie pour le lycée",
     "type": "link",
+    "nature": "ressource",
     "source": "ENS de Lyon",
     "url": "https://geoconfluences.ens-lyon.fr/",
     "titrePage": "accueil-geoconfluences — Géoconfluences"
@@ -58,6 +66,7 @@
   {
     "titre": "Le Dessous des cartes : géopolitique en vidéo",
     "type": "video",
+    "nature": "ressource",
     "source": "ARTE",
     "url": "https://www.arte.tv/fr/videos/RC-014036/le-dessous-des-cartes/",
     "titrePage": "Le dessous des cartes - Info et société | ARTE"

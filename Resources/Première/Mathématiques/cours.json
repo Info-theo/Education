@@ -2,6 +2,7 @@
   {
     "titre": "Cours et exercices de maths Première - Yvan Monka",
     "type": "link",
+    "nature": "cours",
     "source": "Maths et Tiques (Yvan Monka)",
     "url": "https://www.maths-et-tiques.fr/index.php/cours-maths/niveau-premiere",
     "titrePage": "1ère"
@@ -9,6 +10,7 @@
   {
     "titre": "Maths en Première : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/lycee/premiere/mathematiques",
     "titrePage": "Maths en Première - Révisions & vidéos | Lumni"
@@ -16,12 +18,14 @@
   {
     "titre": "Vidéos de cours et d'exercices - Yvan Monka",
     "type": "video",
+    "nature": "ressource",
     "source": "Yvan Monka (YouTube)",
     "url": "https://www.youtube.com/@YMONKA"
   },
   {
     "titre": "Mathenpoche : cours, exercices et aides animées",
     "type": "link",
+    "nature": "exercices",
     "source": "Sésamath",
     "url": "https://mathenpoche.sesamath.net/",
     "titrePage": "Mathenpoche - accueil - index"

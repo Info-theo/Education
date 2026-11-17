@@ -2,6 +2,7 @@
   {
     "titre": "Histoire Terminale",
     "type": "link",
+    "nature": "cours",
     "source": "histoiregeographie.net",
     "url": "https://www.histoiregeographie.net/tale/g%C3%A9n%C3%A9rale/histoire",
     "titrePage": "Histoire – Géographie - Histoire 👑"
@@ -9,6 +10,7 @@
   {
     "titre": "Géographie Terminale",
     "type": "link",
+    "nature": "cours",
     "source": "histoiregeographie.net",
     "url": "https://www.histoiregeographie.net/tale/g%C3%A9n%C3%A9rale/géographie",
     "titrePage": "Histoire – Géographie - Géographie 🌍"
@@ -16,6 +18,7 @@
   {
     "titre": "Histoire-géographie, Géopolitique et Sciences Politiques (H.G.G.S.P.)",
     "type": "link",
+    "nature": "cours",
     "source": "histoiregeographie.net",
     "url": "https://www.histoiregeographie.net/tale/h-g-g-s-p",
     "titrePage": "Histoire – Géographie - H.G.G.S.P. 📍"
@@ -23,6 +26,7 @@
   {
     "titre": "Méthodologie",
     "type": "link",
+    "nature": "ressource",
     "source": "histoiregeographie.net",
     "url": "https://www.histoiregeographie.net/tale/m%C3%A9thodologie",
     "titrePage": "Histoire – Géographie - Méthodologie 📝"
@@ -30,6 +34,7 @@
   {
     "titre": "Aide préparation bac et grand oral",
     "type": "link",
+    "nature": "ressource",
     "source": "histographie.net",
     "url": "https://histographie.net/lycee/bac-hggsp-fiches-methodes-grand-oral/",
     "titrePage": "Bac HGGSP - HISTOgraphie.net"
@@ -37,6 +42,7 @@
   {
     "titre": "Histoire en Terminale : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/lycee/terminale/histoire",
     "titrePage": "Histoire en Terminale - Révisions & vidéos | Lumni"
@@ -44,6 +50,7 @@
   {
     "titre": "Géographie en Terminale : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/lycee/terminale/geographie",
     "titrePage": "Géographie en Terminale - Révisions & vidéos | Lumni"
@@ -51,6 +58,7 @@
   {
     "titre": "L'Histoire par l'image : œuvres d'art et documents analysés",
     "type": "link",
+    "nature": "ressource",
     "source": "Histoire-image.org (GrandPalaisRmn)",
     "url": "https://histoire-image.org/",
     "titrePage": "Histoire-image.org | L’histoire analysée par l’image"
@@ -58,6 +66,7 @@
   {
     "titre": "Géoconfluences : ressources de géographie pour le lycée",
     "type": "link",
+    "nature": "ressource",
     "source": "ENS de Lyon",
     "url": "https://geoconfluences.ens-lyon.fr/",
     "titrePage": "accueil-geoconfluences — Géoconfluences"
@@ -65,6 +74,7 @@
   {
     "titre": "Le Dessous des cartes : géopolitique en vidéo",
     "type": "video",
+    "nature": "ressource",
     "source": "ARTE",
     "url": "https://www.arte.tv/fr/videos/RC-014036/le-dessous-des-cartes/",
     "titrePage": "Le dessous des cartes - Info et société | ARTE"

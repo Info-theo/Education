@@ -23,12 +23,16 @@ export interface SubResource {
   type?: string;
 }
 
+/** cours : cours complet du niveau · exercices : entraînement · ressource : outil ou site général. */
+export type ResourceNature = "cours" | "exercices" | "ressource";
+
 export interface Resource {
   niveau: string;
   matiere: string;
   chapitre: string;
   titre: string;
   type: "link" | "iframe" | "video";
+  nature?: ResourceNature;
   sousRessources?: SubResource[];
   source: string;
   url: string;

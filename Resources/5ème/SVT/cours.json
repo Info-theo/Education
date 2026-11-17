@@ -2,6 +2,7 @@
   {
     "titre": "Playlist de SVT 5eme/4eme/3eme",
     "type": "video",
+    "nature": "cours",
     "source": "Mon Cours De SVT",
     "url": "https://www.youtube.com/playlist?list=PLZVm1WQzNgrogv6Qefmd3j2tDjs0OWyjI",
     "titrePage": "Cycle 4 (5ème, 4ème, 3ème)"
@@ -9,6 +10,7 @@
   {
     "titre": "Cours de SVT 5eme Collège Francois d'Assise",
     "type": "link",
+    "nature": "cours",
     "source": "Cours de SVT 5eme Collège Francois d'Assise",
     "url": "https://svt.francois-d-assise.fr/cinquieme.html",
     "titrePage": "Cours et activités de SVT niveau 5ème",
@@ -36,6 +38,7 @@
   {
     "titre": "SVT en 5ème : vidéos et révisions",
     "type": "link",
+    "nature": "ressource",
     "source": "Lumni (France Télévisions)",
     "url": "https://www.lumni.fr/college/cinquieme/sciences-de-la-vie-et-de-la-terre",
     "titrePage": "Sciences de la vie et de la Terre en Cinquième - Révisions & vidéos | Lumni"
